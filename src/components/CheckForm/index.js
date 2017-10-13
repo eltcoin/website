@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MailInput from '../MailInput';
 import { I18n } from 'react-i18next';
 
 class CheckForm extends Component {
@@ -70,16 +69,13 @@ class CheckForm extends Component {
               😑
             </span>
             <br />
-            We'll be announcing the next batch soon, please be patient.{' '}
-            <span role="img" aria-label="WELCOME">
-              🤗
-            </span>
-            <br />
-            For KYC purposes, please enter your email below.
+            To guarantee your spot, please ensure you complete the form below.
+            <br/>
+            <br/>
+            <a className="button is-danger" href="https://docs.google.com/forms/d/e/1FAIpQLSdaIL0XW0h3HSZAuigPCG-2RoPlxPKaQ8x7ELDyGuuJSe5DvA/viewform" target="_blank" rel="noopener noreferrer" >Here!</a>
           </span>
           <br />
           <br />
-          <MailInput ethAddress={this.state.address} />
         </div>
       );
     } else {
@@ -121,6 +117,7 @@ class CheckForm extends Component {
                     Check
                   </a>
                 </div>
+                <br />
                 <br />
                 {this.renderMessage()}
               </div>

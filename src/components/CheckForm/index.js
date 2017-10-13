@@ -55,7 +55,10 @@ class CheckForm extends Component {
     if (this.state.validStatus === true) {
       return (
         <span className="tag is-success is-large">
-          Congratulations you have been elected!
+          Your email has been verified, we'll keep you updated!{' '}
+          <span role="img" aria-label="SAD">
+            😉
+          </span>
           <br />
         </span>
       );

@@ -1,0 +1,47 @@
+{
+  "advantages": {
+    "faster": {
+      "title": "Plus rapide",
+      "description": "ELTCOIN aura des transactions plus rapides que Litecoin. Le temps moyen de résolution est de <1>2 minutes</1> pour le Litecoin, alors qu'il est de <3>30 secondes</3> pour l'Ethereum."
+    },
+    "cheaper": {
+      "title": "Moins cher",
+      "description": "Les frais de transaction du Litecoin sont plus <1>volatiles</1>. Ceux de l'Ethereum sont moins chers, ils varient entre <3>$0.20 et $0.40</3>."
+    },
+    "smarter": {
+      "title": "Plus intelligent",
+      "description": "ELTCOIN est compatible avec les \"smart contracts\" sur la blockchain Ethereum. Litecoin n'est pas encore compatible avec ceux-ci."
+    }
+  },
+  "banner": "ATTENTION : <1>eltc.io</1> est une arnaque. Soyez prudent.",
+  "faq": {
+    "title": "FAQ",
+    "what": {
+      "title": "Qu'est-ce que ELTCOIN ?",
+      "description": "ELTCOIN veut être le token ERC20 avec une préémiment pour représenter Litecoin ELTCOIN est la version ERC20 du Litecoin sur la blockchain Ethereum."
+    },
+    "why": {
+      "title": "Pourquoi créer ELTCOIN ?",
+      "description": "Après le succès de eBTC, ELTCOIN veut être le token ERC20 préémiment pour représenter Litecoin. Plus d'informations dans notre white paper disponible prochainement."
+    },
+    "howMany": {
+      "title": "Combien de tokens ELTCOIN ?",
+      "description": "Le nombre de tokens est capé à 84,000,000, dans l'esprit du Litecoin."
+    }
+  },
+  "hero": {
+    "title": "Le nouveau Litecoin (ERC20)",
+    "subtitle": "ELTCOIN est la version tokenisée du Litecoin sur la blockchain Ethereum."
+  },
+  "tokenDetails": {
+    "title": "Le token",
+    "whiteList": "Whitelist",
+    "fillForm": "Remplissez le formulaire içi",
+    "contractAddress": "Adresse du contrat",
+    "symbol": "Symbole",
+    "decimals": "Décimales"
+  },
+  "wallets": {
+    "title": "Portefeuilles"
+  }
+}

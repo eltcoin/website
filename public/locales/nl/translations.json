@@ -1,0 +1,47 @@
+{
+  "advantages": {
+    "faster": {
+      "title": "Sneller",
+      "description": "ELTCOIN heeft snellere transactiesnelheden dan Litecoin. De gemiddelde bloktijd op Litecoin is <1>2 minuten</1>, terwijl op Ethereum het <3>30 seconden</3> is."
+    },
+    "cheaper": {
+      "title": "Goedkoper",
+      "description": "Litecoin transactiekosten zijn meer <1>volatiel</1>, waar Ethereum kosten goedkoper zijn en mindere variatie hebben <3>$0.20 tot $0.40</3>."
+    },
+    "smarter": {
+      "title": "Slimmer",
+      "description": "ELTCOIN kan werken met Smart Contracts op het Ethereum blockchain. Terwijl er plannen zijn om Smart Contracts te ondersteunen, ondersteunt Litecoin het momenteel niet."
+    }
+  },
+  "banner": "WAARSCHUWING: <1>eltc.io</1> zijn oplichters. Blijf veilig en let vooral goed op.",
+  "faq": {
+    "title": "FAQ",
+    "what": {
+      "title": "Wat is ELTCOIN?",
+      "description": "ELTCOIN is een ERC20 versie van Litecoin op Ethereum blockchain."
+    },
+    "why": {
+      "title": "Waarom ELTCOIN?",
+      "description": "Na de succes van eBTC, wilt ELTCOIN een ERC20 token hebben om Litecoin te representeren. Meer volgt in onze whitepaper (komt zo snel mogelijk aan)."
+    },
+    "howMany": {
+      "title": "Hoeveel ELTCOIN zijn er in de roulatie?",
+      "description": "Er zijn maximaal 84.000.000, dit om de Litecoin.."
+    }
+  },
+  "hero": {
+    "title": "De nieuwe (ERC20) Litecoin",
+    "subtitle": "ELTCOIN is een token op basis van Ethereum blockchain."
+  },
+  "tokenDetails": {
+    "title": "De token",
+    "whiteList": "Whitelist",
+    "fillForm": "Vul de formulier in om deel te nemen!",
+    "contractAddress": "Contract adres",
+    "symbol": "Symbool",
+    "decimals": "Decimaal"
+  },
+  "wallets": {
+    "title": "Portemonnee"
+  }
+}

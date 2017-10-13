@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'DIN17-Regular';
+  src: url(fonts/DIN17-Regular.otf);
+}
+
+@import "bulma/sass/utilities/initial-variables";
+
+$family-sans-serif: "DIN17-Regular", sans-serif;
+$primary: $grey-light;
+$family-primary: $family-sans-serif;
+$size-1: 4rem;
+$size-2: 2.5rem;
+$text: $white-bis;
+
+@import "bulma/bulma";
+
+body {
+  background-color: $black;
+}
+
+.title {
+  color: $text;
+  letter-spacing: 0.2rem;
+}
+
+.subtitle {
+  color: $text;
+}
+
+.card {
+  background-color: $black;
+}
+
+.fa-circle {
+  color: $primary;
+}
+
+a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
+  background-color: inherit;
+}

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
+import Certificate from '../Certficate';
+import CheckForm from '../CheckForm';
+import Faq from '../Faq';
+import Footer from '../Footer';
 import Header from '../Header';
 import Hero from '../Hero';
 import TokenDetails from '../TokenDetails';
 import Wallets from '../Wallets';
-import Faq from '../Faq';
-import CheckForm from '../CheckForm';
-import Footer from '../Footer';
 
 class App extends Component {
   render() {
@@ -17,10 +18,12 @@ class App extends Component {
         <TokenDetails />
         <br />
         <CheckForm />
-        <br />
+        <br/>
         <Wallets />
         <Faq />
         <br />
+        <Certificate />
+        <br/>
         <Footer />
       </div>
     );

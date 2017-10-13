@@ -22,8 +22,8 @@ class Wallets extends Component {
                 >
                   <img
                     src={parityImage}
-                    width={150}
-                    height={150}
+                    width={100}
+                    height={100}
                     alt=""
                     style={{ margin: 2 + 'em' }}
                   />
@@ -35,8 +35,8 @@ class Wallets extends Component {
                 >
                   <img
                     src={mistImage}
-                    width={150}
-                    height={150}
+                    width={100}
+                    height={100}
                     alt=""
                     style={{ margin: 2 + 'em' }}
                   />
@@ -48,8 +48,8 @@ class Wallets extends Component {
                 >
                   <img
                     src={metamaskImage}
-                    width={150}
-                    height={150}
+                    width={100}
+                    height={100}
                     alt=""
                     style={{ margin: 2 + 'em' }}
                   />
@@ -61,8 +61,8 @@ class Wallets extends Component {
                 >
                   <img
                     src={imTokenImage}
-                    width={150}
-                    height={150}
+                    width={100}
+                    height={100}
                     alt=""
                     style={{ margin: 2 + 'em' }}
                   />
@@ -74,8 +74,8 @@ class Wallets extends Component {
                 >
                   <img
                     src={myEtherWalletImage}
-                    width={150}
-                    height={150}
+                    width={100}
+                    height={100}
                     alt=""
                     style={{ margin: 2 + 'em' }}
                   />

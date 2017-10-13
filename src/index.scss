@@ -1,11 +1,17 @@
 @font-face {
-  font-family: 'DIN17-Regular';
-  src: url(fonts/DIN17-Regular.otf);
+  font-family: 'Open Sans';
+  src: url(fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url(fonts/OpenSans-Bold.ttf);
+  font-weight: bold;
 }
 
 @import "bulma/sass/utilities/initial-variables";
 
-$family-sans-serif: "DIN17-Regular", sans-serif;
+$family-sans-serif: "Open Sans", sans-serif;
 $primary: $grey-light;
 $family-primary: $family-sans-serif;
 $size-1: 4rem;

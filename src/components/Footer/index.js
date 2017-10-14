@@ -7,7 +7,7 @@ class Footer extends Component {
       <I18n ns="translations">
         {(t, { i18n }) => (
           <footer>
-            <div className="content has-text-centered">
+            <div className="content container has-text-centered">
               <p className="is-size-5">
                 <a
                   className="is-medium"

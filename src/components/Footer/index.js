@@ -56,7 +56,7 @@ class Footer extends Component {
                 </a>
               </p>
               <br />
-              © ELTCOIN Project 2017
+              ❤️ ELTCOIN Community Project 2017 ❤️
               <br />
             </div>
             <br />

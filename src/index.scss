@@ -45,3 +45,11 @@ a:hover {
 a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
   background-color: transparentize($grey-light, 0.1);
 }
+
+//Bugfix on iPhone <= 5s
+
+@media only screen and (max-width:320px) {
+  .title.is-size-1 {
+    font-size: 60px !important;
+  }
+}

@@ -42,6 +42,7 @@ a:hover {
   color: transparentize($grey-light, 0.5);
 }
 
+.navbar-link.is-active, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:hover,
 a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
-  background-color: transparentize($grey-light, 0.1);
+  background-color: transparent;
 }

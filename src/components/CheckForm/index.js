@@ -59,7 +59,7 @@ class CheckForm extends Component {
           Your are on the whitelist!
         </p>
         <p style={{ marginTop: '1rem' }}>
-          Please read <a href="https://medium.com/@officialELTCoin/how-to-participate-in-the-eltcoin-token-sale-a44ae97c6c21" target="_blank" rel="noopener noreferrer">
+          Please read <a href="https://medium.com/officialeltcoin/your-moon-mission-awaits-731d7676a678" target="_blank" rel="noopener noreferrer">
           this guide
           </a> to learn how buy ELTCOINs.
         </p>

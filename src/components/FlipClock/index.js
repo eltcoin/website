@@ -72,7 +72,7 @@ class FlipClock extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      countDownDate: moment.utc('2017-10-15 23:59'),
+      countDownDate: moment.utc('2017-10-15 22:59'),
       hours: 0,
       hoursShuffle: true,
       minutes: 0,

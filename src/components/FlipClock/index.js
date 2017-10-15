@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 
 import './index.css';
 
@@ -71,7 +72,7 @@ class FlipClock extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      countDownDate: new Date('Sun Oct 15 2017 22:00:00 GMT').getTime(),
+      countDownDate: moment.utc('2017-10-15 23:59'),
       hours: 0,
       hoursShuffle: true,
       minutes: 0,
@@ -90,7 +91,7 @@ class FlipClock extends Component {
   }
 
   updateTime() {
-    const time = new Date().getTime();
+    const time = moment.utc();
 
     const distance = this.state.countDownDate - time;
 

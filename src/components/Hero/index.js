@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { I18n } from 'react-i18next';
-import FlipClock from '../FlipClock';
 import ParticlesBackground from '../ParticlesBackground';
 import logo from './images/logo.png';
 
@@ -29,11 +28,16 @@ class Hero extends Component {
               <div className="container has-text-centered">
                 <br />
                 <img src={logo} width={350} alt="" />
-                <br />
                 <h1 className="subtitle is-size-2">{t('hero.title')}</h1>
                 <br />
-                <h4 className="subtitle is-size-4">Public sale starting in</h4>
-                <FlipClock />
+                <br />
+                <h4 className="subtitle is-size-4">
+                  <span role="img" aria-label="">🚀</span>{' '}
+                  Our token sale has finally launched{' '}
+                  <span role="img" aria-label="">🚀</span>
+                </h4>
+                <br/>
+                <a href="https://sale.eltcoin.tech" className="button">Visit our Sale website</a>
               </div>
             </div>
           </section>

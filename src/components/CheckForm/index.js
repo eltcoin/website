@@ -54,13 +54,17 @@ class CheckForm extends Component {
   renderMessage() {
     if (this.state.validStatus === true) {
       return (
-        <span className="tag is-success is-large">
-          Your email has been verified, we'll keep you updated!{' '}
-          <span role="img" aria-label="SAD">
-            😉
-          </span>
-          <br />
-        </span>
+        <div>
+        <p className="tag is-success is-large">
+          Your are on the whitelist!
+        </p>
+        <p style={{ marginTop: '1rem' }}>
+          Please read <a href="https://medium.com/@officialELTCoin/how-to-participate-in-the-eltcoin-token-sale-a44ae97c6c21" target="_blank" rel="noopener noreferrer">
+          this guide
+          </a> to learn how buy ELTCOINs.
+        </p>
+        </div>
+
       );
     } else if (this.state.validStatus === false) {
       return (

@@ -28,9 +28,7 @@ class Hero extends Component {
             >
               <div className="container has-text-centered">
                 <br />
-                <img src={logo} width={200} height={200} alt="" />
-                <h1 className="title is-size-1">ELTCOIN</h1>
-                <br />
+                <img src={logo} width={350} alt="" />
                 <br />
                 <h1 className="subtitle is-size-2">{t('hero.title')}</h1>
                 <br />

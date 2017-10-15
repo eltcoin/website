@@ -76,6 +76,11 @@ class CheckForm extends Component {
             </span>
           </span>
           <br />
+          To guarantee your spot, please ensure you complete the form below.
+          <br/>
+          <br/>
+          <a className="button is-danger" href="https://docs.google.com/forms/d/e/1FAIpQLSdaIL0XW0h3HSZAuigPCG-2RoPlxPKaQ8x7ELDyGuuJSe5DvA/viewform" target="_blank" rel="noopener noreferrer" >Here!</a>
+          <br />
           <br />
         </div>
       );

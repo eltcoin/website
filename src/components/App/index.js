@@ -10,6 +10,10 @@ import TokenDetails from '../TokenDetails';
 import Wallets from '../Wallets';
 
 class App extends Component {
+  componentDidMount() {
+    window.Raven.config('https://0ddfcefcf922465488c2dde443f9c9d5@sentry.io/230876').install();
+  }
+
   render() {
     return (
       <div>

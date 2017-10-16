@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import whitePaper from './ELTCOIN MOON PAPER.pdf';
+import whitePaper from './white_paper.pdf';
 
 class Header extends Component {
   render() {
@@ -18,7 +18,7 @@ class Header extends Component {
               rel="noopener noreferrer"
             >
               <span style={{ color: '#fafafa' }}>
-                Our moon paper{' '}
+                Our white paper{' '}
                 <span role="img" aria-label="m00n">
                   🚀🌔
                 </span>

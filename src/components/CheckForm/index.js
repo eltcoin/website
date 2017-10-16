@@ -17,7 +17,7 @@ class CheckForm extends Component {
 
   handleChange(event) {
     const address = event.target.value;
-    const isDisabled = address === '';
+    const isDisabled = !(address.match(/^0x[A-Fa-f0-9]{40}$/));
 
     this.setState({
       address,
@@ -76,6 +76,7 @@ class CheckForm extends Component {
             </span>
           </span>
           <br />
+          <br/>
           To guarantee your spot for the next days, please ensure you complete the form below.
           <br/>
           <br/>

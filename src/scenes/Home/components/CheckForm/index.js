@@ -17,7 +17,7 @@ class CheckForm extends Component {
 
   handleChange(event) {
     const address = event.target.value;
-    const isDisabled = !(address.match(/^0x[A-Fa-f0-9]{40}$/));
+    const isDisabled = !address.match(/^0x[A-Fa-f0-9]{40}$/);
 
     this.setState({
       address,
@@ -55,16 +55,19 @@ class CheckForm extends Component {
     if (this.state.validStatus === true) {
       return (
         <div>
-        <p className="tag is-success is-large">
-          Your are on the whitelist!
-        </p>
-        <p style={{ marginTop: '1rem' }}>
-          Please read <a href="https://medium.com/officialeltcoin/your-moon-mission-awaits-731d7676a678" target="_blank" rel="noopener noreferrer">
-          this guide
-          </a> to learn how buy ELTCOINs.
-        </p>
+          <p className="tag is-success is-large">Your are on the whitelist!</p>
+          <p style={{ marginTop: '1rem' }}>
+            Please read{' '}
+            <a
+              href="https://medium.com/officialeltcoin/your-moon-mission-awaits-731d7676a678"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              this guide
+            </a>{' '}
+            to learn how buy ELTCOINs.
+          </p>
         </div>
-
       );
     } else if (this.state.validStatus === false) {
       return (
@@ -76,11 +79,19 @@ class CheckForm extends Component {
             </span>
           </span>
           <br />
-          <br/>
-          To guarantee your spot for the next days, please ensure you complete the form below.
-          <br/>
-          <br/>
-          <a className="button is-danger" href="https://docs.google.com/forms/d/e/1FAIpQLSdaIL0XW0h3HSZAuigPCG-2RoPlxPKaQ8x7ELDyGuuJSe5DvA/viewform" target="_blank" rel="noopener noreferrer" >Here!</a>
+          <br />
+          To guarantee your spot for the next days, please ensure you complete
+          the form below.
+          <br />
+          <br />
+          <a
+            className="button is-danger"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdaIL0XW0h3HSZAuigPCG-2RoPlxPKaQ8x7ELDyGuuJSe5DvA/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Here!
+          </a>
           <br />
           <br />
         </div>

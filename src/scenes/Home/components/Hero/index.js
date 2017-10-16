@@ -32,12 +32,18 @@ class Hero extends Component {
                 <br />
                 <br />
                 <h4 className="subtitle is-size-4">
-                  <span role="img" aria-label="">🚀</span>{' '}
+                  <span role="img" aria-label="">
+                    🚀
+                  </span>{' '}
                   Our token sale has finally launched{' '}
-                  <span role="img" aria-label="">🚀</span>
+                  <span role="img" aria-label="">
+                    🚀
+                  </span>
                 </h4>
-                <br/>
-                <a href="https://sale.eltcoin.tech" className="button">Visit our Sale website</a>
+                <br />
+                <a href="https://sale.eltcoin.tech" className="button">
+                  Visit our Sale website
+                </a>
               </div>
             </div>
           </section>

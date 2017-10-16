@@ -1,10 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './components/App';
+import { BrowserRouter, Route } from 'react-router-dom';
+import './styles/index.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import ScrollToTop from './components/ScrollToTop';
+import Home from './scenes/Home';
 import registerServiceWorker from './registerServiceWorker';
 
 import './i18n';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <BrowserRouter>
+    <ScrollToTop>
+      <Header />
+      <Route path="/" component={Home} />
+      <Footer />
+    </ScrollToTop>
+  </BrowserRouter>,
+  document.getElementById('root'),
+);
+
 registerServiceWorker();

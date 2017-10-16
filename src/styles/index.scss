@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Open Sans';
-  src: url(fonts/OpenSans-Regular.ttf);
+  src: url(../fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(fonts/OpenSans-Bold.ttf);
+  src: url(../fonts/OpenSans-Bold.ttf);
   font-weight: bold;
 }
 
@@ -13,6 +13,7 @@
 
 $family-sans-serif: "Open Sans", sans-serif;
 $primary: $grey-light;
+$link: $grey-light;
 $family-primary: $family-sans-serif;
 $size-1: 4rem;
 $size-2: 2.5rem;

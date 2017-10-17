@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { I18n } from 'react-i18next';
-import ParticlesBackground from '../ParticlesBackground';
 import logo from './images/logo.png';
 
 class Hero extends Component {
@@ -16,7 +15,6 @@ class Hero extends Component {
               margin: 'auto',
             }}
           >
-            <ParticlesBackground />
             <div
               className="hero-body"
               style={{

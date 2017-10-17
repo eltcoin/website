@@ -9,9 +9,11 @@ import Wallets from './components/Wallets';
 
 class Home extends Component {
   componentDidMount() {
-    window.Raven
-      .config('https://0ddfcefcf922465488c2dde443f9c9d5@sentry.io/230876')
-      .install();
+    if (process.env.NODE_ENV === 'production') {
+      window.Raven
+        .config('https://0ddfcefcf922465488c2dde443f9c9d5@sentry.io/230876')
+        .install();
+    }
   }
 
   render() {

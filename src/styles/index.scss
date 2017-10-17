@@ -9,9 +9,9 @@
   font-weight: bold;
 }
 
-@import "bulma/sass/utilities/initial-variables";
+@import 'bulma/sass/utilities/initial-variables';
 
-$family-sans-serif: "Open Sans", sans-serif;
+$family-sans-serif: 'Open Sans', sans-serif;
 $primary: $grey-light;
 $link: $grey-light;
 $family-primary: $family-sans-serif;
@@ -19,7 +19,7 @@ $size-1: 4rem;
 $size-2: 2.5rem;
 $text: $white-bis;
 
-@import "bulma/bulma";
+@import 'bulma/bulma';
 
 body {
   background-color: $black;
@@ -39,17 +39,27 @@ body {
   box-shadow: none;
 }
 
+.notification {
+  padding: 1rem 1.5rem;
+}
+
 a:hover {
   color: transparentize($grey-light, 0.5);
 }
 
-.navbar-link.is-active, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:hover,
-a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
+.navbar-link.is-active,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:hover,
+a.navbar-item:hover,
+a.navbar-item.is-active,
+.navbar-link:hover,
+.navbar-link.is-active {
   background-color: transparent;
 }
 
 // Bugfix on iPhone <= 5s
-@media only screen and (max-width:320px) {
+@media only screen and (max-width: 320px) {
   .title.is-size-1 {
     font-size: 60px !important;
   }

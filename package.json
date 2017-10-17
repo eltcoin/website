@@ -15,7 +15,6 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-i18next": "^6.0.6",
-    "react-particles-js": "^2.0.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14"
   },
@@ -37,7 +36,7 @@
     "extends": "react-app"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
+    "src/**/*.{js,jsx,json,scss}": [
       "prettier --single-quote --trailing-comma all --write",
       "git add"
     ]

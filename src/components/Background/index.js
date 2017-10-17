@@ -413,11 +413,10 @@ class Background extends Component {
     this.drawStars();
     this.moveStars();
 
-    this.drawSpeed();
-
     this.clearShipBg();
 
-    if (window.innerWidth >= 700) {
+    if (window.innerWidth >= 1024) {
+      this.drawSpeed();
       this.drawRocketships();
     }
 

@@ -44,9 +44,17 @@ class Hero extends Component {
           max="300000"
           style={{ maxWidth: '60rem', alignSelf: 'center' }}
         />
+        <p className="is-size-5">
+          Only{' '}
+          <b>
+            {Number(RATE_CHANGE_THRESHOLD - this.state.tokensSold).toFixed()}
+          </b>{' '}
+          remaining ELTCOIN this round
+        </p>
+        <br />
         <p>
-          {this.state.tokensSold} / 300000 tokens sold for this round at ${this.state.currentPrice}{' '}
-          / ELTCOIN
+          Current price: <b>${this.state.currentPrice}</b> / Next price:{' '}
+          <b>${this.state.currentPrice + 0.01}</b>
         </p>
       </div>
     );

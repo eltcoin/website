@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Certificate from './components/Certficate';
-import CheckForm from './components/CheckForm';
 import Faq from './components/Faq';
 import Hero from './components/Hero';
 import TokenDetails from './components/TokenDetails';
@@ -21,8 +20,6 @@ class Home extends Component {
       <div>
         <Hero />
         <TokenDetails />
-        <br />
-        <CheckForm />
         <br />
         <Wallets />
         <Faq />

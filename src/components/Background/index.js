@@ -449,7 +449,7 @@ class Background extends Component {
             maxWidth: '30rem',
           }}
         >
-          Have you tried to press your spacebar?
+          Have you tried to <b>HODL</b> your spacebar?
         </div>
       </div>
     );

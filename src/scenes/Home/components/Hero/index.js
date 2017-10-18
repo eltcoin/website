@@ -2,7 +2,56 @@ import React, { Component } from 'react';
 import { I18n } from 'react-i18next';
 import logo from './images/logo.png';
 
+const RATE_CHANGE_THRESHOLD = 300000;
+
 class Hero extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      tokensSold: 0,
+    };
+
+    this.renderSaleProgress = this.renderSaleProgress.bind(this);
+  }
+
+  componentDidMount() {
+    fetch('https://eltcoin-api.now.sh/api/v1/sale/tokens_sold')
+      .then(data => data.json())
+      .then(json => {
+        let tokensSold = json.value;
+        let tokensSoldCurrentRound = tokensSold % RATE_CHANGE_THRESHOLD;
+        let currentPrice =
+          0.01 + 0.01 * Math.floor(tokensSold / RATE_CHANGE_THRESHOLD);
+
+        this.setState({
+          currentPrice,
+          tokensSold: tokensSoldCurrentRound,
+        });
+      });
+  }
+
+  renderSaleProgress() {
+    if (this.state.tokensSold === 0) {
+      return;
+    }
+
+    return (
+      <div>
+        <progress
+          class="progress is-success"
+          value={this.state.tokensSold}
+          max="300000"
+          style={{ maxWidth: '60rem', alignSelf: 'center' }}
+        />
+        <p>
+          {this.state.tokensSold} / 300000 tokens sold for this round at ${this.state.currentPrice}{' '}
+          / ELTCOIN
+        </p>
+      </div>
+    );
+  }
+
   render() {
     return (
       <I18n ns="translations">
@@ -23,21 +72,22 @@ class Hero extends Component {
                 justifyContent: 'center',
               }}
             >
-              <div className="container has-text-centered">
+              <div
+                className="container"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                }}
+              >
                 <br />
                 <img src={logo} width={350} alt="" />
                 <h1 className="subtitle is-size-2">{t('hero.title')}</h1>
                 <br />
                 <br />
-                <h4 className="subtitle is-size-4">
-                  <span role="img" aria-label="">
-                    🚀
-                  </span>{' '}
-                  Our token sale has finally launched{' '}
-                  <span role="img" aria-label="">
-                    🚀
-                  </span>
-                </h4>
+                <h4 className="subtitle is-size-4">Public sale has opened!</h4>
+                {this.renderSaleProgress()}
                 <br />
                 <a href="https://sale.eltcoin.tech" className="button">
                   Visit our Sale website

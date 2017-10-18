@@ -38,7 +38,7 @@ class Footer extends Component {
                 </a>
                 <a
                   className="icon is-medium"
-                  href="https://bitcointalk.org/index.php?topic=2241418.0"
+                  href="https://bitcointalk.org/index.php?topic=2259761.0"
                   style={{ margin: '.5em' }}
                   target="_blank"
                   rel="noopener noreferrer"

@@ -13,6 +13,9 @@
     <a href="https://travis-ci.org/ELTCOIN/website">
       <img src="https://travis-ci.org/ELTCOIN/website.svg?branch=master" />
     </a>
+    <a href="https://greenkeeper.io">
+      <img src="https://badges.greenkeeper.io/ELTCOIN/website.svg" />
+    </a>
   </p>
   <p>
     <a href="https://codeclimate.com/github/ELTCOIN/website/maintainability">

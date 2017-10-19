@@ -10,6 +10,11 @@
     The Ethereum Limited Total Coin
   </p>
   <p>
+    <a href="https://travis-ci.org/ELTCOIN/website">
+      <img src="https://travis-ci.org/ELTCOIN/website.svg?branch=master" />
+    </a>
+  </p>
+  <p>
     <a href="https://www.eltcoin.tech">
       Launch App
     </a>

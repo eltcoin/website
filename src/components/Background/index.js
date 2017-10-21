@@ -125,7 +125,7 @@ class Background extends Component {
     const { c, ctx } = this.state;
 
     ctx.rect(0, 0, c.width, c.height);
-    ctx.fillStyle = '#282a3a';
+    ctx.fillStyle = '#0a0a0a';
     ctx.fill();
   }
 
@@ -415,7 +415,7 @@ class Background extends Component {
 
     this.clearShipBg();
 
-    if (window.innerWidth >= 1024) {
+    if (window.innerWidth >= 1024 && this.props.drawRocketships) {
       this.drawSpeed();
       this.drawRocketships();
     }

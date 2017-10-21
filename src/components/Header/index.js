@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter, NavLink } from 'react-router-dom';
 
 import moonPaper from './moon_paper.pdf';
 
@@ -25,6 +26,35 @@ class Header extends Component {
 
           <div className="navbar-menu">
             <div className="navbar-end">
+              {this.props.location.pathname === '/store' ? (
+                <NavLink
+                  exact
+                  to="/"
+                  className="navbar-item"
+                  activeClassName="is-active"
+                  onClick={this.onMenuClick}
+                >
+                  <span>Home</span>
+                </NavLink>
+              ) : (
+                <NavLink
+                  exact
+                  to="/store"
+                  className="navbar-item"
+                  activeClassName="is-active"
+                  onClick={this.onMenuClick}
+                >
+                  <span
+                    role="img"
+                    aria-label="m00n"
+                    style={{ marginRight: '.5rem' }}
+                  >
+                    🤙
+                  </span>
+                  <span>Swag store</span>
+                </NavLink>
+              )}
+
               <a
                 className="navbar-item"
                 href="https://docs.google.com/document/d/1DIjdWiVWjADiwwgGcp7Trk_Zr_xGiRBxfJizQaI_POY/"
@@ -63,4 +93,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);

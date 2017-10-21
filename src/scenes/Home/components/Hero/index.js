@@ -39,7 +39,7 @@ class Hero extends Component {
     return (
       <div>
         <progress
-          class="progress is-success"
+          className="progress is-success"
           value={this.state.tokensSold}
           max="300000"
           style={{ maxWidth: '60rem', alignSelf: 'center' }}

@@ -444,7 +444,7 @@ class Background extends Component {
             opacity: this.state.showNotification ? 1 : 0,
             position: 'absolute',
             top: '1rem',
-            zIndex: 2,
+            zIndex: 3,
             color: '#a0a0a0',
             maxWidth: '30rem',
           }}

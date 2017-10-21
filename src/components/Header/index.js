@@ -3,38 +3,62 @@ import React, { Component } from 'react';
 import moonPaper from './moon_paper.pdf';
 
 class Header extends Component {
+  onMenuClick() {
+    const menuButton = document.querySelector('.burger');
+    const menu = document.querySelector('.navbar-menu');
+
+    menuButton.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
+  }
+
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        style={{ backgroundColor: 'inherit', zIndex: 2 }}
-      >
-        <div className="container">
-          <div className="navbar-end">
-            <a
-              className="navbar-item"
-              href="https://docs.google.com/document/d/1DIjdWiVWjADiwwgGcp7Trk_Zr_xGiRBxfJizQaI_POY/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span style={{ color: '#fafafa' }}>Our white paper </span>
-            </a>
-            <a
-              className="navbar-item"
-              href={moonPaper}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span style={{ color: '#fafafa' }}>
-                Our moon paper{' '}
-                <span role="img" aria-label="m00n">
-                  🚀🌔
-                </span>
-              </span>
-            </a>
+      <div className="container">
+        <nav className="navbar is-transparent">
+          <div className="navbar-brand">
+            <div className="navbar-burger burger" onClick={this.onMenuClick}>
+              <span />
+              <span />
+              <span />
+            </div>
           </div>
-        </div>
-      </nav>
+
+          <div className="navbar-menu">
+            <div className="navbar-end">
+              <a
+                className="navbar-item"
+                href="https://docs.google.com/document/d/1DIjdWiVWjADiwwgGcp7Trk_Zr_xGiRBxfJizQaI_POY/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
+                  role="img"
+                  aria-label="m00n"
+                  style={{ marginRight: '.5rem' }}
+                >
+                  📄
+                </span>
+                <span>White paper</span>
+              </a>
+              <a
+                className="navbar-item"
+                href={moonPaper}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
+                  role="img"
+                  aria-label="m00n"
+                  style={{ marginRight: '.5rem' }}
+                >
+                  🌔
+                </span>
+                <span>Moon paper</span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
     );
   }
 }

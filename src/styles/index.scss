@@ -43,7 +43,8 @@ body {
   padding: 1rem 1.5rem;
 }
 
-a:hover {
+a:hover,
+a.navbar-item:hover {
   color: transparentize($grey-light, 0.5);
 }
 
@@ -56,6 +57,35 @@ a.navbar-item.is-active,
 .navbar-link:hover,
 .navbar-link.is-active {
   background-color: transparent;
+}
+
+.navbar {
+  .navbar-item {
+    color: $grey-light;
+  }
+}
+
+.navbar-burger {
+  color: $primary;
+}
+
+@media only screen and (min-width: $desktop) {
+  .navbar {
+    background-color: inherit;
+    color: $white;
+
+    .navbar-item {
+      color: $white-bis;
+    }
+  }
+}
+
+@media only screen and (max-width: $desktop) {
+  .navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
 }
 
 // Bugfix on iPhone <= 5s

@@ -39,7 +39,7 @@ class Background extends Component {
         this.setState({
           showNotification: false,
         });
-      }, 4000);
+      }, 2000);
     }, 2000);
   }
 

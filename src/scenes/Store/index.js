@@ -4,7 +4,6 @@ import logo from './images/logo.png';
 import hoodClassic from './images/hood-classic.png';
 import hoodHodl from './images/hood-hodl.png';
 import hoodHodler from './images/hood-hodler.png';
-import hoodMoon from './images/hood-moon.png';
 import hoodWolves from './images/hood-wolves.png';
 
 import teeClassic from './images/tee-classic.png';
@@ -48,14 +47,9 @@ class Store extends Component {
             {this.renderImageColumn(teeHodler, 'Hodler tee-shirt', 10000)}
           </div>
           <div className="columns">
-            {this.renderImageColumn(hoodMoon, 'Astronaut hoodie', 20000)}
             {this.renderImageColumn(teeMoon, 'Astronaut tee-shirt', 10000)}
             {this.renderImageColumn(hoodWolves, 'Wolves hoodie', 20000)}
-          </div>
-          <div className="columns">
-            <div className="column" />
             {this.renderImageColumn(teeWolves, 'Wolves tee-shirt', 10000)}
-            <div className="column" />
           </div>
           <br />
         </section>

@@ -38,23 +38,23 @@ class Store extends Component {
         </section>
         <section className="container has-text-centered">
           <div className="columns">
-            {this.renderImageColumn(hoodClassic, 'Classic hoodie', 5000)}
-            {this.renderImageColumn(teeClassic, 'Classic tee-shirt', 2500)}
-            {this.renderImageColumn(hoodHodl, 'Hodl hoodie', 5000)}
+            {this.renderImageColumn(hoodClassic, 'Classic hoodie', 9000)}
+            {this.renderImageColumn(teeClassic, 'Classic tee-shirt', 5000)}
+            {this.renderImageColumn(hoodHodl, 'Hodl hoodie', 9000)}
           </div>
           <div className="columns">
-            {this.renderImageColumn(teeHodl, 'Hodl tee-shirt', 2500)}
-            {this.renderImageColumn(hoodHodler, 'Hodler hoodie', 5000)}
-            {this.renderImageColumn(teeHodler, 'Hodler tee-shirt', 2500)}
+            {this.renderImageColumn(teeHodl, 'Hodl tee-shirt', 5000)}
+            {this.renderImageColumn(hoodHodler, 'Hodler hoodie', 9000)}
+            {this.renderImageColumn(teeHodler, 'Hodler tee-shirt', 5000)}
           </div>
           <div className="columns">
-            {this.renderImageColumn(hoodMoon, 'Astronaut hoodie', 5000)}
-            {this.renderImageColumn(teeMoon, 'Astronaut tee-shirt', 2500)}
-            {this.renderImageColumn(hoodWolves, 'Wolves hoodie', 5000)}
+            {this.renderImageColumn(hoodMoon, 'Astronaut hoodie', 9000)}
+            {this.renderImageColumn(teeMoon, 'Astronaut tee-shirt', 5000)}
+            {this.renderImageColumn(hoodWolves, 'Wolves hoodie', 9000)}
           </div>
           <div className="columns">
             <div className="column" />
-            {this.renderImageColumn(teeWolves, 'Wolves tee-shirt', 2500)}
+            {this.renderImageColumn(teeWolves, 'Wolves tee-shirt', 5000)}
             <div className="column" />
           </div>
           <br />

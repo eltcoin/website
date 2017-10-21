@@ -71,7 +71,11 @@ a.navbar-item.is-active,
 }
 
 .navbar-burger {
-  color: $primary;
+  color: #0a0a0a;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.01);
+  }
 }
 
 @media only screen and (min-width: $desktop) {

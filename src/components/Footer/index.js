@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { I18n } from 'react-i18next';
+import loveEmoji from './images/heart.svg';
 
 class Footer extends Component {
   render() {
@@ -56,7 +57,19 @@ class Footer extends Component {
                 </a>
               </p>
               <br />
-              ❤️ ELTCOIN Community Project 2017 ❤️
+              <img
+                src={loveEmoji}
+                alt=""
+                width={16}
+                style={{ marginRight: '.5rem' }}
+              />
+              <span>ELTCOIN Community Project {new Date().getFullYear()}</span>
+              <img
+                src={loveEmoji}
+                alt=""
+                width={16}
+                style={{ marginLeft: '.5rem' }}
+              />
               <br />
             </div>
             <br />

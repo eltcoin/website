@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import { withRouter, NavLink } from 'react-router-dom';
 
 import moonPaper from './moon_paper.pdf';
-
+import moonEmoji from './images/moon.svg';
+import paperEmoji from './images/paper.svg';
+import swagEmoji from './images/swag.svg';
+import whiteLogo from './images/white_logo.png';
+import blackLogo from './images/black_logo.png';
 class Header extends Component {
   onMenuClick() {
     const menuButton = document.querySelector('.burger');
@@ -12,11 +16,22 @@ class Header extends Component {
     menu.classList.toggle('is-active');
   }
 
+  renderLogo() {
+    if (window.innerWidth > 1024) {
+      return <img src={whiteLogo} alt="" />;
+    }
+
+    return <img src={blackLogo} alt="" />;
+  }
+
   render() {
     return (
       <div className="container">
         <nav className="navbar is-transparent">
           <div className="navbar-brand">
+            <NavLink className="navbar-item" to="/">
+              {this.renderLogo()}
+            </NavLink>
             <div className="navbar-burger burger" onClick={this.onMenuClick}>
               <span />
               <span />
@@ -26,48 +41,33 @@ class Header extends Component {
 
           <div className="navbar-menu">
             <div className="navbar-end">
-              {this.props.location.pathname === '/store' ? (
-                <NavLink
-                  exact
-                  to="/"
-                  className="navbar-item"
-                  activeClassName="is-active"
-                  onClick={this.onMenuClick}
-                >
-                  <span>Home</span>
-                </NavLink>
-              ) : (
-                <NavLink
-                  exact
-                  to="/store"
-                  className="navbar-item"
-                  activeClassName="is-active"
-                  onClick={this.onMenuClick}
-                >
-                  <span
-                    role="img"
-                    aria-label="m00n"
-                    style={{ marginRight: '.5rem' }}
-                  >
-                    🤙
-                  </span>
-                  <span>Swag store</span>
-                </NavLink>
-              )}
-
+              <NavLink
+                exact
+                to="/store"
+                className="navbar-item"
+                activeClassName="is-active"
+                onClick={this.onMenuClick}
+              >
+                <img
+                  src={swagEmoji}
+                  alt=""
+                  width={18}
+                  style={{ marginRight: '.5rem' }}
+                />
+                <span>Swag store</span>
+              </NavLink>
               <a
                 className="navbar-item"
                 href="https://docs.google.com/document/d/1DIjdWiVWjADiwwgGcp7Trk_Zr_xGiRBxfJizQaI_POY/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span
-                  role="img"
-                  aria-label="m00n"
+                <img
+                  src={paperEmoji}
+                  alt=""
+                  width={18}
                   style={{ marginRight: '.5rem' }}
-                >
-                  📄
-                </span>
+                />
                 <span>White paper</span>
               </a>
               <a
@@ -76,13 +76,12 @@ class Header extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span
-                  role="img"
-                  aria-label="m00n"
+                <img
+                  src={moonEmoji}
+                  alt=""
+                  width={18}
                   style={{ marginRight: '.5rem' }}
-                >
-                  🌔
-                </span>
+                />
                 <span>Moon paper</span>
               </a>
             </div>

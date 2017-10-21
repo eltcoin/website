@@ -48,15 +48,20 @@ a.navbar-item:hover {
   color: transparentize($grey-light, 0.5);
 }
 
-.navbar-link.is-active,
 .navbar-link:hover,
-a.navbar-item.is-active,
 a.navbar-item:hover,
 a.navbar-item:hover,
-a.navbar-item.is-active,
-.navbar-link:hover,
-.navbar-link.is-active {
+.navbar-link:hover {
   background-color: transparent;
+  color: transparentize($grey-light, 0.5);
+}
+
+.navbar-link.is-active,
+a.navbar-item.is-active,
+a.navbar-item.is-active,
+.navbar-link.is-active {
+  color: $white-bis;
+  font-weight: bold;
 }
 
 .navbar {
@@ -85,6 +90,14 @@ a.navbar-item.is-active,
     position: absolute;
     width: 100%;
     z-index: 2;
+
+    .navbar-item {
+      color: $black;
+
+      &:hover {
+        color: transparentize($black, 0.5);
+      }
+    }
   }
 }
 

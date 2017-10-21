@@ -21,6 +21,24 @@ class Footer extends Component {
                 </a>
                 <a
                   className="is-medium"
+                  href="https://www.facebook.com/eltcoin.community/"
+                  style={{ margin: '.5em' }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa fa-2x fa-facebook" />
+                </a>
+                <a
+                  className="is-medium"
+                  href="https://www.instagram.com/elt.coin/"
+                  style={{ margin: '.5em' }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa fa-2x fa-instagram" />
+                </a>
+                <a
+                  className="is-medium"
                   href="https://twitter.com/officialELTCoin"
                   style={{ margin: '.5em' }}
                   target="_blank"

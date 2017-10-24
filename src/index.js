@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from 'react-router-dom';
 import './styles/index.css';
 import Background from './components/Background';
 import Footer from './components/Footer';
@@ -19,15 +24,18 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 ReactDOM.render(
-  <BrowserRouter>
+  <Router>
     <ScrollToTop>
       <Background />
       <Header />
-      <Route exact path="/" component={Home} />
-      <Route path="/store" component={Store} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/store" component={Store} />
+        <Redirect from="*" to="/" />
+      </Switch>
       <Footer />
     </ScrollToTop>
-  </BrowserRouter>,
+  </Router>,
   document.getElementById('root'),
 );
 

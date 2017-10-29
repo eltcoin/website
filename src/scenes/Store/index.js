@@ -32,6 +32,7 @@ class Store extends Component {
       <div>
         <section className="hero">
           <div className="container has-text-centered">
+            <br />
             <img src={logo} width={250} alt="" />
           </div>
         </section>

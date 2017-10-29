@@ -1,29 +1,28 @@
-import React, { Component } from 'react';
-import { I18n } from 'react-i18next';
+import React from 'react';
 
-class Faq extends Component {
-  render() {
-    return (
-      <I18n ns="translations">
-        {(t, { i18n }) => (
-          <div className="card container has-text-centered">
-            <div className="card-content">
-              <p className="title is-size-1">{t('faq.title')}</p>
-              <br />
-              <p className="subtitle is-size-4">{t('faq.what.title')}</p>
-              <p className="is-size-5">{t('faq.what.description')}</p>
-              <br />
-              <p className="subtitle is-size-4">{t('faq.why.title')}</p>
-              <p className="is-size-5">{t('faq.why.description')}</p>
-              <br />
-              <p className="subtitle is-size-4">{t('faq.howMany.title')}</p>
-              <p className="is-size-5">{t('faq.howMany.description')}</p>
-            </div>
-          </div>
-        )}
-      </I18n>
-    );
-  }
-}
+const Faq = () => {
+  return (
+    <div className="card container has-text-centered">
+      <div className="card-content">
+        <p className="title is-size-1">FAQ</p>
+        <br />
+        <p className="subtitle is-size-4">What is ELTCOIN?</p>
+        <p className="is-size-5">
+          ELTCOIN seeks to be the preeminent ERC20 token with a limited supply.
+        </p>
+        <br />
+        <p className="subtitle is-size-4">Why create ELTCOIN?</p>
+        <p className="is-size-5">
+          To provide a provably fair currency on the Ethereum Network.
+        </p>
+        <br />
+        <p className="subtitle is-size-4">How many ELTCOIN are there?</p>
+        <p className="is-size-5">
+          The cap of ELTCOIN is 100,000,000 and can never be altered or modified
+        </p>
+      </div>
+    </div>
+  );
+};
 
 export default Faq;

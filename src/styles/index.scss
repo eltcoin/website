@@ -21,6 +21,8 @@ $text: $white-bis;
 
 @import 'bulma/bulma';
 
+@import 'bulma-timeline/timeline';
+
 body {
   background-color: $black;
 }
@@ -39,9 +41,7 @@ body {
   box-shadow: none;
 }
 
-.notification {
-  padding: 1rem 1.5rem;
-}
+// Navbar
 
 a:hover,
 a.navbar-item:hover {
@@ -102,12 +102,33 @@ a.navbar-item.is-active,
         color: transparentize($black, 0.5);
       }
     }
+
+    .navbar-link.is-active,
+    a.navbar-item.is-active,
+    a.navbar-item.is-active,
+    .navbar-link.is-active {
+      color: $black;
+      font-weight: bold;
+    }
   }
+}
+
+.timeline.is-centered .timeline-content {
+  text-align: left;
+  width: 100%;
+}
+
+.timeline .timeline-item .timeline-marker {
+  left: -0.45em;
+}
+
+.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker.is-icon {
+  right: -0.7rem;
 }
 
 // Bugfix on iPhone <= 5s
 @media only screen and (max-width: 320px) {
   .title.is-size-1 {
-    font-size: 60px !important;
+    font-size: 50px !important;
   }
 }

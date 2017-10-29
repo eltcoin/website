@@ -50,7 +50,9 @@ const Roadmap = () => {
                   ○ <i>ELTWallet</i> iOS app launch
                 </p>
                 <p>○ Harpoon contract intro</p>
-                <p>○ ELTCOIN HOLDER brand store opening</p>
+                <p>
+                  ○ ELTCOIN <b>HODLER</b> brand store opening
+                </p>
               </div>
             </li>
             <li className="timeline-item is-primary">
@@ -91,8 +93,8 @@ const Roadmap = () => {
               <div className="timeline-content">
                 <p className="heading">Q3 2018 - "Phase 2"</p>
                 <p>
-                  ○ White paper released for <i>DeadLetters</i>, a Location
-                  enabled, P2P sales & exchange DAO
+                  ○ White paper released for <i>DeadLetters</i>;<br /> a
+                  Location enabled, P2P sales & exchange DAO
                 </p>
                 <p>
                   ○ <i>ELTCLUB</i> dApp beta launch

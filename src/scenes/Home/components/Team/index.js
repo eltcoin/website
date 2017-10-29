@@ -30,19 +30,23 @@ class Team extends Component {
             <br />
             <div className="columns is-multiline is-mobile">
               <div className="column is-one-third-tablet is-half-mobile">
-                {this.renderTeamMember('Adrian', 'Head of Staff', Adrian)}
+                {this.renderTeamMember('Adrian P', 'Head of Staff', Adrian)}
               </div>
               <div className="column is-one-third-tablet is-half-mobile">
-                {this.renderTeamMember('Dan', 'Head of Design', Dan)}
+                {this.renderTeamMember('Dan T', 'Head of Design', Dan)}
               </div>
               <div className="column is-one-third-tablet is-half-mobile">
-                {this.renderTeamMember('Ivan', 'Fintech advisor', Ivan)}
+                {this.renderTeamMember('Ivan S.W', 'Fintech advisor', Ivan)}
               </div>
               <div className="column is-half-tablet is-half-mobile">
-                {this.renderTeamMember('Oliver H.', 'Founder', Oliver)}
+                {this.renderTeamMember('Oli H', 'Founder & Developer', Oliver)}
               </div>
               <div className="column is-half-tablet is-one-desktop">
-                {this.renderTeamMember('Victor', 'Head of Engineering', Victor)}
+                {this.renderTeamMember(
+                  'Victor F',
+                  'Head of Engineering',
+                  Victor,
+                )}
               </div>
             </div>
           </div>

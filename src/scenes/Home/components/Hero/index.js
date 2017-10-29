@@ -36,7 +36,7 @@ class Hero extends Component {
         tokensSoldCurrentRound = tokensSold % RATE_CHANGE_THRESHOLD;
         currentPrice =
           0.01 + 0.01 * Math.floor(tokensSold / RATE_CHANGE_THRESHOLD);
-        fetch('http://localhost:5000/api/v1/unlockTime/timestamps')
+        fetch('https://eltcoin-api.now.sh/api/v1/unlockTime/timestamps')
           .then(timestamps => timestamps.json())
           .then(timestamps => {
             let _currentTime = timestamps.currentTime;
@@ -52,9 +52,6 @@ class Hero extends Component {
                 this.renderUnlockCountdownTimer();
               },
             );
-            console.dir(this.state, {
-              depth: null,
-            });
           });
       });
   }

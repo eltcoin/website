@@ -17,13 +17,11 @@ const Roadmap = () => {
               </div>
               <div className="timeline-content">
                 <p className="heading">October 2017 - "Foundation"</p>
-                <p>○ Token launch</p>
-                <p>○ Airdrop distribution</p>
-                <p>○ ELTCOIN e-commerce store beta launch</p>
-                <p>○ Luxury e-commerce partner announcement</p>
-                <p>○ Website UI/UX update</p>
-                <p>○ Exchange dates release</p>
-                <p>○ Exchange partners announcement</p>
+                <p>○ Token launches</p>
+                <p>○ AIRDROP distribution completed</p>
+                <p>○ ELTCOIN E-Commerce store beta launches</p>
+                <p>○ Luxury E-Commerce partner announced</p>
+                <p>○ Exchange date released</p>
               </div>
             </li>
             <li className="timeline-item is-primary">
@@ -32,10 +30,12 @@ const Roadmap = () => {
                 <p className="heading">
                   After November 1st 2017 - "Constitution"
                 </p>
-                <p>○ Token unlock</p>
+                <p>○ Token unlocks</p>
                 <p>○ Exchange partner launch</p>
-                <p>○ "ELTWallet" iOS app preview</p>
-                <p>○ PoS interest funds (10% supply) locks Jan 2018</p>
+                <p>
+                  ○ <i>ELTWallet</i> iOS app preview
+                </p>
+                <p>○ PoS interest funds (10% supply) locks until Jan 2018</p>
                 <p>○ PoS community driven interest policy adoption</p>
                 <p>○ ELTCOIN HODLER brand store pre-orders opening</p>
               </div>
@@ -46,8 +46,10 @@ const Roadmap = () => {
                 <p className="heading">
                   November / December 2017 - "Groundwork"
                 </p>
-                <p>○ "ELTWallet" iOS app launch</p>
-                <p>○ Harpoon contract introduction</p>
+                <p>
+                  ○ <i>ELTWallet</i> iOS app launch
+                </p>
+                <p>○ Harpoon contract intro</p>
                 <p>○ ELTCOIN HOLDER brand store opening</p>
               </div>
             </li>
@@ -58,16 +60,18 @@ const Roadmap = () => {
                 <p>
                   ○ Special announcement for <b>HODLR</b>s
                 </p>
-                <p>○ PoS faucet dAPP preview</p>
+                <p>○ PoS interest faucet dAPP preview</p>
               </div>
             </li>
             <li className="timeline-item is-primary">
               <div className="timeline-marker is-primary" />
               <div className="timeline-content">
                 <p className="heading">Q1 2018 - "Evolution"</p>
-                <p>○ "ELTWallet" Android app beta</p>
+                <p>
+                  ○ <i>ELTWallet</i> Android app beta
+                </p>
                 <p>○ PoS interest funds unlock and dApp launch</p>
-                <p>○ E-commerce partners program launch</p>
+                <p>○ E-Commerce partner program launches</p>
                 <p>○ ELTCOIN/Fiat bridge announcement</p>
                 <p>○ Regulated fiat to crypto partners announcement</p>
               </div>
@@ -76,8 +80,10 @@ const Roadmap = () => {
               <div className="timeline-marker is-primary" />
               <div className="timeline-content">
                 <p className="heading">Q2 2018 - "Foodchain"</p>
-                <p>○ ELTCOIN dApp payments and staking SDK launch</p>
-                <p>○ Roadmap for P2P lending DAO "ELTCLUB"</p>
+                <p>○ ELTCOIN dApp payments SDK launches</p>
+                <p>
+                  ○ Roadmap for P2P lending DAO <i>ELTCLUB</i>
+                </p>
               </div>
             </li>
             <li className="timeline-item is-primary">
@@ -85,21 +91,30 @@ const Roadmap = () => {
               <div className="timeline-content">
                 <p className="heading">Q3 2018 - "Phase 2"</p>
                 <p>
-                  ○ White paper for "DeadLetters" - a GPS enabled distributed
-                  P2P sales DAO
+                  ○ White paper released for <i>DeadLetters</i>, a Location
+                  enabled, P2P sales & exchange DAO
                 </p>
-                <p>○ "ELTCLUB" dApp beta launch</p>
+                <p>
+                  ○ <i>ELTCLUB</i> dApp beta launch
+                </p>
               </div>
             </li>
             <li className="timeline-item is-primary">
               <div className="timeline-marker is-primary" />
               <div className="timeline-content">
                 <p className="heading">Q4 2018 - "Realisation"</p>
-                <p>○ "ELTCLUB" dApp launch</p>
-                <p>○ "ELTCelerator" program launch</p>
-                <p>○ "DeadLetters" dApp beta launch</p>
                 <p>
-                  ○ "ELTCARD" announcement with preview & early access program
+                  ○ <i>ELTCLUB</i> dApp launch
+                </p>
+                <p>
+                  ○ <i>ELTCelerator</i> program launch
+                </p>
+                <p>
+                  ○ <i>DeadLetters</i> dApp beta launch
+                </p>
+                <p>
+                  ○ <i>ELTCARD</i> announcement with preview & early access
+                  program
                 </p>
               </div>
             </li>
@@ -107,8 +122,12 @@ const Roadmap = () => {
               <div className="timeline-marker is-primary" />
               <div className="timeline-content">
                 <p className="heading">Q1 2019 and beyond - "Phase 3"</p>
-                <p>○ "DeadLetters" app launch</p>
-                <p>○ "ELTCARD" launch</p>
+                <p>
+                  ○ <i>DeadLetters</i> app launch
+                </p>
+                <p>
+                  ○ <i>ELTCARD</i> launch
+                </p>
               </div>
             </li>
             <li className="timeline-header">

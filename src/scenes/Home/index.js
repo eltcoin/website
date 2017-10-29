@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-
-import Certificate from './components/Certficate';
 import Faq from './components/Faq';
 import Hero from './components/Hero';
+import Roadmap from './components/Roadmap';
+import Team from './components/Team';
 import TokenDetails from './components/TokenDetails';
-import Wallets from './components/Wallets';
 
 class Home extends Component {
   componentDidMount() {
@@ -20,11 +19,10 @@ class Home extends Component {
       <div>
         <Hero />
         <TokenDetails />
-        <br />
-        <Wallets />
+        <Roadmap />
+        <Team />
         <Faq />
         <br />
-        <Certificate />
       </div>
     );
   }

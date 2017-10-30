@@ -9,19 +9,50 @@ const Roadmap = () => {
           <br />
           <ul className="timeline is-centered">
             <li className="timeline-header">
-              <span className="tag is-medium is-primary">Start</span>
+              <span className="tag is-medium is-primary">
+                <b>ELTCEPTION</b>
+              </span>
             </li>
-            <li className="timeline-item is-primary">
+            <li
+              className="timeline-item is-primary"
+              onMouseEnter={this.handleHover}
+              onMouseLeave={this.handleHover}
+            >
               <div className="timeline-marker is-success is-icon">
                 <i className="fa fa-check" />
               </div>
               <div className="timeline-content">
                 <p className="heading">October 2017 - "Foundation"</p>
-                <p>○ Token launches</p>
-                <p>○ AIRDROP distribution completed</p>
-                <p>○ ELTCOIN E-Commerce store beta launches</p>
-                <p>○ Luxury E-Commerce partner announced</p>
-                <p>○ Exchange date released</p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  Token launches
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  AIRDROP distribution completed
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  ELTCOIN E-Commerce store beta launches
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  Luxury E-Commerce partner announced
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  Exchange date released
+                </p>
               </div>
             </li>
             <li className="timeline-item is-primary">
@@ -30,14 +61,42 @@ const Roadmap = () => {
                 <p className="heading">
                   After November 1st 2017 - "Constitution"
                 </p>
-                <p>○ Token unlocks</p>
-                <p>○ Exchange partner launch</p>
                 <p>
-                  ○ <i>ELTWallet</i> iOS app preview
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  Token unlocks
                 </p>
-                <p>○ PoS interest funds (10% supply) locks until Jan 2018</p>
-                <p>○ PoS community driven interest policy adoption</p>
-                <p>○ ELTCOIN HODLER brand store pre-orders opening</p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  Exchange partner launch
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  <i>ELTWallet</i> iOS app preview
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  PoS interest funds (10% supply) locks until Jan 2018
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  PoS community driven interest policy adoption
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  ELTCOIN HODLER brand store pre-orders opening
+                </p>
               </div>
             </li>
             <li className="timeline-item is-primary">
@@ -47,11 +106,22 @@ const Roadmap = () => {
                   November / December 2017 - "Groundwork"
                 </p>
                 <p>
-                  ○ <i>ELTWallet</i> iOS app launch
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  <i>ELTWallet</i> iOS app launch
                 </p>
-                <p>○ Harpoon contract intro</p>
                 <p>
-                  ○ ELTCOIN <b>HODLER</b> brand store opening
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  Harpoon contract intro
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  ELTCOIN <b>HODLER</b> brand store opening
                 </p>
               </div>
             </li>
@@ -60,9 +130,17 @@ const Roadmap = () => {
               <div className="timeline-content">
                 <p className="heading">December 1st 2017 - "Airborne"</p>
                 <p>
-                  ○ Special announcement for <b>HODLR</b>s
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  Special announcement for <b>HODLR</b>s
                 </p>
-                <p>○ PoS interest faucet dAPP preview</p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  PoS interest faucet dAPP preview
+                </p>
               </div>
             </li>
             <li className="timeline-item is-primary">
@@ -70,21 +148,52 @@ const Roadmap = () => {
               <div className="timeline-content">
                 <p className="heading">Q1 2018 - "Evolution"</p>
                 <p>
-                  ○ <i>ELTWallet</i> Android app beta
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  <i>ELTWallet</i> Android app beta
                 </p>
-                <p>○ PoS interest funds unlock and dApp launch</p>
-                <p>○ E-Commerce partner program launches</p>
-                <p>○ ELTCOIN/Fiat bridge announcement</p>
-                <p>○ Regulated fiat to crypto partners announcement</p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  PoS interest funds unlock and dApp launch
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  E-Commerce partner program launches
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  ELTCOIN/Fiat bridge announcement
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  Regulated fiat to crypto partners announcement
+                </p>
               </div>
             </li>
             <li className="timeline-item is-primary">
               <div className="timeline-marker is-primary" />
               <div className="timeline-content">
                 <p className="heading">Q2 2018 - "Foodchain"</p>
-                <p>○ ELTCOIN dApp payments SDK launches</p>
                 <p>
-                  ○ Roadmap for P2P lending DAO <i>ELTCLUB</i>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  ELTCOIN dApp payments SDK launches
+                </p>
+                <p>
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  Roadmap for P2P lending DAO <i>ELTCLUB</i>
                 </p>
               </div>
             </li>
@@ -93,11 +202,17 @@ const Roadmap = () => {
               <div className="timeline-content">
                 <p className="heading">Q3 2018 - "Phase 2"</p>
                 <p>
-                  ○ White paper released for <i>DeadLetters</i>;<br /> a
-                  Location enabled, P2P sales & exchange DAO
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  White paper released for <i>DeadLetters</i>
+                  <br /> a Location enabled, P2P sales & exchange DAO
                 </p>
                 <p>
-                  ○ <i>ELTCLUB</i> dApp beta launch
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  <i>ELTCLUB</i> dApp beta launch
                 </p>
               </div>
             </li>
@@ -106,16 +221,28 @@ const Roadmap = () => {
               <div className="timeline-content">
                 <p className="heading">Q4 2018 - "Realisation"</p>
                 <p>
-                  ○ <i>ELTCLUB</i> dApp launch
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  <i>ELTCLUB</i> dApp launch
                 </p>
                 <p>
-                  ○ <i>ELTCelerator</i> program launch
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  <i>ELTCelerator</i> program launch
                 </p>
                 <p>
-                  ○ <i>DeadLetters</i> dApp beta launch
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  <i>DeadLetters</i> dApp beta launch
                 </p>
                 <p>
-                  ○ <i>ELTCARD</i> announcement with preview & early access
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  <i>ELTCARD</i> announcement with preview & early access
                   program
                 </p>
               </div>
@@ -125,15 +252,29 @@ const Roadmap = () => {
               <div className="timeline-content">
                 <p className="heading">Q1 2019 and beyond - "Phase 3"</p>
                 <p>
-                  ○ <i>DeadLetters</i> app launch
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  <i>DeadLetters</i> app launch
                 </p>
                 <p>
-                  ○ <i>ELTCARD</i> launch
+                  <span role="img" aria-label="m00n">
+                    🚀
+                  </span>{' '}
+                  <i>ELTCARD</i> launch
                 </p>
               </div>
             </li>
             <li className="timeline-header">
-              <span className="tag is-medium is-primary">...</span>
+              <span className="tag is-medium is-primary">
+                <span
+                  role="img"
+                  aria-label="m00n"
+                  style={{ fontSize: 1.5 + 'em' }}
+                >
+                  🤔
+                </span>
+              </span>
             </li>
           </ul>
         </div>

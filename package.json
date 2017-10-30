@@ -5,6 +5,8 @@
   "homepage": "https://www.eltcoin.tech",
   "license": "MIT",
   "dependencies": {
+    "animate.css": "^3.5.2",
+    "animate.scss": "0.0.6",
     "bulma": "^0.6.0",
     "bulma-timeline": "^1.0.0",
     "moment": "^2.19.1",

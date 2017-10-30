@@ -10,7 +10,7 @@
 }
 
 @import 'bulma/sass/utilities/initial-variables';
-
+// @import 'animate.scss/vendor/assets/stylesheets/animate';
 $family-sans-serif: 'Open Sans', sans-serif;
 $primary: $grey-light;
 $link: $grey-light;
@@ -18,11 +18,8 @@ $family-primary: $family-sans-serif;
 $size-1: 4rem;
 $size-2: 2.5rem;
 $text: $white-bis;
-
 @import 'bulma/bulma';
-
 @import 'bulma-timeline/timeline';
-
 body {
   background-color: $black;
 }
@@ -41,8 +38,35 @@ body {
   box-shadow: none;
 }
 
-// Navbar
+.timeline .timeline-item p {
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+}
 
+.timeline {
+  .tag:not(body).is-primary {
+    color: black;
+    background-color: white;
+  }
+  .timeline-item:hover {
+    cursor: default;
+    p.heading {
+      font-size: 109%;
+    }
+    p {
+      font-size: 105%;
+    }
+    p:hover:not(.heading) {
+      font-weight: bold;
+      font-size: 110%;
+    }
+  }
+}
+
+// Navbar
 a:hover,
 a.navbar-item:hover {
   color: transparentize($grey-light, 0.5);
@@ -72,7 +96,6 @@ a.navbar-item.is-active,
 
 .navbar-burger {
   color: #0a0a0a;
-
   &:hover {
     background-color: rgba(0, 0, 0, 0.01);
   }
@@ -82,7 +105,6 @@ a.navbar-item.is-active,
   .navbar {
     background-color: inherit;
     color: $white;
-
     .navbar-item {
       color: $white-bis;
     }
@@ -94,15 +116,12 @@ a.navbar-item.is-active,
     position: absolute;
     width: 100%;
     z-index: 2;
-
     .navbar-item {
       color: $black;
-
       &:hover {
         color: transparentize($black, 0.5);
       }
     }
-
     .navbar-link.is-active,
     a.navbar-item.is-active,
     a.navbar-item.is-active,
@@ -130,5 +149,8 @@ a.navbar-item.is-active,
 @media only screen and (max-width: 320px) {
   .title.is-size-1 {
     font-size: 50px !important;
+  }
+  .card-content {
+    padding: 0.25rem;
   }
 }

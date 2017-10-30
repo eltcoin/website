@@ -13,11 +13,7 @@ const Roadmap = () => {
                 <b>ELTCEPTION</b>
               </span>
             </li>
-            <li
-              className="timeline-item is-primary"
-              onMouseEnter={this.handleHover}
-              onMouseLeave={this.handleHover}
-            >
+            <li className="timeline-item is-primary">
               <div className="timeline-marker is-success is-icon">
                 <i className="fa fa-check" />
               </div>

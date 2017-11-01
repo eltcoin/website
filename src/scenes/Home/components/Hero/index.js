@@ -1,75 +1,24 @@
 import React, { Component } from 'react';
 import logo from './images/logo.png';
-import Countdown from 'react-countdown-now';
 
 const RATE_CHANGE_THRESHOLD = 300000;
 
-const countdownRenderer = ({ days, hours, minutes, seconds }) => {
-  return (
-    <span>
-      {days}:{hours}:{minutes}:{seconds}
-    </span>
-  );
-};
-
 class Hero extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      tokensSold: 0,
-    };
-
-    this.renderSaleProgress = this.renderSaleProgress.bind(this);
-    this.renderUnlockCountdownTimer = this.renderUnlockCountdownTimer.bind(
-      this,
-    );
-  }
+  state = {
+    tokensSold: 0,
+  };
 
   componentDidMount() {
-    let currentPrice;
-    let tokensSoldCurrentRound;
     fetch('https://eltcoin-api.now.sh/api/v1/sale/tokens_sold')
       .then(data => data.json())
-      .then(json => {
-        let tokensSold = json.value;
-        tokensSoldCurrentRound = tokensSold % RATE_CHANGE_THRESHOLD;
-        currentPrice =
-          0.01 + 0.01 * Math.floor(tokensSold / RATE_CHANGE_THRESHOLD);
-        fetch('https://eltcoin-api.now.sh/api/v1/unlockTime/timestamps')
-          .then(timestamps => timestamps.json())
-          .then(timestamps => {
-            let _currentTime = timestamps.currentTime;
-            let _unlockTime = timestamps.unlocks;
-            this.setState(
-              {
-                currentPrice,
-                tokensSold: tokensSoldCurrentRound,
-                currentTime: _currentTime,
-                unlockTime: _unlockTime * 1000,
-              },
-              () => {
-                this.renderUnlockCountdownTimer();
-              },
-            );
-          });
+      .then(tokensSold => {
+        this.setState({
+          tokensSold: tokensSold.value % RATE_CHANGE_THRESHOLD,
+        });
       });
   }
 
-  renderUnlockCountdownTimer() {
-    if (typeof this.state.unlockTime === 'undefined') {
-      return;
-    }
-    return (
-      <Countdown date={this.state.unlockTime} renderer={countdownRenderer} />
-    );
-  }
-
-  renderSaleProgress() {
-    if (this.state.tokensSold === 0) {
-      return;
-    }
-
+  renderSaleProgress = () => {
     return (
       <div>
         <progress
@@ -86,14 +35,9 @@ class Hero extends Component {
           remaining ELTCOIN this round
         </p>
         <br />
-
-        {/* <p>
-          Current price: <b>${this.state.currentPrice}</b> / Next price:{' '}
-          <b>${this.state.currentPrice + 0.01}</b>
-        </p> */}
       </div>
     );
-  }
+  };
 
   render() {
     return (
@@ -128,11 +72,10 @@ class Hero extends Component {
             <br />
             <br />
             <h4 className="subtitle is-size-4">
-              <b>ELTCOIN</b>{' '}
+              <b>ELTCOIN</b> is {' '}
               <span role="img" aria-label="unlocks">
                 🔓
-              </span>{' '}
-              {this.renderUnlockCountdownTimer()}
+              </span>
             </h4>
             {this.renderSaleProgress()}
             <br />

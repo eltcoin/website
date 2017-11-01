@@ -6,20 +6,27 @@ const Faq = () => {
       <div className="card-content">
         <p className="title is-size-1">FAQ</p>
         <br />
-        <p className="subtitle is-size-4">What is ELTCOIN?</p>
+        <p className="subtitle is-size-4">
+          <b>ELTCOIN</b>?
+        </p>
         <p className="is-size-5">
-          ELTCOIN seeks to be the preeminent ERC20 token with a limited supply.
+          <b>ELTCOIN</b> is a community currency
         </p>
         <br />
-        <p className="subtitle is-size-4">Why create ELTCOIN?</p>
-        <p className="is-size-5">
-          To provide a provably fair currency on the Ethereum Network.
+        <p className="subtitle is-size-4">
+          Why HODL <b>ELTCOIN</b>?
         </p>
+        <p className="is-size-5">Hodlers will get surprises...</p>
         <br />
-        <p className="subtitle is-size-4">How many ELTCOIN are there?</p>
-        <p className="is-size-5">
-          The cap of ELTCOIN is 100,000,000 and can never be altered or modified
+        <p className="subtitle is-size-4">
+          Why believe in <b>ELTCOIN</b>?
         </p>
+        <p className="is-size-5">Wolves don't listen to sheep</p>
+        <br />
+        <p className="subtitle is-size-4">
+          How many <b>ELTCOIN</b>?
+        </p>
+        <p className="is-size-5">100 Million Ltd Supply</p>
       </div>
     </div>
   );

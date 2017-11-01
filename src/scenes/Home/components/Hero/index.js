@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import logo from './images/logo.png';
 
 const RATE_CHANGE_THRESHOLD = 300000;
+const EMOJIS_ARRAY = ['🚀', '💰', '🌏', '🌕', '❤️', '🔓'];
 
 class Hero extends Component {
   state = {
     tokensSold: 0,
+    emojiIndex: 0,
   };
 
   componentDidMount() {
@@ -16,6 +18,18 @@ class Hero extends Component {
           tokensSold: tokensSold.value % RATE_CHANGE_THRESHOLD,
         });
       });
+
+    setInterval(() => {
+      let emojiIndex = this.state.emojiIndex + 1;
+
+      if (this.state.emojiIndex >= EMOJIS_ARRAY.length) {
+        emojiIndex = 0;
+      }
+
+      this.setState({
+        emojiIndex,
+      });
+    }, 1750);
   }
 
   renderSaleProgress = () => {
@@ -28,11 +42,10 @@ class Hero extends Component {
           style={{ maxWidth: '60rem', alignSelf: 'center' }}
         />
         <p className="is-size-5">
-          Only{' '}
-          <b>
+          Discount Tokens Remaining<b>
+            {' '}
             {Number(RATE_CHANGE_THRESHOLD - this.state.tokensSold).toFixed()}
-          </b>{' '}
-          remaining ELTCOIN this round
+          </b>
         </p>
         <br />
       </div>
@@ -72,10 +85,11 @@ class Hero extends Component {
             <br />
             <br />
             <h4 className="subtitle is-size-4">
-              <b>ELTCOIN</b> is {' '}
+              <b>ELTCOIN</b>{' '}
               <span role="img" aria-label="unlocks">
-                🔓
+                {EMOJIS_ARRAY[this.state.emojiIndex]}
               </span>
+              <b> DREAMS</b>
             </h4>
             {this.renderSaleProgress()}
             <br />

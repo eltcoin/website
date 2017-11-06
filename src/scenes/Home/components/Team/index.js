@@ -34,7 +34,7 @@ class Team extends Component {
 
   render() {
     return (
-      <section className="hero">
+      <section id="team" className="hero">
         <div className="hero-body">
           <div className="container has-text-centered">
             <h1 className="title is-size-1">Team</h1>

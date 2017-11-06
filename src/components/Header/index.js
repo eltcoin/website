@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { withRouter, NavLink } from 'react-router-dom';
-
+import { NavLink, withRouter } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import moonPaper from './moon_paper.pdf';
 import moonEmoji from './images/moon.svg';
 import paperEmoji from './images/paper.svg';
+import roadmapEmoji from './images/roadmap.svg';
 import swagEmoji from './images/swag.svg';
+import teamEmoji from './images/team.svg';
 import whiteLogo from './images/white_logo.png';
 import blackLogo from './images/black_logo.png';
 class Header extends Component {
@@ -38,9 +40,38 @@ class Header extends Component {
               <span />
             </div>
           </div>
-
           <div className="navbar-menu">
             <div className="navbar-end">
+              <Link
+                exact
+                to="/#roadmap"
+                className="navbar-item"
+                activeClassName="is-active"
+                onClick={this.onMenuClick}
+              >
+                <img
+                  src={roadmapEmoji}
+                  alt=""
+                  width={18}
+                  style={{ marginRight: '.5rem' }}
+                />
+                <span>Roadmap</span>
+              </Link>
+              <Link
+                exact
+                to="/#team"
+                className="navbar-item"
+                activeClassName="is-active"
+                onClick={this.onMenuClick}
+              >
+                <img
+                  src={teamEmoji}
+                  alt=""
+                  width={18}
+                  style={{ marginRight: '.5rem' }}
+                />
+                <span>Team</span>
+              </Link>
               <NavLink
                 exact
                 to="/store"

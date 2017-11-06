@@ -2,7 +2,7 @@ import React from 'react';
 
 const Roadmap = () => {
   return (
-    <section className="hero">
+    <section id="roadmap" className="hero">
       <div className="hero-body">
         <div className="container has-text-centered">
           <h1 className="title is-size-1">Roadmap</h1>

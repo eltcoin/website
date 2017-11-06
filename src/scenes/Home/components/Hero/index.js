@@ -1,25 +1,16 @@
 import React, { Component } from 'react';
 import logo from './images/logo.png';
+import appStoreLogo from './images/app-store.png';
 
-const RATE_CHANGE_THRESHOLD = 300000;
 const EMOJIS_ARRAY = ['🚀', '💰', '🌏', '🌕', '❤️', '🔓'];
 
 class Hero extends Component {
   state = {
-    tokensSold: 0,
     emojiIndex: 0,
   };
 
   componentDidMount() {
-    fetch('https://eltcoin-api.now.sh/api/v1/sale/tokens_sold')
-      .then(data => data.json())
-      .then(tokensSold => {
-        this.setState({
-          tokensSold: tokensSold.value % RATE_CHANGE_THRESHOLD,
-        });
-      });
-
-    setInterval(() => {
+    const emojiInterval = setInterval(() => {
       let emojiIndex = this.state.emojiIndex + 1;
 
       if (this.state.emojiIndex >= EMOJIS_ARRAY.length) {
@@ -30,27 +21,15 @@ class Hero extends Component {
         emojiIndex,
       });
     }, 1750);
+
+    this.setState({
+      emojiInterval,
+    });
   }
 
-  renderSaleProgress = () => {
-    return (
-      <div>
-        <progress
-          className="progress is-success"
-          value={this.state.tokensSold}
-          max="300000"
-          style={{ maxWidth: '60rem', alignSelf: 'center' }}
-        />
-        <p className="is-size-5">
-          Discount Tokens Remaining<b>
-            {' '}
-            {Number(RATE_CHANGE_THRESHOLD - this.state.tokensSold).toFixed()}
-          </b>
-        </p>
-        <br />
-      </div>
-    );
-  };
+  componentWillUnmount() {
+    clearInterval(this.state.emojiInterval);
+  }
 
   render() {
     return (
@@ -91,10 +70,16 @@ class Hero extends Component {
               </span>
               <b> DREAMS</b>
             </h4>
-            {this.renderSaleProgress()}
             <br />
-            <a href="https://sale.eltcoin.tech" className="button">
-              Visit our Sale website
+            <br />
+            <h5 className="is-size-5">Download our iOS wallet</h5>
+            <br />
+            <a
+              href="https://itunes.apple.com/app/eltwallet/id1302147242"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={appStoreLogo} alt="" width={150} />
             </a>
           </div>
         </div>

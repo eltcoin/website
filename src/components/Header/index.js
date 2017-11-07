@@ -43,10 +43,8 @@ class Header extends Component {
           <div className="navbar-menu">
             <div className="navbar-end">
               <Link
-                exact
                 to="/#roadmap"
                 className="navbar-item"
-                activeClassName="is-active"
                 onClick={this.onMenuClick}
               >
                 <img
@@ -58,10 +56,8 @@ class Header extends Component {
                 <span>Roadmap</span>
               </Link>
               <Link
-                exact
                 to="/#team"
                 className="navbar-item"
-                activeClassName="is-active"
                 onClick={this.onMenuClick}
               >
                 <img

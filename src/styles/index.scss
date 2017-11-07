@@ -9,6 +9,11 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: 'DIN17SBOP-Regular';
+  src: url(../fonts/DIN17SBOP-Regular.otf);
+}
+
 @import 'bulma/sass/utilities/initial-variables';
 $family-sans-serif: 'Open Sans', sans-serif;
 $primary: $grey-light;
@@ -21,6 +26,10 @@ $text: $white-bis;
 @import 'bulma-timeline/timeline';
 body {
   background-color: $black;
+}
+
+.title.is-size-1 {
+  font-family: 'DIN17SBOP-Regular', 'Open Sans', sans-serif;
 }
 
 .title {

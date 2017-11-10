@@ -41,15 +41,17 @@ class OrderSummary extends Component {
             $ {this.totalPrice()}
           </li>
         </ul>
-        <button
-          className="button is-dark"
-          style={{ textAlign: 'right' }}
-          onClick={() => {
-            this.props.loadNextPage();
-          }}
-        >
-          Order
-        </button>
+        <div style={{ textAlign: 'right' }}>
+          <button
+            className="button is-dark"
+            style={{ textAlign: 'right' }}
+            onClick={() => {
+              this.props.loadNextPage();
+            }}
+          >
+            Order
+          </button>
+        </div>
       </div>
     );
   }

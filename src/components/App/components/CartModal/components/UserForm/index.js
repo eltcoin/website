@@ -204,12 +204,14 @@ class UserForm extends Component {
           </div>
         </div>
 
-        {this.state.country.value &&
+        {this.state.country &&
           this.state.country.value.states &&
           this.state.country.value.states.length > 0 && (
             <div className="field is-horizontal">
               <div className="field-label is-normal">
-                <label className="label">State</label>
+                <label className="label">
+                  State <small>*</small>
+                </label>
               </div>
               <div className="field-body">
                 <div className="field">

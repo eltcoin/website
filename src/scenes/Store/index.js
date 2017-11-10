@@ -1,62 +1,77 @@
 import React, { Component } from 'react';
-import logo from './images/logo.png';
-
-import hoodClassic from './images/hood-classic.png';
-import hoodHodl from './images/hood-hodl.png';
-import hoodHodler from './images/hood-hodler.png';
-import hoodWolves from './images/hood-wolves.png';
-
-import teeClassic from './images/tee-classic.png';
-import teeHodl from './images/tee-hodl.png';
-import teeHodler from './images/tee-hodler.png';
-import teeMoon from './images/tee-moon.png';
-import teeWolves from './images/tee-wolves.png';
+import { Link } from 'react-router-dom';
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
+import Spinner from '../../components/Spinner';
 
 class Store extends Component {
-  renderImageColumn(imageUrl, productName, productPrice) {
+  renderProductCard(product) {
     return (
-      <div className="column" style={{ marginBottom: '1rem' }}>
-        <figure className="image" style={{ width: '80%', margin: 'auto' }}>
-          <img src={imageUrl} alt="" />
-        </figure>
-        <br />
-        <b>{productName}</b>
-        <p>{productPrice} ELTCOIN</p>
-        <p className="has-text-danger">Out of stock</p>
+      <div
+        className="column is-one-third"
+        style={{ marginBottom: '1rem' }}
+        key={product.id}
+      >
+        <Link to={`/store/${product.id}`}>
+          <figure className="image" style={{ width: '80%', margin: 'auto' }}>
+            <img src={product.productVariants[0].imageUrl} alt="" />
+          </figure>
+          <br />
+          <b>{product.name}</b>
+          <p>$ {product.usdPrice}</p>
+        </Link>
       </div>
     );
   }
 
   render() {
+    if (this.props.data.loading) {
+      return <Spinner />;
+    }
+
+    if (this.props.error) {
+      return (
+        <section
+          className="container has-text-centered"
+          style={{ paddingTop: '4rem' }}
+        >
+          <h2>An error occured fetching our Swag Store products...</h2>
+        </section>
+      );
+    }
+
     return (
-      <div>
-        <section className="hero">
-          <div className="container has-text-centered">
-            <br />
-            <img src={logo} width={250} alt="" />
-          </div>
-        </section>
-        <section className="container has-text-centered">
-          <div className="columns">
-            {this.renderImageColumn(hoodClassic, 'Classic hoodie', 20000)}
-            {this.renderImageColumn(teeClassic, 'Classic tee-shirt', 10000)}
-            {this.renderImageColumn(hoodHodl, 'Hodl hoodie', 20000)}
-          </div>
-          <div className="columns">
-            {this.renderImageColumn(teeHodl, 'Hodl tee-shirt', 10000)}
-            {this.renderImageColumn(hoodHodler, 'Hodler hoodie', 20000)}
-            {this.renderImageColumn(teeHodler, 'Hodler tee-shirt', 10000)}
-          </div>
-          <div className="columns">
-            {this.renderImageColumn(teeMoon, 'Astronaut tee-shirt', 10000)}
-            {this.renderImageColumn(hoodWolves, 'Wolves hoodie', 20000)}
-            {this.renderImageColumn(teeWolves, 'Wolves tee-shirt', 10000)}
-          </div>
-          <br />
-        </section>
-      </div>
+      <section
+        className="container has-text-centered"
+        style={{ paddingTop: '4rem' }}
+      >
+        <div className="columns is-multiline" style={{ marginTop: '2rem' }}>
+          {this.props.data.allProducts.map(p => this.renderProductCard(p))}
+        </div>
+        <br />
+      </section>
     );
   }
 }
 
-export default Store;
+const PRODUCTS_QUERY = gql`
+  {
+    allProducts {
+      id
+      name
+      usdPrice
+      productVariants(
+        filter: { color_in: ["Black", "Charcoal-Black Triblend"], size: S }
+      ) {
+        id
+        color
+        imageUrl
+      }
+    }
+  }
+`;
+export default graphql(PRODUCTS_QUERY, {
+  options: {
+    errorPolicy: 'all',
+  },
+})(Store);

@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Open Sans';
-  src: url(../fonts/OpenSans-Regular.ttf);
+  src: url(./fonts/OpenSans-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Open Sans';
-  src: url(../fonts/OpenSans-Bold.ttf);
+  src: url(./fonts/OpenSans-Bold.ttf);
   font-weight: bold;
 }
 
@@ -15,21 +15,30 @@
 }
 
 @import 'bulma/sass/utilities/initial-variables';
+
 $family-sans-serif: 'Open Sans', sans-serif;
-$primary: $grey-light;
-$link: $grey-light;
+$primary: #9098a1;
+$link: #9098a1;
 $family-primary: $family-sans-serif;
 $size-1: 4rem;
 $size-2: 2.5rem;
 $text: $white-bis;
+
 @import 'bulma/bulma';
 @import 'bulma-timeline/timeline';
+@import 'bulma-steps/steps';
+
 body {
   background-color: $black;
 }
 
 .title.is-size-1 {
   font-family: 'DIN17SBOP-Regular', 'Open Sans', sans-serif;
+}
+
+footer {
+  align-self: flex-end;
+  width: 100%;
 }
 
 .title {
@@ -46,31 +55,103 @@ body {
   box-shadow: none;
 }
 
-.timeline .timeline-item p {
-  transition: all 0.25s ease;
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
+.Select {
+  max-width: 10rem;
+
+  &.centered {
+    margin: auto;
+  }
 }
 
-.timeline {
-  .tag:not(body).is-primary {
-    color: black;
-    background-color: white;
+// Spinner
+.rocket {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+
+  animation: infinite-spinning 4s infinite;
+  animation-timing-function: linear;
+  transform-origin: 335% 500%;
+}
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
   }
-  .timeline-item:hover {
-    cursor: default;
-    p.heading {
-      font-size: 109%;
-    }
-    p {
-      font-size: 105%;
-    }
-    p:hover:not(.heading) {
-      font-weight: bold;
-      font-size: 110%;
-    }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.moon {
+  background: #c7cbd0;
+  border-radius: 50%;
+  box-shadow: inset -25px 0px 0 0px #9098a1;
+  height: 200px;
+  margin: 10rem auto;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  width: 200px;
+
+  li {
+    position: absolute;
+    list-style: none;
+    background: #737277;
+    border-radius: 50%;
+  }
+  li:nth-child(1) {
+    left: 25px;
+    top: 60px;
+    width: 50px;
+    height: 50px;
+    box-shadow: inset 6px -2px 0 0px #414043;
+  }
+  li:nth-child(2) {
+    left: 150px;
+    top: 50px;
+    width: 25px;
+    height: 25px;
+    box-shadow: inset 3px -1px 0 0px #414043;
+  }
+
+  li:nth-child(3) {
+    left: 100px;
+    top: 150px;
+    width: 25px;
+    height: 25px;
+    box-shadow: inset 3px -1px 0 0px #414043;
+  }
+
+  li:nth-child(4) {
+    left: 50px;
+    top: 150px;
+    width: 12.5px;
+    height: 12.5px;
+    box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  }
+
+  li:nth-child(5) {
+    left: 87.5px;
+    top: 16.66666667px;
+    width: 12.5px;
+    height: 12.5px;
+    box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  }
+
+  li:nth-child(6) {
+    left: 114.28571429px;
+    top: 80px;
+    width: 12.5px;
+    height: 12.5px;
+    box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  }
+
+  li:nth-child(7) {
+    left: 181.81818182px;
+    top: 100px;
+    width: 12.5px;
+    height: 12.5px;
+    box-shadow: inset 2.4px -0.8px 0 0px #414043;
   }
 }
 
@@ -122,6 +203,7 @@ a.navbar-item.is-active,
 @media only screen and (max-width: $desktop) {
   .navbar {
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 2;
     .navbar-item {
@@ -140,17 +222,41 @@ a.navbar-item.is-active,
   }
 }
 
+// Roadmap
+.timeline .timeline-item p {
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+}
+
+.timeline {
+  .timeline-item:hover {
+    cursor: default;
+
+    p:hover:not(.heading) {
+      font-weight: bold;
+      font-size: 110%;
+    }
+  }
+}
+
 .timeline.is-centered .timeline-content {
   text-align: left;
   width: 100%;
 }
 
 .timeline .timeline-item .timeline-marker {
-  left: -0.45em;
+  left: -0.34em;
 }
 
-.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker.is-icon {
-  right: -0.7rem;
+.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker {
+  right: -0.46rem;
+}
+
+.timeline.is-centered .timeline-item:nth-of-type(2n + 1)::before {
+  background-color: #9098a1;
 }
 
 // Bugfix on iPhone <= 5s

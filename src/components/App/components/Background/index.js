@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Particle from './particle';
+
 class Background extends Component {
   componentDidMount() {
     this.initBackground();

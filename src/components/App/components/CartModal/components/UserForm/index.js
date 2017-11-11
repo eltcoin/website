@@ -16,17 +16,6 @@ class UserForm extends Component {
     countriesList: [],
   };
 
-  componentWillMount() {
-    const user = window.localStorage.getItem('user');
-
-    if (user) {
-      const userObject = JSON.parse(user);
-      this.setState({
-        ...userObject,
-      });
-    }
-  }
-
   componentWillReceiveProps(newProps) {
     if (!newProps.data.allCountries) return;
 

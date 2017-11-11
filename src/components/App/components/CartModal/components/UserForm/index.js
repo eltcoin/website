@@ -83,6 +83,31 @@ class UserForm extends Component {
         <div className="field is-horizontal">
           <div className="field-label is-normal">
             <label className="label">
+              Country <small>*</small>
+            </label>
+          </div>
+          <div className="field-body">
+            <div className="field">
+              <div className="control">
+                <Select
+                  required
+                  autoComplete="shipping address-level1"
+                  clearable={false}
+                  value={this.state.country}
+                  options={this.state.countriesList.map(country => ({
+                    value: country,
+                    label: country.name,
+                  }))}
+                  onChange={this.handleCountryChange}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="field is-horizontal">
+          <div className="field-label is-normal">
+            <label className="label">
               Full name <small>*</small>
             </label>
           </div>
@@ -152,14 +177,15 @@ class UserForm extends Component {
         <div className="field is-horizontal">
           <div className="field-label is-normal">
             <label className="label">
-              Zip <small>*</small>
+              {this.state.country && this.state.country.value === 'US'
+                ? 'Zip code'
+                : 'Postal code'}
             </label>
           </div>
           <div className="field-body">
             <div className="field">
               <div className="control">
                 <input
-                  required
                   autoComplete="shipping postal-code"
                   className="input"
                   placeholder="10011"
@@ -223,34 +249,6 @@ class UserForm extends Component {
               </div>
             </div>
           )}
-
-        <div className="field is-horizontal">
-          <div className="field-label is-normal">
-            <label className="label">
-              Country <small>*</small>
-            </label>
-          </div>
-          <div className="field-body">
-            <div className="field">
-              <div className="control">
-                <Select
-                  required
-                  autoComplete="shipping address-level1"
-                  clearable={false}
-                  value={this.state.country}
-                  options={this.state.countriesList.map(country => ({
-                    value: country,
-                    label: country.name,
-                  }))}
-                  onChange={this.handleCountryChange}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <br />
-        <br />
 
         <div
           className="field is-grouped"

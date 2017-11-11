@@ -25,12 +25,18 @@ class App extends Component {
   }
 
   openModal = () => {
+    document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
     this.setState({
       isCartModalOpen: true,
     });
   };
 
   closeModal = () => {
+    document.body.style.overflow = 'auto';
+    document.body.style.position = 'initial';
     this.setState({
       isCartModalOpen: false,
     });

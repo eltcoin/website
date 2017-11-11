@@ -40,9 +40,9 @@ class CartItem extends Component {
             <p>
               <strong>{item.product.name}</strong>
               <br />
-              Color: <small>{item.productVariant.color}</small>
-              <br />
-              Size: <small>{item.productVariant.size}</small>
+              {item.productVariant.color}
+              {' - '}
+              {item.productVariant.size}
               <br />
               Quantity: <small>{item.amount}</small>
             </p>

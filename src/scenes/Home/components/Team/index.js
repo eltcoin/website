@@ -4,8 +4,10 @@ import Adrian from './images/Adrian.png';
 import Dan from './images/Dan.png';
 import Ivan from './images/Ivan.png';
 import Oliver from './images/Oliver.png';
+import Oli from './images/Oli.png';
 import Victor from './images/Victor.png';
 import Nathan from './images/Nathan.png';
+import Bot from './images/Bot.png';
 
 class Team extends Component {
   renderTeamMember(name, role, imageUrl, handle) {
@@ -42,7 +44,7 @@ class Team extends Component {
             <div className="columns is-multiline is-mobile">
               <div className="column is-one-third-tablet is-half-mobile">
                 {this.renderTeamMember(
-                  'Oli H',
+                  'Oli H.',
                   'Founder & Developer',
                   Oliver,
                   '@steak_e',
@@ -50,7 +52,7 @@ class Team extends Component {
               </div>
               <div className="column is-one-third-tablet is-half-mobile">
                 {this.renderTeamMember(
-                  'Ivan S.W',
+                  'Ivan S.W.',
                   'Strategist & Senior Advisor',
                   Ivan,
                   '@augmentedInvestor',
@@ -58,7 +60,7 @@ class Team extends Component {
               </div>
               <div className="column is-one-third-tablet is-half-mobile">
                 {this.renderTeamMember(
-                  'Victor F',
+                  'Victor F.',
                   'Head of Engineering',
                   Victor,
                   '@vicdu81',
@@ -66,27 +68,42 @@ class Team extends Component {
               </div>
               <div className="column is-one-third-tablet is-half-mobile">
                 {this.renderTeamMember(
-                  'Dan T',
+                  'Dan T.',
                   'Head of Design',
                   Dan,
                   '@Astroboylambo',
                 )}
               </div>
-
               <div className="column is-one-third-tablet is-half-mobile">
                 {this.renderTeamMember(
-                  'Nathan H',
+                  'Oli M.',
+                  'Head of Mobile Development',
+                  Oli,
+                  '@olliemoon',
+                )}
+              </div>
+              <div className="column is-one-third-tablet is-half-mobile">
+                {this.renderTeamMember(
+                  'Adrian P.',
+                  'Head of Staff',
+                  Adrian,
+                  '@moonshot100',
+                )}
+              </div>
+              <div className="column is-half-tablet is-half-mobile">
+                {this.renderTeamMember(
+                  'Nathan H.',
                   'Head of Community',
                   Nathan,
                   '@DarkImpulse',
                 )}
               </div>
-              <div className="column is-one-third-tablet is-half-mobile">
+              <div className="column is-half-tablet is-half-mobile">
                 {this.renderTeamMember(
-                  'Adrian P',
-                  'Head of Staff',
-                  Adrian,
-                  '@moonshot100',
+                  'ELTBOT',
+                  'Head of Automation',
+                  Bot,
+                  '@eltcoin_bot',
                 )}
               </div>
             </div>

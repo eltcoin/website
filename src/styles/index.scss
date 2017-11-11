@@ -18,7 +18,7 @@
 
 $family-sans-serif: 'Open Sans', sans-serif;
 $primary: #9098a1;
-$link: #9098a1;
+$link: #fafafa;
 $family-primary: $family-sans-serif;
 $size-1: 4rem;
 $size-2: 2.5rem;
@@ -99,6 +99,7 @@ footer {
     background: #737277;
     border-radius: 50%;
   }
+
   li:nth-child(1) {
     left: 25px;
     top: 60px;
@@ -106,6 +107,7 @@ footer {
     height: 50px;
     box-shadow: inset 6px -2px 0 0px #414043;
   }
+
   li:nth-child(2) {
     left: 150px;
     top: 50px;

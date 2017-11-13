@@ -241,9 +241,8 @@ a.navbar-item.is-active,
   .timeline-item:hover {
     cursor: default;
 
-    p:hover:not(.heading) {
-      font-weight: bold;
-      font-size: 110%;
+    .heading {
+      cursor: pointer;
     }
   }
 }

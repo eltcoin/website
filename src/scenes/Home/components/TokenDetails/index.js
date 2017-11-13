@@ -6,7 +6,7 @@ class TokenDetails extends Component {
       <section className="hero">
         <div className="hero-body">
           <div className="container has-text-centered">
-            <h1 className="title is-size-1">The token</h1>
+            <h1 className="title is-size-1">THE TOKEN</h1>
             <br />
             <div className="subtitle">
               <b className="is-size-4">Contract address</b>

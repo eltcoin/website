@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from './images/logo.png';
 import appStoreLogo from './images/app-store.png';
 
-const EMOJIS_ARRAY = ['🚀', '💰', '🌏', '🌕', '❤️', '🔓'];
+const EMOJIS = ['🚀', '💰', '🌏', '🌕', '❤️', '🔓'];
 
 class Hero extends Component {
   state = {
@@ -13,7 +13,7 @@ class Hero extends Component {
     const emojiInterval = setInterval(() => {
       let emojiIndex = this.state.emojiIndex + 1;
 
-      if (this.state.emojiIndex >= EMOJIS_ARRAY.length) {
+      if (this.state.emojiIndex === EMOJIS.length - 1) {
         emojiIndex = 0;
       }
 
@@ -62,24 +62,43 @@ class Hero extends Component {
             <img src={logo} width={350} alt="" />
             <h1 className="subtitle is-size-2">Ethereum Limited Total Coin</h1>
             <br />
+            <a
+              class="button is-white"
+              href="https://t.me/ELTCOIN"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="icon">
+                <i class="fa fa-telegram" />
+              </span>
+              <span>Join our Telegram community</span>
+              <span class="icon">
+                <i class="fa fa-telegram" />
+              </span>
+            </a>
+            <br />
             <br />
             <h4 className="subtitle is-size-4">
               <b>ELTCOIN</b>{' '}
               <span role="img" aria-label="unlocks">
-                {EMOJIS_ARRAY[this.state.emojiIndex]}
+                {EMOJIS[this.state.emojiIndex]}
               </span>
               <b> DREAMS</b>
             </h4>
             <br />
-            <br />
-            <h5 className="is-size-5">Download our iOS wallet</h5>
-            <br />
             <a
+              class="button is-white"
               href="https://itunes.apple.com/app/eltwallet/id1302147242"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={appStoreLogo} alt="" width={150} />
+              <span class="icon">
+                <i class="fa fa-apple" />
+              </span>
+              <span>Download our iOS Wallet</span>
+              <span class="icon">
+                <i class="fa fa-apple" />
+              </span>
             </a>
           </div>
         </div>

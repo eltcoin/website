@@ -13,26 +13,26 @@
     "graphql-tag": "^2.5.0",
     "history": "^4.7.2",
     "lodash": "^4.17.4",
-    "moment": "^2.19.1",
+    "moment": "^2.19.2",
     "node-sass-chokidar": "0.0.3",
-    "npm-run-all": "^4.1.1",
-    "react": "^16.0.0",
-    "react-apollo": "^2.0.0",
+    "npm-run-all": "^4.1.2",
+    "react": "^16.1.1",
+    "react-apollo": "^2.0.1",
     "react-collapse": "^4.0.3",
-    "react-dom": "^16.0.0",
+    "react-dom": "^16.1.1",
     "react-motion": "^0.5.2",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
-    "react-router-hash-link": "^1.1.1",
     "react-scripts": "1.0.17",
     "react-select": "^1.0.0-rc.10",
     "redux": "^3.7.2",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "scroll-to-element": "^2.0.0"
   },
   "devDependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^5.0.0",
-    "prettier": "^1.7.4"
+    "prettier": "^1.8.2"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",

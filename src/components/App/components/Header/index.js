@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 import blackLogo from './images/black_logo.png';
 import cartEmoji from './images/cart.svg';
 import moonPaper from './moon_paper.pdf';
@@ -50,9 +49,9 @@ class Header extends Component {
               {this.renderLogo()}
             </NavLink>
             <div
-              className={`navbar-burger burger ${this.state.isMenuOpen
-                ? 'is-active'
-                : ''}`}
+              className={`navbar-burger burger ${
+                this.state.isMenuOpen ? 'is-active' : ''
+              }`}
               onClick={this.state.isMenuOpen ? this.closeMenu : this.openMenu}
             >
               <span />
@@ -61,9 +60,9 @@ class Header extends Component {
             </div>
           </div>
           <div
-            className={`navbar-menu ${this.state.isMenuOpen
-              ? 'is-active'
-              : ''}`}
+            className={`navbar-menu ${
+              this.state.isMenuOpen ? 'is-active' : ''
+            }`}
           >
             <div className="navbar-end">
               <Link

@@ -16,6 +16,14 @@ class App extends Component {
     isCartModalOpen: false,
   };
 
+  componentDidMount() {
+    if (process.env.NODE_ENV === 'production') {
+      window.Raven.config(
+        'https://0ddfcefcf922465488c2dde443f9c9d5@sentry.io/230876',
+      ).install();
+    }
+  }
+
   componentWillMount() {
     const cartItems = window.localStorage.getItem('cartItems');
 

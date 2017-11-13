@@ -177,7 +177,7 @@ class UserForm extends Component {
         <div className="field is-horizontal">
           <div className="field-label is-normal">
             <label className="label">
-              {this.state.country && this.state.country.value === 'US'
+              {this.state.country && this.state.country.value.code === 'US'
                 ? 'Zip code'
                 : 'Postal code'}
             </label>

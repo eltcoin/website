@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './images/logo.png';
-import appStoreLogo from './images/app-store.png';
+import appStoreBadge from './images/app-store.svg';
 
 const EMOJIS = ['🚀', '💰', '🌏', '🌕', '❤️', '🔓'];
 
@@ -63,17 +63,17 @@ class Hero extends Component {
             <h1 className="subtitle is-size-2">Ethereum Limited Total Coin</h1>
             <br />
             <a
-              class="button is-white"
+              className="button is-white"
               href="https://t.me/ELTCOIN"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span class="icon">
-                <i class="fa fa-telegram" />
+              <span className="icon">
+                <i className="fa fa-telegram" />
               </span>
               <span>Join our Telegram community</span>
-              <span class="icon">
-                <i class="fa fa-telegram" />
+              <span className="icon">
+                <i className="fa fa-telegram" />
               </span>
             </a>
             <br />
@@ -87,18 +87,11 @@ class Hero extends Component {
             </h4>
             <br />
             <a
-              class="button is-white"
               href="https://itunes.apple.com/app/eltwallet/id1302147242"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span class="icon">
-                <i class="fa fa-apple" />
-              </span>
-              <span>Download our iOS Wallet</span>
-              <span class="icon">
-                <i class="fa fa-apple" />
-              </span>
+              <img src={appStoreBadge} alt="" width={150} />
             </a>
           </div>
         </div>

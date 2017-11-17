@@ -77,7 +77,7 @@ class Team extends Component {
               <div className="column is-one-third-tablet is-half-mobile">
                 {this.renderTeamMember(
                   'Oli M.',
-                  'Head of Mobile Development',
+                  'Senior Advisor & Tech',
                   Oli,
                   '@olliemoon',
                 )}

@@ -273,3 +273,24 @@ a.navbar-item.is-active,
     padding: 0.25rem;
   }
 }
+
+div.steak_e:hover {
+  img.main {
+    display: none !important;
+  }
+  #oHover {
+    display: inline !important;
+    opacity: 2.8 !important;
+    animation: fade 1s;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -4,6 +4,7 @@ import Adrian from './images/Adrian.png';
 import Dan from './images/Dan.png';
 import Ivan from './images/Ivan.png';
 import Oliver from './images/Oliver.png';
+import OliverHover from './images/Oliver.hover.png';
 import Oli from './images/Oli.png';
 import Victor from './images/Victor.png';
 import Nathan from './images/Nathan.png';
@@ -14,8 +15,15 @@ class Team extends Component {
     handle = handle.replace('@', '');
     return (
       <div className="card">
-        <div className="card-image">
-          <img src={imageUrl} alt="" width={200} />
+        <div className={handle + ' card-image'}>
+          <img class="main" src={imageUrl} alt="" width={200} />
+          <img
+            id="oHover"
+            style={{ opacity: 0, display: 'none' }}
+            src={OliverHover}
+            alt=""
+            width={200}
+          />
         </div>
         <div className="card-content">
           <p className="title is-4">{name}</p>
@@ -52,18 +60,18 @@ class Team extends Component {
               </div>
               <div className="column is-one-third-tablet is-half-mobile">
                 {this.renderTeamMember(
-                  'Ivan S.W.',
-                  'Strategist & Senior Advisor',
-                  Ivan,
-                  '@augmentedInvestor',
-                )}
-              </div>
-              <div className="column is-one-third-tablet is-half-mobile">
-                {this.renderTeamMember(
                   'Victor F.',
                   'Head of Engineering',
                   Victor,
                   '@vicdu81',
+                )}
+              </div>
+              <div className="column is-one-third-tablet is-half-mobile">
+                {this.renderTeamMember(
+                  'Ivan S.W.',
+                  'Strategist & Senior Advisor',
+                  Ivan,
+                  '@augmentedInvestor',
                 )}
               </div>
               <div className="column is-one-third-tablet is-half-mobile">

@@ -53,7 +53,6 @@ class App extends Component {
   render() {
     return (
       <ScrollToTop>
-        <Background />
         <Header openModal={this.openModal} />
         <CartModal
           isOpen={this.state.isCartModalOpen}

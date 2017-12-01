@@ -1,36 +1,7 @@
 import React, { Component } from 'react';
 import logo from './images/logo.png';
-import appStoreBadge from './images/app-store.svg';
-
-const EMOJIS = ['🚀', '💰', '🌏', '🌕', '❤️', '🔓'];
 
 class Hero extends Component {
-  state = {
-    emojiIndex: 0,
-  };
-
-  componentDidMount() {
-    const emojiInterval = setInterval(() => {
-      let emojiIndex = this.state.emojiIndex + 1;
-
-      if (this.state.emojiIndex === EMOJIS.length - 1) {
-        emojiIndex = 0;
-      }
-
-      this.setState({
-        emojiIndex,
-      });
-    }, 1750);
-
-    this.setState({
-      emojiInterval,
-    });
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.state.emojiInterval);
-  }
-
   render() {
     return (
       <section
@@ -58,41 +29,8 @@ class Hero extends Component {
               textAlign: 'center',
             }}
           >
-            <br />
             <img src={logo} width={350} alt="" />
-            <h1 className="subtitle is-size-2">Ethereum Limited Total Coin</h1>
-            <br />
-            <a
-              className="button is-white"
-              href="https://t.me/ELTCOIN"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="icon">
-                <i className="fa fa-telegram" />
-              </span>
-              <span>Join our Telegram community</span>
-              <span className="icon">
-                <i className="fa fa-telegram" />
-              </span>
-            </a>
-            <br />
-            <br />
-            <h4 className="subtitle is-size-4">
-              <b>ELTCOIN</b>{' '}
-              <span role="img" aria-label="unlocks">
-                {EMOJIS[this.state.emojiIndex]}
-              </span>
-              <b> DREAMS</b>
-            </h4>
-            <br />
-            <a
-              href="https://itunes.apple.com/app/eltwallet/id1302147242"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={appStoreBadge} alt="" width={150} />
-            </a>
+            <h1 className="subtitle is-size-2">Welcome to our universe!</h1>
           </div>
         </div>
       </section>

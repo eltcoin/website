@@ -31,8 +31,8 @@ class Home extends Component {
     return (
       <div>
         <Hero />
-        <Roadmap />
         <Team />
+        <Roadmap />
         <ELTCard />
         <ELTSwag />
         <br />

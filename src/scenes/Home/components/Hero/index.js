@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './images/logo.png';
-import iphoneMockup from './images/iphone.png';
+import iphoneMockup from './images/iphoneELT.png';
 import appStoreLogo from './images/app-store.svg';
 import googlePlayLogo from './images/google-play.png';
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import image0 from './images/0.png';
-import image1 from './images/1.png';
-import image2 from './images/2.png';
+import ELTCard1 from './images/eltcard1.jpg';
+import ELTCard2 from './images/eltcard2.jpg';
+import ELTCard3 from './images/eltcard3.jpg';
 
 export default () => (
   <div
@@ -15,17 +15,17 @@ export default () => (
     <div className="columns">
       <div className="column">
         <figure className="image" style={{ width: '80%%' }}>
-          <img src={image0} alt="" />
+          <img src={ELTCard1} alt="" />
         </figure>
       </div>
       <div className="column">
         <figure className="image" style={{ width: '80%%' }}>
-          <img src={image1} alt="" />
+          <img src={ELTCard2} alt="" />
         </figure>
       </div>
       <div className="column">
         <figure className="image" style={{ width: '80%%' }}>
-          <img src={image2} alt="" />
+          <img src={ELTCard3} alt="" />
         </figure>
       </div>
     </div>

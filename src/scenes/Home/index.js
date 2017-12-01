@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import scrollToElement from 'scroll-to-element';
-import Faq from './components/Faq';
 import Hero from './components/Hero';
-import Roadmap from './components/Roadmap';
 import Team from './components/Team';
-import TokenDetails from './components/TokenDetails';
+import Exchanges from './components/Exchanges';
+import Plans from './components/Plans';
+import VideoBox from './components/Plans';
+import ELTCard from './components/ELTCard';
+import ELTSwag from './components/ELTSwag';
 
 class Home extends Component {
   componentDidMount() {
@@ -31,10 +33,12 @@ class Home extends Component {
     return (
       <div>
         <Hero />
-        <TokenDetails />
-        <Roadmap />
         <Team />
-        <Faq />
+        <Exchanges />
+        <Plans />
+        <VideoBox />
+        <ELTCard />
+        <ELTSwag />
         <br />
       </div>
     );

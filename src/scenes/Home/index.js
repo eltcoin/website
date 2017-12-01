@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import scrollToElement from 'scroll-to-element';
 import ELTCard from './components/ELTCard';
 import ELTSwag from './components/ELTSwag';
+import Exchanges from './components/Exchanges';
 import Hero from './components/Hero';
 import Roadmap from './components/Roadmap';
 import Team from './components/Team';
@@ -32,6 +33,7 @@ class Home extends Component {
       <div>
         <Hero />
         <Team />
+        <Exchanges />
         <Roadmap />
         <ELTCard />
         <ELTSwag />

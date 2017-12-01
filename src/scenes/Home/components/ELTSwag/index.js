@@ -14,7 +14,7 @@ export default () => (
     }}
   >
     <p className="title is-size-1" style={{ color: '#fff' }}>
-      ELTSWAG
+      ELTSwag
     </p>
     <div className="columns">
       <div className="column">

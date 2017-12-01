@@ -10,7 +10,7 @@ export default () => (
       padding: '1.5rem',
     }}
   >
-    <p className="title is-size-1">ELTCARD</p>
+    <p className="title is-size-1">ELTCard</p>
     <p className="subtitle">Instant crypto to fiat conversion!</p>
     <div className="columns">
       <div className="column">

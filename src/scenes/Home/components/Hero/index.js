@@ -12,7 +12,7 @@ class Hero extends Component {
           <div
             className="container"
             style={{
-              background: 'linear-gradient(to bottom, #000000, #53346d)',
+              background: 'linear-gradient(to bottom, #000000, #da328a)',
               minHeight: 'calc(100vh - 40px)',
               textAlign: 'center',
             }}
@@ -67,10 +67,8 @@ class Hero extends Component {
               </a>
               <img
                 src={googlePlayLogo}
-                width={120}
-                height={40}
                 alt=""
-                style={{ marginLeft: '0.5em' }}
+                style={{ marginLeft: '0.5em', height: 40, width: 'auto' }}
               />
             </div>
           </div>

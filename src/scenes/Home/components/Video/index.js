@@ -5,6 +5,8 @@ export default () => (
     className="card container has-text-centered"
     style={{
       padding: '1.5rem',
+      paddingTop: 100,
+      paddingBottom: 100,
     }}
   >
     <iframe

@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import {
-  Background,
-  CartModal,
-  Footer,
-  Header,
-  ScrollToTop,
-} from './components';
+import { CartModal, Footer, Header, ScrollToTop } from './components';
 import { Home, Store, StoreProduct } from '../../scenes';
 import { connect } from 'react-redux';
 import { SET_CART_ITEMS } from '../../config/actionTypes';
@@ -53,7 +47,6 @@ class App extends Component {
   render() {
     return (
       <ScrollToTop>
-        <Background />
         <Header openModal={this.openModal} />
         <CartModal
           isOpen={this.state.isCartModalOpen}

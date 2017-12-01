@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import scrollToElement from 'scroll-to-element';
+import ELTSwag from './components/ELTSwag';
 import Faq from './components/Faq';
 import Hero from './components/Hero';
 import Roadmap from './components/Roadmap';
@@ -35,6 +36,7 @@ class Home extends Component {
         <Roadmap />
         <Team />
         <Faq />
+        <ELTSwag />
         <br />
       </div>
     );

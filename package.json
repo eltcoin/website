@@ -8,7 +8,6 @@
     "apollo-client-preset": "^1.0.4",
     "bulma": "^0.6.1",
     "bulma-steps": "^0.1.2",
-    "bulma-timeline": "^1.1.2",
     "graphql": "^0.11.7",
     "graphql-tag": "^2.5.0",
     "history": "^4.7.2",

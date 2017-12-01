@@ -25,7 +25,6 @@ $size-2: 2.5rem;
 $text: $primary;
 
 @import 'bulma/bulma';
-@import 'bulma-timeline/timeline';
 @import 'bulma-steps/steps';
 
 body {
@@ -170,42 +169,6 @@ footer {
     width: 100%;
     z-index: 2;
   }
-}
-
-// Roadmap
-.timeline .timeline-item p {
-  transition: all 0.25s ease;
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-}
-
-.timeline {
-  .timeline-item:hover {
-    cursor: default;
-
-    .heading {
-      cursor: pointer;
-    }
-  }
-}
-
-.timeline.is-centered .timeline-content {
-  text-align: left;
-  width: 100%;
-}
-
-.timeline .timeline-item .timeline-marker {
-  left: -0.34em;
-}
-
-.timeline.is-centered .timeline-item:nth-of-type(2n) .timeline-marker {
-  right: -0.46rem;
-}
-
-.timeline.is-centered .timeline-item:nth-of-type(2n + 1)::before {
-  background-color: #9098a1;
 }
 
 // Bugfix on iPhone <= 5s

@@ -7,6 +7,7 @@ import Exchanges from './components/Exchanges';
 import Hero from './components/Hero';
 import Roadmap from './components/Roadmap';
 import Team from './components/Team';
+import Video from './components/Video';
 
 class Home extends Component {
   componentDidMount() {
@@ -35,6 +36,7 @@ class Home extends Component {
         <Team />
         <Exchanges />
         <Roadmap />
+        <Video />
         <ELTCard />
         <ELTSwag />
         <br />

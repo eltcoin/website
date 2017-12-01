@@ -1,81 +1,106 @@
 import React from 'react';
-import loveEmoji from './images/heart.svg';
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="content container has-text-centered">
+    <footer
+      style={{
+        background: 'radial-gradient(circle, #000000, #53346d)',
+        backgroundSize: '100% 200%',
+        padding: '1.5rem',
+      }}
+    >
+      <div className="container has-text-white has-text-weight-bold">
+        <p className="is-size-3">JOIN OUR COMMUNITY</p>
+        <p className="has-text-weight-light">
+          Stay up to date with progress and updates.
+        </p>
+        <br />
         <p className="is-size-5">
           <a
             className="is-medium"
-            href="https://github.com/eltcoin"
-            style={{ margin: '.5em' }}
+            href="https://www.youtube.com/channel/UCCpJqoXegl501zfHevtTilQ"
             target="_blank"
             rel="noopener noreferrer"
+            style={{ marginRight: '.5rem' }}
           >
-            <i className="fa fa-2x fa-github" />
+            <span className="fa-stack">
+              <i className="fa fa-circle fa-stack-2x fa-inverse" />
+              <i className="fa fa-youtube-play fa-stack-1x" />
+            </span>
+          </a>
+          <a
+            className="is-medium"
+            href="https://github.com/eltcoin"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginRight: '.5rem' }}
+          >
+            <span className="fa-stack">
+              <i className="fa fa-circle fa-stack-2x fa-inverse" />
+              <i className="fa fa-github fa-stack-1x" />
+            </span>
           </a>
           <a
             className="is-medium"
             href="https://www.facebook.com/eltcoin.community/"
-            style={{ margin: '.5em' }}
             target="_blank"
             rel="noopener noreferrer"
+            style={{ marginRight: '.5rem' }}
           >
-            <i className="fa fa-2x fa-facebook" />
+            <span className="fa-stack">
+              <i className="fa fa-circle fa-stack-2x fa-inverse" />
+              <i className="fa fa-facebook fa-stack-1x" />
+            </span>
+          </a>
+          <a
+            className="is-medium"
+            href="https://t.me/ELTCOIN"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ marginRight: '.5rem' }}
+          >
+            <span className="fa-stack">
+              <i className="fa fa-circle fa-stack-2x fa-inverse" />
+              <i className="fa fa-telegram fa-stack-1x" />
+            </span>
           </a>
           <a
             className="is-medium"
             href="https://twitter.com/officialELTCoin"
-            style={{ margin: '.5em' }}
             target="_blank"
             rel="noopener noreferrer"
+            style={{ marginRight: '.5rem' }}
           >
-            <i className="fa fa-2x fa-twitter" />
+            <span className="fa-stack">
+              <i className="fa fa-circle fa-stack-2x fa-inverse" />
+              <i className="fa fa-twitter fa-stack-1x" />
+            </span>
           </a>
           <a
-            className="icon is-medium"
-            href="https://t.me/ELTCOIN"
-            style={{ margin: '.5em' }}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa fa-2x fa-telegram" />
-          </a>
-          <a
-            className="icon is-medium"
+            className="is-medium"
             href="https://bitcointalk.org/index.php?topic=2259761.0"
-            style={{ margin: '.5em' }}
             target="_blank"
             rel="noopener noreferrer"
+            style={{ marginRight: '.5rem' }}
           >
-            <i className="fa fa-2x fa-btc" />
+            <span className="fa-stack">
+              <i className="fa fa-circle fa-stack-2x fa-inverse" />
+              <i className="fa fa-bitcoin fa-stack-1x" />
+            </span>
           </a>
           <a
-            className="icon is-medium"
+            className="is-medium"
             href="https://medium.com/@officialELTCoin"
-            style={{ margin: '.5em' }}
             target="_blank"
             rel="noopener noreferrer"
+            style={{ marginRight: '.5rem' }}
           >
-            <i className="fa fa-2x fa-medium" />
+            <span className="fa-stack">
+              <i className="fa fa-circle fa-stack-2x fa-inverse" />
+              <i className="fa fa-medium fa-stack-1x" />
+            </span>
           </a>
         </p>
-        <br />
-        <img
-          src={loveEmoji}
-          alt=""
-          width={16}
-          style={{ marginRight: '.5rem' }}
-        />
-        <span>ELTCOIN Community Project {new Date().getFullYear()}</span>
-        <img
-          src={loveEmoji}
-          alt=""
-          width={16}
-          style={{ marginLeft: '.5rem' }}
-        />
-        <br />
       </div>
       <br />
     </footer>

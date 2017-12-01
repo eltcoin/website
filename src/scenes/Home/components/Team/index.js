@@ -16,7 +16,7 @@ class Team extends Component {
     return (
       <div className="card">
         <div className={handle + ' card-image'}>
-          <img class="main" src={imageUrl} alt="" width={200} />
+          <img className="main" src={imageUrl} alt="" width={200} />
           <img
             id="oHover"
             style={{ opacity: 0, display: 'none' }}

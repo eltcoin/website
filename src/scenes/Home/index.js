@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import scrollToElement from 'scroll-to-element';
+import ELTCard from './components/ELTCard';
 import ELTSwag from './components/ELTSwag';
-import Faq from './components/Faq';
 import Hero from './components/Hero';
 import Roadmap from './components/Roadmap';
 import Team from './components/Team';
-import TokenDetails from './components/TokenDetails';
 
 class Home extends Component {
   componentDidMount() {
@@ -32,10 +31,9 @@ class Home extends Component {
     return (
       <div>
         <Hero />
-        <TokenDetails />
         <Roadmap />
         <Team />
-        <Faq />
+        <ELTCard />
         <ELTSwag />
         <br />
       </div>

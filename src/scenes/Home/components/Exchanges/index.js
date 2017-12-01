@@ -9,8 +9,8 @@ export default () => (
   <div
     className="card container has-text-centered has-text-white"
     style={{
-      background: 'radial-gradient(circle, #000000, #53346d)',
-      backgroundSize: '100% 200%',
+      background: 'linear-gradient(0deg, #500d33, #000000)',
+      height: 500,
       padding: '1.5rem',
     }}
   >

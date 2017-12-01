@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import Adrian from './images/planet1.jpg';
-import Dan from './images/planet2.jpg';
-import Ivan from './images/planet3.jpg';
-import Oliver from './images/planet4.jpg';
-import Oli from './images/planet5.jpg';
-import Victor from './images/planet6.jpg';
-import Nathan from './images/planet7.jpg';
+import Adrian from './../../images/planet1.png';
+import Dan from './../../images/planet2.png';
+import Ivan from './../../images/planet3.png';
+import Oliver from './../../images/planet4.png';
+import Oli from './../../images/planet5.png';
+import Victor from './../../images/planet6.png';
+import Nathan from './../../images/planet7.png';
 
 class Team extends Component {
   renderTeamMember(name, role, imageUrl, handle) {

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer
       style={{
-        background: 'radial-gradient(circle, #000000, #53346d)',
+        background: 'radial-gradient(circle, #000000, #500d33)',
         backgroundSize: '100% 200%',
         padding: '1.5rem',
       }}

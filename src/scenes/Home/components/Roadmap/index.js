@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import planetImage from './images/planet.png';
 import roadmapItems from './roadmap.json';
 
+import Planet1 from './../../images/planet1.png';
+import Planet2 from './../../images/planet2.png';
+import Planet3 from './../../images/planet3.png';
+import Planet4 from './../../images/planet4.png';
+import Planet5 from './../../images/planet5.png';
+import Planet6 from './../../images/planet6.png';
+import Planet7 from './../../images/planet7.png';
+
 class Roadmap extends Component {
   state = {
     index: 0,
@@ -15,8 +23,7 @@ class Roadmap extends Component {
         id="roadmap"
         className="card container has-text-centered has-text-white"
         style={{
-          background: 'radial-gradient(circle, #000000, #53346d)',
-          backgroundSize: '100% 200%',
+          background: 'linear-gradient(0deg, #500d33, #000000)',
           padding: '1.5rem',
           marginTop: '2rem',
         }}
@@ -27,7 +34,7 @@ class Roadmap extends Component {
         <div className="columns is-mobile">
           <div className="column">
             <img
-              src={planetImage}
+              src={Planet1}
               alt=""
               style={{ cursor: 'pointer' }}
               onClick={() => {
@@ -39,7 +46,7 @@ class Roadmap extends Component {
           </div>
           <div className="column">
             <img
-              src={planetImage}
+              src={Planet2}
               alt=""
               style={{ cursor: 'pointer' }}
               onClick={() => {
@@ -51,7 +58,7 @@ class Roadmap extends Component {
           </div>
           <div className="column">
             <img
-              src={planetImage}
+              src={Planet3}
               alt=""
               style={{ cursor: 'pointer' }}
               onClick={() => {
@@ -63,7 +70,7 @@ class Roadmap extends Component {
           </div>
           <div className="column">
             <img
-              src={planetImage}
+              src={Planet4}
               alt=""
               style={{ cursor: 'pointer' }}
               onClick={() => {
@@ -75,7 +82,7 @@ class Roadmap extends Component {
           </div>
           <div className="column">
             <img
-              src={planetImage}
+              src={Planet5}
               alt=""
               style={{ cursor: 'pointer' }}
               onClick={() => {
@@ -87,7 +94,7 @@ class Roadmap extends Component {
           </div>
           <div className="column">
             <img
-              src={planetImage}
+              src={Planet6}
               alt=""
               style={{ cursor: 'pointer' }}
               onClick={() => {
@@ -99,7 +106,7 @@ class Roadmap extends Component {
           </div>
           <div className="column">
             <img
-              src={planetImage}
+              src={Planet7}
               alt=""
               style={{ cursor: 'pointer' }}
               onClick={() => {

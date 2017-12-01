@@ -13,7 +13,6 @@
     "graphql-tag": "^2.5.0",
     "history": "^4.7.2",
     "lodash": "^4.17.4",
-    "moment": "^2.19.3",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
@@ -32,9 +31,11 @@
   "devDependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
-    "prettier": "^1.8.2"
+    "prettier": "^1.8.2",
+    "source-map-explorer": "^1.5.0"
   },
   "scripts": {
+    "analyze": "source-map-explorer build/static/js/main.*",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "build": "npm run build-css && react-scripts build",
     "eject": "react-scripts eject",

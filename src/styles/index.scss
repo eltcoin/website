@@ -17,19 +17,20 @@
 @import 'bulma/sass/utilities/initial-variables';
 
 $family-sans-serif: 'Open Sans', sans-serif;
-$primary: #9098a1;
-$link: #fafafa;
+$primary: #000;
+$link: $primary;
 $family-primary: $family-sans-serif;
 $size-1: 4rem;
 $size-2: 2.5rem;
-$text: $white-bis;
+$text: $primary;
 
 @import 'bulma/bulma';
 @import 'bulma-timeline/timeline';
 @import 'bulma-steps/steps';
 
 body {
-  background-color: $black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .modal a {
@@ -161,70 +162,13 @@ footer {
   }
 }
 
-// Navbar
-a:hover,
-a.navbar-item:hover {
-  color: transparentize($grey-light, 0.5);
-}
-
-.navbar-link:hover,
-a.navbar-item:hover,
-a.navbar-item:hover,
-.navbar-link:hover {
-  background-color: transparent;
-  color: transparentize($grey-light, 0.5);
-}
-
-.navbar-link.is-active,
-a.navbar-item.is-active,
-a.navbar-item.is-active,
-.navbar-link.is-active {
-  color: $white-bis;
-  font-weight: bold;
-}
-
-.navbar {
-  .navbar-item {
-    color: $grey-light;
-  }
-}
-
-.navbar-burger {
-  color: #0a0a0a;
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.01);
-  }
-}
-
-@media only screen and (min-width: $desktop) {
-  .navbar {
-    background-color: inherit;
-    color: $white;
-    .navbar-item {
-      color: $white-bis;
-    }
-  }
-}
-
 @media only screen and (max-width: $desktop) {
   .navbar {
+    border-bottom: 1px solid transparentize($black, 0.95);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 2;
-    .navbar-item {
-      color: $black;
-      &:hover {
-        color: transparentize($black, 0.5);
-      }
-    }
-    .navbar-link.is-active,
-    a.navbar-item.is-active,
-    a.navbar-item.is-active,
-    .navbar-link.is-active {
-      color: $black;
-      font-weight: bold;
-    }
   }
 }
 

@@ -24,7 +24,7 @@ class Roadmap extends Component {
         <p className="title is-size-1" style={{ color: '#fff' }}>
           Flight Plan
         </p>
-        <div className="columns">
+        <div className="columns is-mobile">
           <div className="column">
             <img
               src={planetImage}

@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 import Select from 'react-select';
-import _ from 'lodash';
+import find from 'lodash/find';
+import range from 'lodash/range';
+import uniq from 'lodash/uniq';
 import Spinner from '../../components/Spinner';
 import { ADD_ITEM_TO_CART } from '../../config/actionTypes';
 
@@ -29,7 +31,7 @@ class StoreProduct extends Component {
 
     if (this.state.availableColors) return;
 
-    const availableColors = _.uniq(
+    const availableColors = uniq(
       newProps.data.Product.productVariants.map(pv => pv.color),
     )
       .sort()
@@ -38,7 +40,7 @@ class StoreProduct extends Component {
         label: color,
       }));
 
-    const availableSizes = _.uniq(
+    const availableSizes = uniq(
       newProps.data.Product.productVariants.map(pv => pv.size),
     )
       .sort((size1, size2) => SIZES_ORDER[size1] > SIZES_ORDER[size2])
@@ -76,7 +78,7 @@ class StoreProduct extends Component {
   selectedProductVariant = () => {
     if (!this.state.selectedSize || !this.state.selectedColor) return;
 
-    return _.find(
+    return find(
       this.props.data.Product.productVariants,
       pv =>
         pv.size === this.state.selectedSize.value &&
@@ -101,8 +103,8 @@ class StoreProduct extends Component {
 
     const isItemInCart =
       selectedProductVariant &&
-      _.find(
-        _.map(this.props.cartItems, i => i.productVariant.id),
+      find(
+        this.props.cartItems.map(i => i.productVariant.id),
         productVariantId => productVariantId === selectedProductVariant.id,
       );
 
@@ -174,7 +176,7 @@ class StoreProduct extends Component {
                   searchable={false}
                   clearable={false}
                   value={this.state.selectedQuantity}
-                  options={_.range(1, 11).map(n => ({
+                  options={range(1, 11).map(n => ({
                     value: n,
                     label: n,
                   }))}

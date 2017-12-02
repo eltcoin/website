@@ -102,6 +102,7 @@ class StoreProduct extends Component {
     if (!selectedProductVariant) return;
 
     const isItemInCart =
+      this.props.cartItems &&
       selectedProductVariant &&
       find(
         this.props.cartItems.map(i => i.productVariant.id),

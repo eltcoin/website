@@ -11,4 +11,4 @@ const getMiddleware = () => {
   return applyMiddleware(localStorageMiddleware, createLogger());
 };
 
-export default createStore(reducer, getMiddleware());
+export default createStore(reducer, { cartItems: [] }, getMiddleware());

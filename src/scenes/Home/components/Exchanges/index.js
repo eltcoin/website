@@ -41,7 +41,7 @@ export default () => (
     </p>
     <div className="columns">
       {EXCHANGES.map(exchange => (
-        <div className="column">
+        <div className="column" key={exchange.link}>
           <a href={exchange.link} target="_blank" rel="noopener noreferrer">
             <figure className="image">
               <img src={exchange.logo} alt="" />

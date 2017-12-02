@@ -4,6 +4,24 @@ import image0 from './images/0.png';
 import image1 from './images/1.png';
 import image2 from './images/2.png';
 
+const SWAG_ITEMS = [
+  {
+    image: image0,
+    name: 'The fighter',
+    price: '$29.99',
+  },
+  {
+    image: image1,
+    name: 'The original',
+    price: '$39.99',
+  },
+  {
+    image: image2,
+    name: 'The hodler',
+    price: '$29.99',
+  },
+];
+
 export default () => (
   <div
     className="card container has-text-centered has-text-white"
@@ -16,27 +34,15 @@ export default () => (
       ELTSwag
     </p>
     <div className="columns">
-      <div className="column">
-        <figure className="image" style={{ width: '80%%' }}>
-          <img src={image0} alt="" />
-        </figure>
-        <p>The fighter</p>
-        <p>$29.99</p>
-      </div>
-      <div className="column">
-        <figure className="image" style={{ width: '80%%' }}>
-          <img src={image1} alt="" />
-        </figure>
-        <p>The original</p>
-        <p>$39.99</p>
-      </div>
-      <div className="column">
-        <figure className="image" style={{ width: '80%%' }}>
-          <img src={image2} alt="" />
-        </figure>
-        <p>The hodler</p>
-        <p>$29.99</p>
-      </div>
+      {SWAG_ITEMS.map(item => (
+        <div className="column" key={item.name}>
+          <figure className="image" style={{ margin: 'auto', width: '80%' }}>
+            <img src={item.image} alt="" />
+          </figure>
+          <p>{item.name}</p>
+          <p>{item.price}</p>
+        </div>
+      ))}
     </div>
     <p className="is-size-3">Limited supply</p>
     <br />

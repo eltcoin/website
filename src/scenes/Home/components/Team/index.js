@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import Adrian from './../../images/planet1.png';
 import Dan from './../../images/planet2.png';
 import Ivan from './../../images/planet3.png';
@@ -8,64 +7,60 @@ import Oli from './../../images/planet5.png';
 import Victor from './../../images/planet6.png';
 import Nathan from './../../images/planet7.png';
 
-class Team extends Component {
-  renderTeamMember(name, role, imageUrl, handle) {
-    return (
-      <div>
-        <img src={imageUrl} alt="" width={100} />
-        <p className="title is-4">{name}</p>
-        <p className="subtitle is-6">{role}</p>
-      </div>
-    );
-  }
+const TEAM_MEMBERS = [
+  {
+    image: Oliver,
+    name: 'Oli H.',
+    title: 'Founder & Developer',
+  },
+  {
+    image: Victor,
+    name: 'Victor F.',
+    title: 'Head of Engineering',
+  },
+  {
+    image: Ivan,
+    name: 'Ivan S.W.',
+    title: 'Strategist & Senior Advisor',
+  },
+  {
+    image: Dan,
+    name: 'Dan T.',
+    title: 'Head of Design',
+  },
+  {
+    image: Oli,
+    name: 'Oli M.',
+    title: 'Senior Advisor & Tech',
+  },
+  {
+    image: Adrian,
+    name: 'Adrian P.',
+    title: 'Head of Staff',
+  },
+  {
+    image: Nathan,
+    name: 'Nathan H.',
+    title: 'Head of Community',
+  },
+];
 
-  render() {
-    return (
-      <section id="team" className="hero">
-        <div className="hero-body">
-          <div className="container has-text-centered">
-            <h1 className="title is-size-1">Meet the Team</h1>
-            <br />
-            <div className="columns">
-              <div className="column">
-                {this.renderTeamMember('Oli H.', 'Founder & Developer', Oliver)}
-              </div>
-              <div className="column">
-                {this.renderTeamMember(
-                  'Victor F.',
-                  'Head of Engineering',
-                  Victor,
-                )}
-              </div>
-              <div className="column">
-                {this.renderTeamMember(
-                  'Ivan S.W.',
-                  'Strategist & Senior Advisor',
-                  Ivan,
-                )}
-              </div>
-              <div className="column">
-                {this.renderTeamMember('Dan T.', 'Head of Design', Dan)}
-              </div>
-              <div className="column">
-                {this.renderTeamMember('Oli M.', 'Senior Advisor & Tech', Oli)}
-              </div>
-              <div className="column">
-                {this.renderTeamMember('Adrian P.', 'Head of Staff', Adrian)}
-              </div>
-              <div className="column">
-                {this.renderTeamMember(
-                  'Nathan H.',
-                  'Head of Community',
-                  Nathan,
-                )}
-              </div>
+export default () => (
+  <section id="team" className="hero">
+    <div className="hero-body">
+      <div className="container has-text-centered">
+        <h1 className="title is-size-1">Meet the Team</h1>
+        <br />
+        <div className="columns">
+          {TEAM_MEMBERS.map(member => (
+            <div className="column" key={member.name}>
+              <img src={member.image} alt="" width={100} />
+              <p className="title is-4">{member.name}</p>
+              <p className="subtitle is-6">{member.title}</p>
             </div>
-          </div>
+          ))}
         </div>
-      </section>
-    );
-  }
-}
-
-export default Team;
+      </div>
+    </div>
+  </section>
+);

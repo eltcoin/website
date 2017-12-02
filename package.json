@@ -71,6 +71,7 @@
       ]
     }
   },
+  "eslintIgnore": ["src/config/registerServiceWorker.js"],
   "lint-staged": {
     "src/**/*.{js,jsx,json,scss}": [
       "prettier --single-quote --trailing-comma all --write",

@@ -1,4 +1,4 @@
-export const localStorageMiddleware = store => next => action => {
+export default store => next => action => {
   const previousCartItems = store.getState().cartItems;
 
   next(action);

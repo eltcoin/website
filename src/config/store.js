@@ -1,6 +1,6 @@
 import { applyMiddleware, createStore } from 'redux';
 import { createLogger } from 'redux-logger';
-import { localStorageMiddleware } from './middleware';
+import localStorageMiddleware from './middleware';
 import reducer from './reducer';
 
 const getMiddleware = () => {

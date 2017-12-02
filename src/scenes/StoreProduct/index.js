@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
@@ -18,8 +19,22 @@ const SIZES_ORDER = {
 };
 
 class StoreProduct extends Component {
+  static propTypes = {
+    cartItems: PropTypes.arrayOf({
+      productVariant: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+    data: PropTypes.shape({
+      error: PropTypes.object,
+      loading: PropTypes.bool.isRequired,
+      Product: PropTypes.object,
+    }).isRequired,
+    error: PropTypes.string.isRequired,
+    onAdd: PropTypes.func.isRequired,
+  };
+
   state = {
-    isModalOpen: false,
     selectedQuantity: {
       value: 1,
       label: 1,
@@ -76,7 +91,7 @@ class StoreProduct extends Component {
   };
 
   selectedProductVariant = () => {
-    if (!this.state.selectedSize || !this.state.selectedColor) return;
+    if (!this.state.selectedSize || !this.state.selectedColor) return null;
 
     return find(
       this.props.data.Product.productVariants,
@@ -99,7 +114,7 @@ class StoreProduct extends Component {
   renderProduct(product) {
     const selectedProductVariant = this.selectedProductVariant();
 
-    if (!selectedProductVariant) return;
+    if (!selectedProductVariant) return null;
 
     const isItemInCart =
       this.props.cartItems &&
@@ -133,13 +148,18 @@ class StoreProduct extends Component {
             <p className="is-size-3">$ {product.usdPrice}</p>
             <br />
             <div className="field">
-              <label className="label" style={{ color: '#fafafa' }}>
+              <label
+                className="label"
+                style={{ color: '#fafafa' }}
+                htmlFor="size"
+              >
                 Size
               </label>
               <div className="control">
                 <Select
                   className="centered"
                   placeholder="Size"
+                  name="size"
                   searchable={false}
                   clearable={false}
                   value={this.state.selectedSize}
@@ -150,13 +170,18 @@ class StoreProduct extends Component {
             </div>
             <br />
             <div className="field">
-              <label className="label" style={{ color: '#fafafa' }}>
+              <label
+                className="label"
+                style={{ color: '#fafafa' }}
+                htmlFor="color"
+              >
                 Color
               </label>
               <div className="control">
                 <Select
                   className="centered"
-                  placeholder="Size"
+                  placeholder="Color"
+                  name="color"
                   searchable={false}
                   clearable={false}
                   value={this.state.selectedColor}
@@ -167,13 +192,18 @@ class StoreProduct extends Component {
             </div>
             <br />
             <div className="field">
-              <label className="label" style={{ color: '#fafafa' }}>
+              <label
+                className="label"
+                style={{ color: '#fafafa' }}
+                htmlFor="quantity"
+              >
                 Quantity
               </label>
               <div className="control">
                 <Select
                   className="centered"
-                  placeholder="Size"
+                  placeholder="Quantity"
+                  name="quantity"
                   searchable={false}
                   clearable={false}
                   value={this.state.selectedQuantity}
@@ -254,11 +284,9 @@ const PRODUCT_QUERY = gql`
   }
 `;
 
-const mapStateToProps = state => {
-  return {
-    cartItems: state.cartItems,
-  };
-};
+const mapStateToProps = state => ({
+  cartItems: state.cartItems,
+});
 
 const mapDispatchToProps = dispatch => ({
   onAdd: item => dispatch({ type: ADD_ITEM_TO_CART, item }),

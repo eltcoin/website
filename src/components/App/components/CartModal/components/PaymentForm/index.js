@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
@@ -18,6 +19,28 @@ const CURRENCIES = [
 ];
 
 class PaymentForm extends Component {
+  static propTypes = {
+    cartItems: PropTypes.arrayOf({
+      amount: PropTypes.number.isRequired,
+      productVariant: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+    createTransaction: PropTypes.func.isRequired,
+    emptyCart: PropTypes.func.isRequired,
+    loadPreviousPage: PropTypes.func.isRequired,
+    onSuccess: PropTypes.func.isRequired,
+    user: PropTypes.shape({
+      address: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
+      country: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      fullName: PropTypes.string.isRequired,
+      postalCode: PropTypes.string.isRequired,
+      state: PropTypes.string.isRequired,
+    }).isRequired,
+  };
+
   state = {
     selectedCurrency: CURRENCIES[0],
     formSubmitted: false,
@@ -68,105 +91,95 @@ class PaymentForm extends Component {
           paymentAddress: res.data.createTransaction.paymentAddress,
           qrCodeUrl: res.data.createTransaction.qrCodeUrl,
           statusUrl: res.data.createTransaction.statusUrl,
-          timeout: res.data.createTransaction.timeout,
         });
       })
-      .catch(error => {
-        console.error(error);
+      .catch(() => {
         this.setState({
           isErrorState: true,
         });
       });
   };
 
-  renderCurrencySelection = () => {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="field is-horizontal">
-          <div className="field-label is-normal">
-            <label className="label">Currency</label>
-          </div>
-          <div className="field-body">
-            <div className="field">
-              <div className="control">
-                <Select
-                  searchable={false}
-                  clearable={false}
-                  value={this.state.selectedCurrency}
-                  options={CURRENCIES}
-                  onChange={this.handleCurrencyChange}
-                />
-              </div>
+  renderCurrencySelection = () => (
+    <form onSubmit={this.handleSubmit}>
+      <div className="field is-horizontal">
+        <div className="field-label is-normal">
+          <label className="label">Currency</label>
+        </div>
+        <div className="field-body">
+          <div className="field">
+            <div className="control">
+              <Select
+                searchable={false}
+                clearable={false}
+                value={this.state.selectedCurrency}
+                options={CURRENCIES}
+                onChange={this.handleCurrencyChange}
+              />
             </div>
           </div>
         </div>
-        <br />
-        <div
-          className="field is-grouped"
-          style={{ justifyContent: 'flex-end' }}
-        >
-          <p className="control">
-            <a
-              style={{ lineHeight: '36px' }}
-              onClick={() => {
-                this.props.loadPreviousPage();
-              }}
-            >
-              Back
-            </a>
-          </p>
-          <p className="control">
-            <button type="submit" className="button is-dark">
-              {`Pay in ${this.state.selectedCurrency.label}`}
-            </button>
-          </p>
-        </div>
-      </form>
-    );
-  };
-
-  renderSpinner = () => {
-    return (
-      <div>
-        <Spinner />
-        <p className="has-text-centered">Creating transaction...</p>
       </div>
-    );
-  };
-
-  renderTransactionInfos = () => {
-    return (
-      <div className="has-text-centered">
-        <img src={this.state.qrCodeUrl} alt="" />
-        <br />
-        <p>
-          Please send{' '}
-          <strong>
-            {this.state.amount} {this.state.selectedCurrency.value}
-          </strong>{' '}
-          to the following address:
-        </p>
-        <br />
-        <p>
-          <strong>{this.state.paymentAddress}</strong>
-        </p>
-        <br />
-        <p>
+      <br />
+      <div className="field is-grouped" style={{ justifyContent: 'flex-end' }}>
+        <p className="control">
           <a
-            href={this.state.statusUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            style={{ lineHeight: '36px' }}
+            onClick={() => {
+              this.props.loadPreviousPage();
+            }}
           >
-            Transaction status
+            Back
           </a>
         </p>
-        <br />
-        <p>
-          We'll keep you updated as soon as your order is processed and shipped.
+        <p className="control">
+          <button type="submit" className="button is-dark">
+            {`Pay in ${this.state.selectedCurrency.label}`}
+          </button>
         </p>
       </div>
-    );
-  };
+    </form>
+  );
+
+  renderSpinner = () => (
+    <div>
+      <Spinner />
+      <p className="has-text-centered">Creating transaction...</p>
+    </div>
+  );
+
+  renderTransactionInfos = () => (
+    <div className="has-text-centered">
+      <img src={this.state.qrCodeUrl} alt="" />
+      <br />
+      <p>
+        Please send{' '}
+        <strong>
+          {this.state.amount} {this.state.selectedCurrency.value}
+        </strong>{' '}
+        to the following address:
+      </p>
+      <br />
+      <p>
+        <strong>{this.state.paymentAddress}</strong>
+      </p>
+      <br />
+      <p>
+        <a
+          href={this.state.statusUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Transaction status
+        </a>
+      </p>
+      <br />
+      <p>
+        We&apos;ll keep you updated as soon as your order is processed and
+        shipped.
+      </p>
+    </div>
+  );
 
   render() {
     if (this.state.isErrorState) {
@@ -209,17 +222,14 @@ const CREATE_TRANSACTION_MUTATION = gql`
       paymentAddress
       qrCodeUrl
       statusUrl
-      timeout
     }
   }
 `;
 
-const mapStateToProps = state => {
-  return {
-    cartItems: state.cartItems,
-    user: state.user,
-  };
-};
+const mapStateToProps = state => ({
+  cartItems: state.cartItems,
+  user: state.user,
+});
 
 const mapDispatchToProps = dispatch => ({
   emptyCart: user => dispatch({ type: EMPTY_CART, user }),

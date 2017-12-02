@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
@@ -6,6 +7,12 @@ import Select from 'react-select';
 import { UPDATE_USER_INFOS } from '../../../../../../config/actionTypes';
 
 class UserForm extends Component {
+  static propTypes = {
+    loadNextPage: PropTypes.func.isRequired,
+    loadPreviousPage: PropTypes.func.isRequired,
+    onUserUpdate: PropTypes.func.isRequired,
+  };
+
   state = {
     fullName: '',
     email: '',
@@ -82,7 +89,7 @@ class UserForm extends Component {
       <form onSubmit={this.handleFormSubmit}>
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">
+            <label className="label" htmlFor="country">
               Country <small>*</small>
             </label>
           </div>
@@ -99,6 +106,7 @@ class UserForm extends Component {
                     label: country.name,
                   }))}
                   onChange={this.handleCountryChange}
+                  name="country"
                 />
               </div>
             </div>
@@ -107,7 +115,7 @@ class UserForm extends Component {
 
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">
+            <label className="label" htmlFor="name">
               Full name <small>*</small>
             </label>
           </div>
@@ -119,6 +127,7 @@ class UserForm extends Component {
                   autoComplete="name"
                   className="input"
                   type="text"
+                  name="name"
                   placeholder="John Doe"
                   value={this.state.fullName}
                   onChange={this.handleFullNameChange}
@@ -130,7 +139,7 @@ class UserForm extends Component {
 
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">
+            <label className="label" htmlFor="email">
               Email <small>*</small>
             </label>
           </div>
@@ -154,7 +163,7 @@ class UserForm extends Component {
 
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">
+            <label className="label" htmlFor="address">
               Address <small>*</small>
             </label>
           </div>
@@ -163,6 +172,7 @@ class UserForm extends Component {
               <div className="control">
                 <textarea
                   required
+                  name="address"
                   autoComplete="shipping street-address"
                   className="textarea"
                   placeholder="Ethereum Mainnet"
@@ -176,7 +186,7 @@ class UserForm extends Component {
 
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">
+            <label className="label" htmlFor="postalCode">
               {this.state.country && this.state.country.value.code === 'US'
                 ? 'Zip code'
                 : 'Postal code'}
@@ -187,6 +197,7 @@ class UserForm extends Component {
               <div className="control">
                 <input
                   autoComplete="shipping postal-code"
+                  name="postalCode"
                   className="input"
                   placeholder="10011"
                   value={this.state.postalCode}
@@ -199,7 +210,7 @@ class UserForm extends Component {
 
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label">
+            <label className="label" htmlFor="city">
               City <small>*</small>
             </label>
           </div>
@@ -209,6 +220,7 @@ class UserForm extends Component {
                 <input
                   required
                   autoComplete="shipping address-level2"
+                  name="city"
                   className="input"
                   placeholder="New York"
                   value={this.state.city}
@@ -224,7 +236,7 @@ class UserForm extends Component {
           this.state.country.value.states.length > 0 && (
             <div className="field is-horizontal">
               <div className="field-label is-normal">
-                <label className="label">
+                <label className="label" htmlFor="state">
                   State <small>*</small>
                 </label>
               </div>
@@ -235,6 +247,7 @@ class UserForm extends Component {
                       <Select
                         required
                         autoComplete="shipping address-level1"
+                        name="state"
                         clearable={false}
                         value={this.state.state}
                         options={this.state.country.value.states.map(state => ({

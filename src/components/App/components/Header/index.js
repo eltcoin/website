@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 import blackLogo from './images/black_logo.png';
 import moonPaper from './moon_paper.pdf';
 
 class Header extends Component {
+  static propTypes = {
+    location: PropTypes.shape({
+      pathname: PropTypes.string,
+    }).isRequired,
+    openModal: PropTypes.func.isRequired,
+  };
+
   state = {
     isMenuOpen: false,
+  };
+
+  onCartButtonClick = () => {
+    this.props.openModal();
+    this.closeMenu();
   };
 
   closeMenu = () => {
@@ -18,11 +31,6 @@ class Header extends Component {
     this.setState({
       isMenuOpen: true,
     });
-  };
-
-  onCartButtonClick = () => {
-    this.props.openModal();
-    this.closeMenu();
   };
 
   render() {

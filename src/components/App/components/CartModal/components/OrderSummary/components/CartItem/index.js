@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {
   DECREASE_ITEM_QUANTITY,
@@ -7,6 +8,17 @@ import {
 } from '../../../../../../../../config/actionTypes';
 
 class CartItem extends Component {
+  static propTypes = {
+    onDecrease: PropTypes.func.isRequired,
+    onIncrease: PropTypes.func.isRequired,
+    onRemove: PropTypes.func.isRequired,
+    item: PropTypes.shape({
+      productVariant: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+  };
+
   decreaseQuantity = () => {
     const { item } = this.props;
 

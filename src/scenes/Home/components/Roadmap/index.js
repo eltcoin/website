@@ -47,12 +47,13 @@ class Roadmap extends Component {
             <div className="column">
               <img
                 src={planet}
+                // eslint-disable-next-line react/no-array-index-key
                 key={index}
                 alt=""
                 style={{ cursor: 'pointer' }}
                 onClick={() => {
                   this.setState({
-                    index: index,
+                    index,
                   });
                 }}
               />
@@ -63,6 +64,7 @@ class Roadmap extends Component {
           <p className="is-size-5">{roadmapItem.title}</p>
           <ul>
             {roadmapItem.items.map((item, index) => (
+              // eslint-disable-next-line react/no-array-index-key
               <li key={index}>{item}</li>
             ))}
           </ul>

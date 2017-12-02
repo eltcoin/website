@@ -1,36 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Steps extends Component {
-  renderStep(isCompleted, isActive, description) {
-    return (
-      <div
-        className={`step-item ${isCompleted
-          ? ' is-completed is-success'
-          : ''} ${isActive ? ' is-active' : ''}`}
-      >
-        <div className="step-marker" />
-        <div className="step-details">
-          <p>{description}</p>
-        </div>
+function renderStep(isCompleted, isActive, description) {
+  return (
+    <div
+      className={`step-item ${isCompleted ? ' is-completed is-success' : ''} ${
+        isActive ? ' is-active' : ''
+      }`}
+    >
+      <div className="step-marker" />
+      <div className="step-details">
+        <p>{description}</p>
       </div>
-    );
-  }
-
-  render() {
-    const { pageNumber } = this.props;
-
-    return (
-      <div className="steps">
-        {this.renderStep(pageNumber >= 1, pageNumber === 0, 'Review order')}
-        {this.renderStep(
-          pageNumber >= 2,
-          pageNumber === 1,
-          'Your informations',
-        )}
-        {this.renderStep(pageNumber === 3, pageNumber === 2, 'Payment')}
-      </div>
-    );
-  }
+    </div>
+  );
 }
+
+const Steps = ({ pageNumber }) => (
+  <div className="steps">
+    {renderStep(pageNumber >= 1, pageNumber === 0, 'Review order')}
+    {renderStep(pageNumber >= 2, pageNumber === 1, 'Your informations')}
+    {renderStep(pageNumber === 3, pageNumber === 2, 'Payment')}
+  </div>
+);
+
+Steps.propTypes = {
+  pageNumber: PropTypes.number.isRequired,
+};
 
 export default Steps;

@@ -1,25 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ApolloClient from 'apollo-client';
-import { HttpLink, InMemoryCache } from 'apollo-client-preset';
+import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-client-preset';
 import { ApolloProvider } from 'react-apollo';
 import { Provider } from 'react-redux';
 import { Router, Route, Switch } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
+import 'react-select/dist/react-select.css';
 import store from './config/store';
 import App from './components/App';
 import registerServiceWorker from './config/registerServiceWorker';
+
 import './styles/index.css';
-import 'react-select/dist/react-select.css';
 
 const history = createBrowserHistory();
 
 if (process.env.NODE_ENV === 'production') {
-  window.Raven
-    .config('https://0ddfcefcf922465488c2dde443f9c9d5@sentry.io/230876')
-    .install();
+  window.Raven.config(
+    'https://0ddfcefcf922465488c2dde443f9c9d5@sentry.io/230876',
+  ).install();
 
-  history.listen((location, action) => {
+  history.listen(location => {
     window.gtag('config', 'UA-107700473-1', {
       page_path: location.pathname,
     });

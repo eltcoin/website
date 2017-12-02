@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import OrderSummary from './components/OrderSummary';
 import PaymentForm from './components/PaymentForm';
 import Steps from './components/Steps';
 import UserForm from './components/UserForm';
 
 class CartModal extends Component {
+  static propTypes = {
+    closeModal: PropTypes.func.isRequired,
+  };
+
   state = {
     pageNumber: 0,
   };
@@ -49,14 +54,18 @@ class CartModal extends Component {
           />
         );
       default:
-        return;
+        return null;
     }
   };
 
   render() {
     return (
       <div className={`modal ${this.props.isOpen ? 'is-active' : ''}`}>
-        <div className="modal-background" onClick={this.props.closeModal} />
+        <div
+          className="modal-background"
+          onClick={this.props.closeModal}
+          role="button"
+        />
         <div className="modal-content">
           <div className="box" style={{ color: '#0a0a0a' }}>
             <Steps

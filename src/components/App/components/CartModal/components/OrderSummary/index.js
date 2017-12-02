@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import CartItem from './components/CartItem';
 
 class OrderSummary extends Component {
+  static propTypes = {
+    cartItems: PropTypes.arrayOf({
+      productVariant: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+      }).isRequired,
+    }).isRequired,
+    loadNextPage: PropTypes.func.isRequired,
+  };
+
   totalPrice() {
-    return (this.props.cartItems
-      .map(item => item.product.usdPrice * item.amount)
-      .reduce((a, b) => a + b, 0) + 9.99
+    return (
+      this.props.cartItems
+        .map(item => item.product.usdPrice * item.amount)
+        .reduce((a, b) => a + b, 0) + 9.99
     ).toFixed(2);
   }
 
@@ -57,10 +68,8 @@ class OrderSummary extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    cartItems: state.cartItems,
-  };
-};
+const mapStateToProps = state => ({
+  cartItems: state.cartItems,
+});
 
 export default connect(mapStateToProps)(OrderSummary);

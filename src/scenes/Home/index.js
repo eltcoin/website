@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import scrollToElement from 'scroll-to-element';
 import ELTCard from './components/ELTCard';
@@ -9,6 +10,14 @@ import Roadmap from './components/Roadmap';
 import Team from './components/Team';
 
 class Home extends Component {
+  static propTypes = {
+    history: PropTypes.shape({
+      location: PropTypes.shape({
+        hash: PropTypes.string,
+      }).isRequired,
+    }).isRequired,
+  };
+
   componentDidMount() {
     this.jumpToHash();
   }
@@ -18,7 +27,7 @@ class Home extends Component {
   }
 
   jumpToHash = () => {
-    const hash = this.props.history.location.hash;
+    const { hash } = this.props.history.location;
 
     if (hash) {
       scrollToElement(hash, {

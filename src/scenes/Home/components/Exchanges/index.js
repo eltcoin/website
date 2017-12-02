@@ -5,12 +5,34 @@ import decentrexLogo from './images/decentrex.png';
 import etherdeltaLogo from './images/etherdelta.png';
 import coinexchangeLogo from './images/coinexchange.png';
 
+const EXCHANGES = [
+  {
+    link: 'https://idex.market/eth/eltcoin',
+    logo: idexLogo,
+  },
+  {
+    link: 'https://mercatox.com/exchange/ELTCOIN/ETH',
+    logo: mercatoxLogo,
+  },
+  {
+    link: 'https://decentrex.com/#ELTCOIN-ETH',
+    logo: decentrexLogo,
+  },
+  {
+    link: 'https://etherdelta.com/#ELTCOIN-ETH',
+    logo: etherdeltaLogo,
+  },
+  {
+    link: 'https://www.coinexchange.io/market/ELT/ETH',
+    logo: coinexchangeLogo,
+  },
+];
+
 export default () => (
   <div
     className="card container has-text-centered has-text-white"
     style={{
       background: 'linear-gradient(0deg, #500d33, #000000)',
-      height: 500,
       padding: '1.5rem',
     }}
   >
@@ -18,76 +40,18 @@ export default () => (
       Exchanges
     </p>
     <div className="columns">
-      <div className="column">
-        <a
-          href="https://idex.market/eth/eltcoin"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <figure className="image" style={{ width: '80%%' }}>
-            <img src={idexLogo} alt="" />
-          </figure>
-        </a>
-        <p>
-          Status: <span className="has-text-success">LISTED</span>
-        </p>
-      </div>
-      <div className="column">
-        <a
-          href="https://mercatox.com/exchange/ELTCOIN/ETH"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <figure className="image" style={{ width: '80%%' }}>
-            <img src={mercatoxLogo} alt="" />
-          </figure>
-        </a>
-        <p>
-          Status: <span className="has-text-success">LISTED</span>
-        </p>
-      </div>
-      <div className="column">
-        <a
-          href="https://decentrex.com/#ELTCOIN-ETH"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <figure className="image" style={{ width: '80%%' }}>
-            <img src={decentrexLogo} alt="" />
-          </figure>
-        </a>
-        <p>
-          Status: <span className="has-text-success">LISTED</span>
-        </p>
-      </div>
-      <div className="column">
-        <a
-          href="https://etherdelta.com/#ELTCOIN-ETH"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <figure className="image" style={{ width: '80%%' }}>
-            <img src={etherdeltaLogo} alt="" />
-          </figure>
-        </a>
-        <p>
-          Status: <span className="has-text-success">LISTED</span>
-        </p>
-      </div>
-      <div className="column">
-        <a
-          href="https://www.coinexchange.io/market/ELT/ETH"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <figure className="image" style={{ width: '80%%' }}>
-            <img src={coinexchangeLogo} alt="" />
-          </figure>
-        </a>
-        <p>
-          Status: <span className="has-text-success">LISTED</span>
-        </p>
-      </div>
+      {EXCHANGES.map(exchange => (
+        <div className="column">
+          <a href={exchange.link} target="_blank" rel="noopener noreferrer">
+            <figure className="image">
+              <img src={exchange.logo} alt="" />
+            </figure>
+          </a>
+          <p>
+            Status: <span className="has-text-success">LISTED</span>
+          </p>
+        </div>
+      ))}
     </div>
   </div>
 );

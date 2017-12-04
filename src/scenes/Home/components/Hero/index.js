@@ -36,6 +36,14 @@ class Hero extends Component {
                   alt=""
                   style={{ paddingBottom: '1rem' }}
                 />
+                <h1
+                  className="subtitle is-size-2"
+                  style={{
+                    color: '#000000',
+                  }}
+                >
+                  The Ethereum Limited Total Coin
+                </h1>
                 <h1 className="subtitle is-size-2 has-text-white">
                   Welcome to our universe!
                 </h1>

@@ -49,13 +49,6 @@ class Team extends Component {
               <div className="column">
                 {this.renderTeamMember('Adrian P.', 'Head of Staff', Adrian)}
               </div>
-              <div className="column">
-                {this.renderTeamMember(
-                  'Nathan H.',
-                  'Head of Community',
-                  Nathan,
-                )}
-              </div>
             </div>
           </div>
         </div>

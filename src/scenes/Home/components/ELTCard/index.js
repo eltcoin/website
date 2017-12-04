@@ -10,7 +10,7 @@ export default () => (
       padding: '1.5rem',
     }}
   >
-    <p className="title is-size-1">ELTCard</p>
+    <p className="title is-size-1">ELTCARD</p>
     <p className="subtitle">Instant crypto to fiat conversion!</p>
     <div className="columns">
       <div className="column">
@@ -30,10 +30,8 @@ export default () => (
       </div>
     </div>
     <p style={{ margin: 'auto', maxWidth: '800px' }}>
-      Introducing a seemless crypto to fiat experience that can really change
-      the way you think about your finances. Available in three tiers: Moon
-      Mission, OG ELTCOIN participant and Wolf.<br />Order through ELTWALLET in
-      the near future.
+      Introducing ELTCARD...spend your ELTCOIN anywhere! Available to order via
+      ELTWALLET soon!.<br />
     </p>
   </div>
 );

@@ -38,17 +38,13 @@ class Team extends Component {
                 )}
               </div>
               <div className="column">
-                {this.renderTeamMember(
-                  'Ivan S.W.',
-                  'Strategist & Senior Advisor',
-                  Ivan,
-                )}
+                {this.renderTeamMember('Ivan S.W.', 'Head of Strategy', Ivan)}
               </div>
               <div className="column">
                 {this.renderTeamMember('Dan T.', 'Head of Design', Dan)}
               </div>
               <div className="column">
-                {this.renderTeamMember('Oli M.', 'Senior Advisor & Tech', Oli)}
+                {this.renderTeamMember('Oli M.', 'Head of Mobile', Oli)}
               </div>
               <div className="column">
                 {this.renderTeamMember('Adrian P.', 'Head of Staff', Adrian)}

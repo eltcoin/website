@@ -1,9 +1,9 @@
 import React from 'react';
+import './index.css';
 import logo from './images/logo.png';
 import iphoneMockup from './images/iphone.png';
 import appStoreLogo from './images/app-store.svg';
 import googlePlayLogo from './images/google-play.png';
-import moon from './images/moon.svg';
 
 export default () => (
   <section className="hero">
@@ -17,18 +17,7 @@ export default () => (
           zIndex: '0',
         }}
       >
-        <div
-          style={{
-            backgroundImage: `url(${moon})`,
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: '100%',
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            zIndex: '-1',
-          }}
-        />
+        <div className="moon-background" />
         <div className="columns">
           <div
             className="column"

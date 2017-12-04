@@ -3,6 +3,7 @@ import logo from './images/logo.png';
 import iphoneMockup from './images/iphoneELT.png';
 import appStoreLogo from './images/app-store.svg';
 import googlePlayLogo from './images/google-play.png';
+import moon from './images/moon.png';
 
 class Hero extends Component {
   render() {
@@ -15,6 +16,8 @@ class Hero extends Component {
               background: 'linear-gradient(to bottom, #000000, #da328a)',
               minHeight: 'calc(100vh - 40px)',
               textAlign: 'center',
+              zIndex: 0,
+              overflow: 'hidden',
             }}
           >
             <div className="columns">
@@ -42,9 +45,16 @@ class Hero extends Component {
                   src={iphoneMockup}
                   width={350}
                   alt=""
-                  style={{ paddingTop: '3rem' }}
+                  style={{ paddingTop: '3rem', zIndex: 500 }}
                 />
               </div>
+
+              <img
+                src={moon}
+                width={1800}
+                alt=""
+                style={{ position: 'absolute', zIndex: -1 }}
+              />
             </div>
             <div
               style={{

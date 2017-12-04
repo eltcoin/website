@@ -44,7 +44,7 @@ export default () => (
         </div>
       ))}
     </div>
-    <p className="is-size-3">Limited supply</p>
+    <p className="is-size-3">Limited Total</p>
     <br />
     <Link to="/store" className="button">
       Shop now

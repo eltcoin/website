@@ -24,10 +24,8 @@ export default () => (
       ))}
     </div>
     <p style={{ margin: 'auto', maxWidth: '800px' }}>
-      Introducing a seemless crypto to fiat experience that can really change
-      the way you think about your finances. Available in three tiers: Moon
-      Mission, OG ELTCOIN participant and Wolf.<br />Order through ELTWALLET in
-      the near future.
+      Introducing ELTCard, spend your ELTCOIN anywhere!<br />Available to order
+      via ELTWALLET soon!
     </p>
   </div>
 );

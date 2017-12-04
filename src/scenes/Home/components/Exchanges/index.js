@@ -89,5 +89,29 @@ export default () => (
         </p>
       </div>
     </div>
+    <form>
+      <input
+        style={{
+          padding: 5,
+          borderRadius: 50,
+          width: 250,
+          display: 'block',
+          margin: '20px auto',
+        }}
+      />
+      <input
+        style={{
+          color: '#ffffff',
+          backgroundColor: '#60b158',
+          padding: 5,
+          borderRadius: 50,
+          width: 250,
+          display: 'block',
+          margin: '20px auto',
+        }}
+        type="submit"
+        value="Request Exchange"
+      />
+    </form>
   </div>
 );

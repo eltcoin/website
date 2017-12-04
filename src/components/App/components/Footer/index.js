@@ -1,4 +1,5 @@
 import React from 'react';
+import communitySticker from './images/community.png';
 
 const SOCIAL_ICONS = [
   {
@@ -44,6 +45,12 @@ export default () => (
       <p className="has-text-weight-light">
         Stay up to date with progress and updates.
       </p>
+      <img
+        src={communitySticker}
+        alt=""
+        width={100}
+        style={{ position: 'absolute', right: '0', top: '0' }}
+      />
       <br />
       <p className="is-size-5">
         {SOCIAL_ICONS.map(icon => (

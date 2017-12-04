@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './images/logo.png';
-import iphoneMockup from './images/iphoneELT.png';
+import iphoneMockup from './images/iphone.png';
 import appStoreLogo from './images/app-store.svg';
 import googlePlayLogo from './images/google-play.png';
+import moon from './images/moon.svg';
 
 export default () => (
   <section className="hero">
@@ -13,16 +14,29 @@ export default () => (
           background: 'linear-gradient(to bottom, #000000, #da328a)',
           minHeight: 'calc(100vh - 40px)',
           textAlign: 'center',
+          zIndex: '0',
         }}
       >
+        <div
+          style={{
+            backgroundImage: `url(${moon})`,
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100%',
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            zIndex: '-1',
+          }}
+        />
         <div className="columns">
           <div
             className="column"
             style={{
+              alignItems: 'center',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
-              alignItems: 'center',
             }}
           >
             <img

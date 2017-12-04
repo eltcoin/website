@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import planetImage from './images/planet.png';
 import roadmapItems from './roadmap.json';
-
 import planet1 from './../../images/planet1.png';
 import planet2 from './../../images/planet2.png';
 import planet3 from './../../images/planet3.png';
@@ -9,6 +7,7 @@ import planet4 from './../../images/planet4.png';
 import planet5 from './../../images/planet5.png';
 import planet6 from './../../images/planet6.png';
 import planet7 from './../../images/planet7.png';
+import planet8 from './../../images/planet8.png';
 
 const PLANETS = [
   planet1,
@@ -18,7 +17,7 @@ const PLANETS = [
   planet5,
   planet6,
   planet7,
-  planetImage,
+  planet8,
 ];
 
 class Roadmap extends Component {

@@ -6,7 +6,7 @@ import googlePlayLogo from './images/google-play.png';
 
 export default () => (
   <section className="hero">
-    <div className="hero-body" style={{ padding: '1.5rem 0' }}>
+    <div className="hero-body" style={{ padding: '1.5rem 0 0' }}>
       <div
         className="container"
         style={{

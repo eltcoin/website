@@ -59,18 +59,18 @@ class Header extends Component {
           >
             <div className="navbar-end">
               <Link
-                to="/#roadmap"
-                className="navbar-item"
-                onClick={this.closeMenu}
-              >
-                <span>Roadmap</span>
-              </Link>
-              <Link
                 to="/#team"
                 className="navbar-item"
                 onClick={this.closeMenu}
               >
                 <span>Team</span>
+              </Link>
+              <Link
+                to="/#roadmap"
+                className="navbar-item"
+                onClick={this.closeMenu}
+              >
+                <span>Roadmap</span>
               </Link>
               <NavLink
                 exact

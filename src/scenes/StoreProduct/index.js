@@ -146,7 +146,6 @@ class StoreProduct extends Component {
             }}
           >
             <p className="is-size-3">$ {product.usdPrice}</p>
-            <br />
             <div className="field">
               <label
                 className="label"
@@ -168,7 +167,6 @@ class StoreProduct extends Component {
                 />
               </div>
             </div>
-            <br />
             <div className="field">
               <label
                 className="label"
@@ -190,7 +188,6 @@ class StoreProduct extends Component {
                 />
               </div>
             </div>
-            <br />
             <div className="field">
               <label
                 className="label"

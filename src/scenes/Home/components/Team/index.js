@@ -46,21 +46,23 @@ const TEAM_MEMBERS = [
 ];
 
 export default () => (
-  <section id="team" className="hero">
-    <div className="hero-body">
-      <div className="container has-text-centered">
-        <h1 className="title is-size-1">Meet the Team</h1>
-        <br />
-        <div className="columns">
-          {TEAM_MEMBERS.map(member => (
-            <div className="column" key={member.name}>
-              <img src={member.image} alt="" width={100} />
-              <p className="title is-4">{member.name}</p>
-              <p className="subtitle is-6">{member.title}</p>
-            </div>
-          ))}
+  <div
+    className="card container has-text-centered"
+    id="team"
+    style={{
+      padding: '1.5rem',
+    }}
+  >
+    <h1 className="title is-size-1">Meet the Team</h1>
+    <br />
+    <div className="columns">
+      {TEAM_MEMBERS.map(member => (
+        <div className="column" key={member.name}>
+          <img src={member.image} alt="" width={100} />
+          <p className="title is-4">{member.name}</p>
+          <p className="subtitle is-6">{member.title}</p>
         </div>
-      </div>
+      ))}
     </div>
-  </section>
+  </div>
 );

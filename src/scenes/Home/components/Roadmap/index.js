@@ -9,6 +9,7 @@ import Planet4 from './../../images/planet4.png';
 import Planet5 from './../../images/planet5.png';
 import Planet6 from './../../images/planet6.png';
 import Planet7 from './../../images/planet7.png';
+import Planet8 from './../../images/planet8.png';
 
 class Roadmap extends Component {
   state = {
@@ -118,7 +119,7 @@ class Roadmap extends Component {
           </div>
           <div className="column">
             <img
-              src={planetImage}
+              src={Planet8}
               alt=""
               style={{ cursor: 'pointer' }}
               onClick={() => {

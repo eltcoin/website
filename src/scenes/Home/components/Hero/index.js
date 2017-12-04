@@ -32,9 +32,14 @@ export default () => (
               src={logo}
               width={200}
               alt=""
-              style={{ paddingBottom: '1rem' }}
+              style={{
+                paddingBottom: '1rem',
+              }}
             />
-            <h1 className="subtitle is-size-2 has-text-white">
+            <h1
+              className="subtitle is-size-2 has-text-white"
+              style={{ fontFamily: "'Pacifico', cursive" }}
+            >
               Welcome to our universe!
             </h1>
           </div>

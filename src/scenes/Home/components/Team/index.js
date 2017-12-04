@@ -21,7 +21,7 @@ const TEAM_MEMBERS = [
   {
     image: Ivan,
     name: 'Ivan S.W.',
-    title: 'Strategist & Senior Advisor',
+    title: 'Head of Strategy',
   },
   {
     image: Dan,
@@ -31,7 +31,7 @@ const TEAM_MEMBERS = [
   {
     image: Oli,
     name: 'Oli M.',
-    title: 'Senior Advisor & Tech',
+    title: 'Head of Mobile',
   },
   {
     image: Adrian,

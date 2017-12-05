@@ -47,7 +47,7 @@ export default () => (
         Stay up to date with progress and updates.
       </p>
       <a
-        href="https://twitter.com/home?status=I%20love%20%40officialELTCoin!%20%23eltcoin"
+        href="https://twitter.com/home?status=I%20just%20discovered%20%40officialELTCOIN%20and%20the%20Community%20rocks!%20😎%20$ELT%20🚀🌖%20%23eltcoin"
         target="_blank"
         rel="noopener noreferrer"
       >

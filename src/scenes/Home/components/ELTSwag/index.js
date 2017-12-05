@@ -32,7 +32,7 @@ export default () => (
     }}
   >
     <p className="title is-size-1" style={{ color: '#fff' }}>
-      ELTSwag
+      ELTSWAG
     </p>
     <div className="columns">
       {SWAG_ITEMS.map(item => (
@@ -45,10 +45,10 @@ export default () => (
         </div>
       ))}
     </div>
-    <p className="is-size-3">Limited Total</p>
+    <p className="is-size-3">Limited Supply</p>
     <br />
-    <Link to="/store" className="button">
-      Shop now
+    <Link to="/store" className="button is-medium">
+      SHOP NOW
     </Link>
   </div>
 );

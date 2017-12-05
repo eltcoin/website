@@ -1,5 +1,6 @@
 import React from 'react';
 import communitySticker from './images/community.png';
+import './index.css';
 
 const SOCIAL_ICONS = [
   {
@@ -45,12 +46,20 @@ export default () => (
       <p className="has-text-weight-light">
         Stay up to date with progress and updates.
       </p>
-      <img
-        src={communitySticker}
-        alt=""
-        width={100}
-        style={{ position: 'absolute', right: '0', top: '0' }}
-      />
+      <a
+        href="https://twitter.com/home?status=I%20love%20%40officialELTCoin!%20%23eltcoin"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          className="community-sticker"
+          src={communitySticker}
+          alt=""
+          width={100}
+          style={{ position: 'absolute', right: '0', top: '0' }}
+        />
+      </a>
+
       <br />
       <p className="is-size-5">
         {SOCIAL_ICONS.map(icon => (

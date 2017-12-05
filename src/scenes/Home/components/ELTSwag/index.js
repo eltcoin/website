@@ -8,17 +8,17 @@ const SWAG_ITEMS = [
   {
     image: image0,
     name: 'The fighter',
-    price: '$29.99',
+    price: 'ELT 2999',
   },
   {
     image: image1,
     name: 'The original',
-    price: '$39.99',
+    price: 'ELT 3999',
   },
   {
     image: image2,
     name: 'The hodler',
-    price: '$29.99',
+    price: 'ELT 2999',
   },
 ];
 
@@ -41,7 +41,9 @@ export default () => (
             <img src={item.image} alt="" />
           </figure>
           <p>{item.name}</p>
-          <p>{item.price}</p>
+          <p>
+            <b>{item.price}</b>
+          </p>
         </div>
       ))}
     </div>

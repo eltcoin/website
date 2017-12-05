@@ -23,7 +23,7 @@ const SOCIAL_ICONS = [
     className: 'fa-twitter',
   },
   {
-    link: 'https://bitcointalk.org/index.php?topic=2259761.0',
+    link: 'https://bitcointalk.org/index.php?topic=2425069',
     className: 'fa-bitcoin',
   },
   {

@@ -8,6 +8,9 @@ $primary: #000;
 $link: $primary;
 $family-primary: $family-sans-serif;
 $size-1: 4rem;
+$table-background-color: transparent;
+$table-color: $white;
+$table-cell-border: none;
 
 @import 'bulma/bulma';
 @import 'bulma-steps/steps';

@@ -12,6 +12,7 @@ export default () => (
         className="container"
         style={{
           background: 'linear-gradient(to bottom, #000000, #da328a)',
+          borderRadius: '5px',
           minHeight: 'calc(100vh - 40px)',
           textAlign: 'center',
           zIndex: '0',

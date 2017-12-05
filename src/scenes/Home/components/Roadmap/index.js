@@ -34,6 +34,7 @@ class Roadmap extends Component {
         className="card container has-text-centered has-text-white"
         style={{
           background: 'linear-gradient(0deg, #500d33, #000000)',
+          borderRadius: '5px',
           padding: '1.5rem',
           marginTop: '2rem',
         }}

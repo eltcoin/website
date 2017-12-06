@@ -1,9 +1,9 @@
 import React from 'react';
 import Adrian from './../../images/planet1.png';
-import Dan from './../../images/planet2.png';
+import Oli from './../../images/planet2.png';
 import Ivan from './../../images/planet3.png';
 import Oliver from './../../images/planet4.png';
-import Oli from './../../images/planet5.png';
+import Dan from './../../images/planet5.png';
 import Victor from './../../images/planet6.png';
 import Nathan from './../../images/planet7.png';
 

@@ -24,7 +24,7 @@ export default () => (
       ))}
     </div>
     <p style={{ margin: 'auto', maxWidth: '800px' }}>
-      Introducing ELTCard, spend your ELTCOIN anywhere!<br />Available to order
+      Introducing ELTCARD, spend your ELTCOIN anywhere!<br />Available to order
       via{' '}
       <a
         href="https://itunes.apple.com/us/app/eltwallet/id1302147242"

@@ -3,6 +3,7 @@ import logo from './images/logo.png';
 import iphoneMockup from './images/iphone.png';
 import appStoreLogo from './images/app-store.svg';
 import googlePlayLogo from './images/google-play.png';
+import video from './videos/eltwallet.mp4';
 import './index.css';
 
 export default () => (
@@ -18,10 +19,10 @@ export default () => (
           zIndex: '0',
         }}
       >
-        <div className="moon-background" />
+        <div className="moon-background animated pulse" />
         <div className="columns">
           <div
-            className="column"
+            className="column animated fadeIn"
             style={{
               alignItems: 'center',
               display: 'flex',
@@ -45,12 +46,35 @@ export default () => (
             </h1>
           </div>
           <div className="column">
-            <img
-              src={iphoneMockup}
-              width={350}
-              alt=""
-              style={{ paddingTop: '3rem' }}
-            />
+            <div className="animated bounceInUp" style={{ paddingTop: '3rem' }}>
+              <div>
+                <img
+                  src={iphoneMockup}
+                  width={350}
+                  alt=""
+                  style={{ zIndex: 1 }}
+                />
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  style={{
+                    left: '0',
+                    margin: 'auto',
+                    position: 'absolute',
+                    right: '0',
+                    top: '93px',
+                    width: '280px',
+                    zIndex: -1,
+                  }}
+                >
+                  <source src={video} type="video/mp4" />
+                  <track kind="captions" />
+                </video>
+              </div>
+            </div>
           </div>
         </div>
         <div

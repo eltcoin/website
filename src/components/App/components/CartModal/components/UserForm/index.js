@@ -186,11 +186,11 @@ class UserForm extends Component {
 
         <div className="field is-horizontal">
           <div className="field-label is-normal">
-            <label className="label" htmlFor="postalCode">
+            <span className="label">
               {this.state.country && this.state.country.value.code === 'US'
                 ? 'Zip code'
                 : 'Postal code'}
-            </label>
+            </span>
           </div>
           <div className="field-body">
             <div className="field">
@@ -268,14 +268,14 @@ class UserForm extends Component {
           style={{ justifyContent: 'flex-end' }}
         >
           <p className="control">
-            <a
-              style={{ lineHeight: '36px' }}
+            <button
+              className="button is-text"
               onClick={() => {
                 this.props.loadPreviousPage();
               }}
             >
               Back
-            </a>
+            </button>
           </p>
           <p className="control">
             <button type="submit" className="button is-dark">

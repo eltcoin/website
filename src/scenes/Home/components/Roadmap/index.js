@@ -44,18 +44,24 @@ class Roadmap extends Component {
         </p>
         <div className="columns is-mobile">
           {PLANETS.map((planet, index) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <div className="column" key={index}>
-              <img
-                src={planet}
-                alt=""
-                style={{ cursor: 'pointer' }}
-                onClick={() => {
-                  this.setState({
-                    index,
-                  });
-                }}
-              />
+            <div
+              className="column"
+              role="button"
+              // eslint-disable-next-line react/no-array-index-key
+              key={index}
+              onClick={() => {
+                this.setState({
+                  index,
+                });
+              }}
+              onKeyPress={() => {
+                this.setState({
+                  index,
+                });
+              }}
+              tabIndex="0"
+            >
+              <img src={planet} alt="" style={{ cursor: 'pointer' }} />
             </div>
           ))}
         </div>

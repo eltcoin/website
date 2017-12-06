@@ -148,13 +148,9 @@ class StoreProduct extends Component {
           >
             <p className="is-size-3">$ {product.usdPrice}</p>
             <div className="field">
-              <label
-                className="label"
-                style={{ color: '#fafafa' }}
-                htmlFor="size"
-              >
+              <span className="label" style={{ color: '#fafafa' }}>
                 Size
-              </label>
+              </span>
               <div className="control">
                 <Select
                   className="centered"
@@ -169,13 +165,9 @@ class StoreProduct extends Component {
               </div>
             </div>
             <div className="field">
-              <label
-                className="label"
-                style={{ color: '#fafafa' }}
-                htmlFor="color"
-              >
+              <span className="label" style={{ color: '#fafafa' }}>
                 Color
-              </label>
+              </span>
               <div className="control">
                 <Select
                   className="centered"
@@ -190,13 +182,9 @@ class StoreProduct extends Component {
               </div>
             </div>
             <div className="field">
-              <label
-                className="label"
-                style={{ color: '#fafafa' }}
-                htmlFor="quantity"
-              >
+              <span className="label" style={{ color: '#fafafa' }}>
                 Quantity
-              </label>
+              </span>
               <div className="control">
                 <Select
                   className="centered"

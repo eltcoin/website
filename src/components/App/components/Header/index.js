@@ -46,6 +46,11 @@ class Header extends Component {
                 this.state.isMenuOpen ? 'is-active' : ''
               }`}
               onClick={this.state.isMenuOpen ? this.closeMenu : this.openMenu}
+              onKeyPress={
+                this.state.isMenuOpen ? this.closeMenu : this.openMenu
+              }
+              role="button"
+              tabIndex={0}
             >
               <span />
               <span />
@@ -100,7 +105,14 @@ class Header extends Component {
                 <span>Moon paper</span>
               </a>
               {this.props.location.pathname.indexOf('store') !== -1 && (
-                <a className="navbar-item" onClick={this.onCartButtonClick}>
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                <a
+                  className="navbar-item"
+                  onClick={this.onCartButtonClick}
+                  onKeyPress={this.onCartButtonClick}
+                  role="button"
+                  tabIndex={0}
+                >
                   <span>My bag</span>
                 </a>
               )}

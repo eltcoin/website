@@ -8,6 +8,7 @@ import UserForm from './components/UserForm';
 class CartModal extends Component {
   static propTypes = {
     closeModal: PropTypes.func.isRequired,
+    isOpen: PropTypes.bool.isRequired,
   };
 
   state = {
@@ -61,11 +62,7 @@ class CartModal extends Component {
   render() {
     return (
       <div className={`modal ${this.props.isOpen ? 'is-active' : ''}`}>
-        <div
-          className="modal-background"
-          onClick={this.props.closeModal}
-          role="button"
-        />
+        <div className="modal-background" role="button" />
         <div className="modal-content">
           <div className="box" style={{ color: '#0a0a0a' }}>
             <Steps

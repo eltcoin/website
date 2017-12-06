@@ -107,9 +107,7 @@ class PaymentForm extends Component {
     <form onSubmit={this.handleSubmit}>
       <div className="field is-horizontal">
         <div className="field-label is-normal">
-          <label className="label" htmlFor="currency">
-            Currency
-          </label>
+          <span className="label">Currency</span>
         </div>
         <div className="field-body">
           <div className="field">
@@ -129,14 +127,14 @@ class PaymentForm extends Component {
       <br />
       <div className="field is-grouped" style={{ justifyContent: 'flex-end' }}>
         <p className="control">
-          <a
-            style={{ lineHeight: '36px' }}
+          <button
+            className="button is-text"
             onClick={() => {
               this.props.loadPreviousPage();
             }}
           >
             Back
-          </a>
+          </button>
         </p>
         <p className="control">
           <button type="submit" className="button is-dark">

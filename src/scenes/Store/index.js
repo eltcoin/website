@@ -26,14 +26,21 @@ function renderProductCard(product) {
 
 const Store = props => {
   if (props.data.loading) {
-    return <Spinner />;
+    return (
+      <section
+        className="container has-text-centered"
+        style={{ minHeight: 'calc(100vh - 260px)', paddingTop: '4rem' }}
+      >
+        <Spinner />
+      </section>
+    );
   }
 
   if (!props.data.allProducts) {
     return (
       <section
         className="container has-text-centered"
-        style={{ paddingTop: '4rem' }}
+        style={{ minHeight: 'calc(100vh - 260px)', paddingTop: '4rem' }}
       >
         <h2>An error occured fetching our Swag Store products...</h2>
       </section>
@@ -43,7 +50,7 @@ const Store = props => {
   return (
     <section
       className="container has-text-centered"
-      style={{ paddingTop: '4rem' }}
+      style={{ minHeight: 'calc(100vh - 260px)', paddingTop: '4rem' }}
     >
       <div className="columns is-multiline" style={{ marginTop: '2rem' }}>
         {props.data.allProducts.map(p => renderProductCard(p))}

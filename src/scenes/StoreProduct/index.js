@@ -226,14 +226,21 @@ class StoreProduct extends Component {
 
   render() {
     if (this.props.data.loading) {
-      return <Spinner />;
+      return (
+        <section
+          className="container has-text-centered"
+          style={{ minHeight: 'calc(100vh - 260px)', paddingTop: '4rem' }}
+        >
+          <Spinner />
+        </section>
+      );
     }
 
     if (!this.props.data.Product) {
       return (
         <section
           className="container has-text-centered"
-          style={{ padding: '4rem 0 2rem' }}
+          style={{ minHeight: 'calc(100vh - 260px)', padding: '4rem 0 2rem' }}
         >
           <h4 className="is-size-4">
             An error occured fetching this Swag Store product...
@@ -245,7 +252,7 @@ class StoreProduct extends Component {
     return (
       <section
         className="container has-text-centered"
-        style={{ padding: '4rem 0 2rem' }}
+        style={{ minHeight: 'calc(100vh - 260px)', padding: '4rem 0 2rem' }}
       >
         {this.renderProduct(this.props.data.Product)}
         <br />

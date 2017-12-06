@@ -79,7 +79,7 @@ export default () => (
       </p>
       <br />
       <p className="has-text-weight-light">We welcome your donations</p>
-      <p className="has-text-weight-light">
+      <p className="has-text-weight-light" style={{ wordBreak: 'break-all' }}>
         0x4EEd3775F8bA584558D8A2f1aea5786f0582916e
       </p>
     </div>

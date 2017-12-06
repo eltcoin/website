@@ -36,8 +36,7 @@ const SOCIAL_ICONS = [
 export default () => (
   <footer
     style={{
-      background: 'radial-gradient(circle, #000000, #500d33)',
-      backgroundSize: '100% 200%',
+      background: 'black',
       padding: '1.5rem',
     }}
   >
@@ -78,7 +77,11 @@ export default () => (
           </a>
         ))}
       </p>
+      <br />
+      <p className="has-text-weight-light">We welcome your donations</p>
+      <p className="has-text-weight-light">
+        0x4EEd3775F8bA584558D8A2f1aea5786f0582916e
+      </p>
     </div>
-    <br />
   </footer>
 );

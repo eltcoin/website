@@ -50,13 +50,6 @@ const TEAM_MEMBERS = [
       __html: 'Head of<br/>Staff',
     },
   },
-  {
-    image: Nathan,
-    name: 'Nathan H.',
-    title: {
-      __html: 'Head of<br/>Community',
-    },
-  },
 ];
 
 export default () => (
@@ -67,7 +60,15 @@ export default () => (
       padding: '1.5rem',
     }}
   >
-    <h1 className="title is-size-1">Meet the Team</h1>
+    <h1 className="title is-size-2">THE TEAM</h1>
+    <p
+      className="subtitle"
+      style={{
+        fontFamily: "'Pacifico', cursive",
+      }}
+    >
+      Entrepreneurs, engineers and eclectics
+    </p>
     <br />
     <div className="columns">
       {TEAM_MEMBERS.map(member => (
@@ -77,6 +78,19 @@ export default () => (
           <p className="subtitle is-6" dangerouslySetInnerHTML={member.title} />
         </div>
       ))}
+      <div className="column">
+        <a
+          href="https://t.me/ELTCOIN"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={Nathan} alt="" width={100} />
+          <p className="title is-4">You</p>
+          <p className="subtitle is-6">
+            We ❤️<br />Community
+          </p>
+        </a>
+      </div>
     </div>
   </div>
 );

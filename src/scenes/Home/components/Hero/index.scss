@@ -15,3 +15,9 @@
     margin-top: -20px;
   }
 }
+
+@media only screen and (min-width: 500px) {
+  .welcome-text.is-size-1 {
+    font-size: 80px !important;
+  }
+}

@@ -34,15 +34,25 @@ class Roadmap extends Component {
         id="roadmap"
         className="card container has-text-centered has-text-white"
         style={{
-          background: 'linear-gradient(0deg, #500d33, #000000)',
+          background: 'linear-gradient(#000000 0%, #000000 50%, #500d33 100%)',
           borderRadius: '5px',
           padding: '1.5rem',
           marginTop: '2rem',
+          minHeight: '29rem',
         }}
       >
         <StarsBackground />
-        <p className="title is-size-1" style={{ color: '#fff' }}>
-          Flight Plan
+        <p className="title is-size-2" style={{ color: '#fff' }}>
+          Flight plan
+        </p>
+        <p
+          className="subtitle"
+          style={{
+            color: '#fff',
+            fontFamily: "'Pacifico', cursive",
+          }}
+        >
+          The hodler's guide to the universe
         </p>
         <div
           className="columns is-mobile"
@@ -66,7 +76,14 @@ class Roadmap extends Component {
               }}
               tabIndex="0"
             >
-              <img src={planet} alt="" style={{ cursor: 'pointer' }} />
+              <img
+                src={planet}
+                alt=""
+                style={{
+                  cursor: 'pointer',
+                  transform: index === this.state.index ? 'scale(1.3)' : 'none',
+                }}
+              />
             </div>
           ))}
         </div>

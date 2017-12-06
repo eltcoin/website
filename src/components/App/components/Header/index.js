@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 import blackLogo from './images/black_logo.png';
-import moonPaper from './moon_paper.pdf';
 
 class Header extends Component {
   static propTypes = {
@@ -64,18 +63,11 @@ class Header extends Component {
           >
             <div className="navbar-end">
               <Link
-                to="/#team"
-                className="navbar-item"
-                onClick={this.closeMenu}
-              >
-                <span>TEAM</span>
-              </Link>
-              <Link
                 to="/#roadmap"
                 className="navbar-item"
                 onClick={this.closeMenu}
               >
-                <span>ROADMAP</span>
+                <span>FLIGHT PLAN</span>
               </Link>
               <a
                 className="navbar-item"
@@ -85,15 +77,6 @@ class Header extends Component {
                 onClick={this.closeMenu}
               >
                 <span>WHITE PAPER</span>
-              </a>
-              <a
-                className="navbar-item"
-                href={moonPaper}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={this.closeMenu}
-              >
-                <span>MOON PAPER</span>
               </a>
               <NavLink
                 exact

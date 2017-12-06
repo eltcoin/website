@@ -110,14 +110,23 @@ export default class Exchanges extends Component {
       <div
         className="card container has-text-centered has-text-white"
         style={{
-          background: 'linear-gradient(0deg, #500d33, #000000)',
+          background: 'linear-gradient(#000000 0%, #000000 50%, #500d33 100%)',
           borderRadius: '5px',
           padding: '1.5rem',
         }}
       >
         <StarsBackground />
-        <p className="title is-size-1" style={{ color: '#fff' }}>
-          Exchanges
+        <p className="title is-size-2" style={{ color: '#fff' }}>
+          EXCHANGES
+        </p>
+        <p
+          className="subtitle"
+          style={{
+            color: '#fff',
+            fontFamily: "'Pacifico', cursive",
+          }}
+        >
+          Buy and HODL!
         </p>
         <div className="columns" style={{ position: 'relative', zIndex: 2 }}>
           {EXCHANGES.map(exchange => (

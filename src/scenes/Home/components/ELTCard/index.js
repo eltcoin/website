@@ -12,8 +12,15 @@ export default () => (
       padding: '1.5rem',
     }}
   >
-    <p className="title is-size-1">ELTCARD</p>
-    <p className="subtitle">Instant crypto to fiat conversion!</p>
+    <p className="title is-size-2">ELTCARD</p>
+    <p
+      className="subtitle"
+      style={{
+        fontFamily: "'Pacifico', cursive",
+      }}
+    >
+      Instant crypto to fiat conversion!
+    </p>
     <div className="columns">
       {CARD_IMAGES.map(image => (
         <div className="column" key={image}>
@@ -23,17 +30,5 @@ export default () => (
         </div>
       ))}
     </div>
-    <p style={{ margin: 'auto', maxWidth: '800px' }}>
-      Introducing ELTCARD, spend your ELTCOIN anywhere!<br />Available to order
-      via{' '}
-      <a
-        href="https://itunes.apple.com/us/app/eltwallet/id1302147242"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        ELTWALLET
-      </a>{' '}
-      soon!
-    </p>
   </div>
 );

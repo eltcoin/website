@@ -1,9 +1,9 @@
 @import 'bulma/sass/utilities/initial-variables';
 
-@import url('https://fonts.googleapis.com/css?family=Lato:400,600');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round:400,600');
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
-$family-sans-serif: 'Lato', sans-serif;
+$family-sans-serif: 'Varela Round', sans-serif;
 $primary: #000;
 $link: $primary;
 $family-primary: $family-sans-serif;
@@ -31,6 +31,16 @@ body {
 
 .button.is-text {
   text-decoration: none;
+}
+
+.universe-link {
+  color: #fff;
+
+  &:hover {
+    // color: #da328a;
+    color: #000;
+    text-decoration: underline;
+  }
 }
 
 .Select {

@@ -20,7 +20,7 @@ export default class Hero extends Component {
   render() {
     return (
       <section className="hero">
-        <div className="hero-body" style={{ padding: '1rem 0 1.5rem' }}>
+        <div className="hero-body" style={{ padding: '1rem 0 0' }}>
           <div
             className="container"
             style={{
@@ -52,10 +52,20 @@ export default class Hero extends Component {
                   }}
                 />
                 <h1
-                  className="subtitle is-size-1 has-text-white"
-                  style={{ fontFamily: "'Pacifico', cursive" }}
+                  className="subtitle is-size-1 has-text-white welcome-text"
+                  style={{
+                    fontFamily: "'Pacifico', cursive",
+                  }}
                 >
-                  Welcome to our universe!
+                  Welcome to<br />our{' '}
+                  <a
+                    className="universe-link"
+                    href="https://t.me/ELTCOIN"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    universe!
+                  </a>
                 </h1>
               </div>
               <div className="column">
@@ -100,6 +110,8 @@ export default class Hero extends Component {
                 display: 'flex',
                 justifyContent: 'center',
                 padding: '1.5rem',
+                position: 'relative',
+                zIndex: 2,
               }}
             >
               <a
@@ -117,7 +129,12 @@ export default class Hero extends Component {
               <img
                 src={googlePlayLogo}
                 alt=""
-                style={{ marginLeft: '0.5em', height: 40, width: 'auto' }}
+                style={{
+                  marginLeft: '0.5em',
+                  height: 40,
+                  width: 'auto',
+                  opacity: '0.5',
+                }}
               />
             </div>
           </div>

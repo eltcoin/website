@@ -41,8 +41,9 @@ class Home extends Component {
     return (
       <div>
         <Hero />
-        <Team />
+        <br />
         <Exchanges />
+        <Team />
         <Roadmap />
         <ELTCard />
         <ELTSwag />

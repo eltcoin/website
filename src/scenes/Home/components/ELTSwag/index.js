@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import StarsBackground from '../../../../components/StarsBackground';
 import image0 from './images/0.png';
 import image1 from './images/1.png';
 import image2 from './images/2.png';
@@ -31,8 +32,18 @@ export default () => (
       padding: '1.5rem',
     }}
   >
-    <p className="title is-size-1" style={{ color: '#fff' }}>
+    <StarsBackground />
+    <p className="title is-size-2" style={{ color: '#fff' }}>
       ELTSWAG
+    </p>
+    <p
+      className="subtitle"
+      style={{
+        color: '#fff',
+        fontFamily: "'Pacifico', cursive",
+      }}
+    >
+      Here today, gone tomorrow
     </p>
     <div className="columns">
       {SWAG_ITEMS.map(item => (
@@ -47,10 +58,13 @@ export default () => (
         </div>
       ))}
     </div>
-    <p className="is-size-3">Limited Supply</p>
     <br />
-    <Link to="/store" className="button is-medium">
-      SHOP NOW
+    <Link
+      to="/store"
+      className="button is-medium"
+      style={{ fontFamily: "'Pacifico', cursive" }}
+    >
+      Become a Hodler
     </Link>
   </div>
 );

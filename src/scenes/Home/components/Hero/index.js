@@ -7,7 +7,7 @@ import './index.css';
 
 export default () => (
   <section className="hero">
-    <div className="hero-body" style={{ padding: '1.5rem 0 0' }}>
+    <div className="hero-body" style={{ padding: '1rem 0 1.5rem' }}>
       <div
         className="container"
         style={{

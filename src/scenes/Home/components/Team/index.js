@@ -11,37 +11,51 @@ const TEAM_MEMBERS = [
   {
     image: Oliver,
     name: 'Oli H.',
-    title: 'Founder & Developer',
+    title: {
+      __html: 'Founder &<br/>Developer',
+    },
   },
   {
     image: Victor,
     name: 'Victor F.',
-    title: 'Head of Engineering',
+    title: {
+      __html: 'Head of<br/>Engineering',
+    },
   },
   {
     image: Ivan,
     name: 'Ivan S.W.',
-    title: 'Head of Strategy',
+    title: {
+      __html: 'Head of<br/>Strategy',
+    },
   },
   {
     image: Dan,
     name: 'Dan T.',
-    title: 'Head of Design',
+    title: {
+      __html: 'Head of<br/>Design',
+    },
   },
   {
     image: Oli,
     name: 'Oli M.',
-    title: 'Head of Mobile',
+    title: {
+      __html: 'Head of<br/>Mobile',
+    },
   },
   {
     image: Adrian,
     name: 'Adrian P.',
-    title: 'Head of Staff',
+    title: {
+      __html: 'Head of<br/>Staff',
+    },
   },
   {
     image: Nathan,
     name: 'Nathan H.',
-    title: 'Head of Community',
+    title: {
+      __html: 'Head of<br/>Community',
+    },
   },
 ];
 
@@ -60,7 +74,7 @@ export default () => (
         <div className="column" key={member.name}>
           <img src={member.image} alt="" width={100} />
           <p className="title is-4">{member.name}</p>
-          <p className="subtitle is-6">{member.title}</p>
+          <p className="subtitle is-6" dangerouslySetInnerHTML={member.title} />
         </div>
       ))}
     </div>

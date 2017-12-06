@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StarsBackground from '../../../../components/StarsBackground';
 import roadmapItems from './roadmap.json';
 import planet1 from './../../images/planet1.png';
 import planet2 from './../../images/planet2.png';
@@ -39,10 +40,14 @@ class Roadmap extends Component {
           marginTop: '2rem',
         }}
       >
+        <StarsBackground />
         <p className="title is-size-1" style={{ color: '#fff' }}>
           Flight Plan
         </p>
-        <div className="columns is-mobile">
+        <div
+          className="columns is-mobile"
+          style={{ position: 'relative', zIndex: 2 }}
+        >
           {PLANETS.map((planet, index) => (
             <div
               className="column"

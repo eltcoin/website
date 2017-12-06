@@ -68,24 +68,15 @@ class Header extends Component {
                 className="navbar-item"
                 onClick={this.closeMenu}
               >
-                <span>Team</span>
+                <span>TEAM</span>
               </Link>
               <Link
                 to="/#roadmap"
                 className="navbar-item"
                 onClick={this.closeMenu}
               >
-                <span>Roadmap</span>
+                <span>ROADMAP</span>
               </Link>
-              <NavLink
-                exact
-                to="/store"
-                className="navbar-item"
-                activeClassName="is-active"
-                onClick={this.closeMenu}
-              >
-                <span>Swag store</span>
-              </NavLink>
               <a
                 className="navbar-item"
                 href="https://docs.google.com/document/d/1DIjdWiVWjADiwwgGcp7Trk_Zr_xGiRBxfJizQaI_POY/"
@@ -93,7 +84,7 @@ class Header extends Component {
                 rel="noopener noreferrer"
                 onClick={this.closeMenu}
               >
-                <span>White paper</span>
+                <span>WHITE PAPER</span>
               </a>
               <a
                 className="navbar-item"
@@ -102,8 +93,17 @@ class Header extends Component {
                 rel="noopener noreferrer"
                 onClick={this.closeMenu}
               >
-                <span>Moon paper</span>
+                <span>MOON PAPER</span>
               </a>
+              <NavLink
+                exact
+                to="/store"
+                className="navbar-item"
+                activeClassName="is-active"
+                onClick={this.closeMenu}
+              >
+                <span>SWAG STORE</span>
+              </NavLink>
               {this.props.location.pathname.indexOf('store') !== -1 && (
                 // eslint-disable-next-line jsx-a11y/anchor-is-valid
                 <a
@@ -113,7 +113,7 @@ class Header extends Component {
                   role="button"
                   tabIndex={0}
                 >
-                  <span>My bag</span>
+                  <span>MY BAG</span>
                 </a>
               )}
             </div>

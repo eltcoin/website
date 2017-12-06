@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import eltcoinLogo from './images/eltcoinLogo.png';
+import StarsBackground from '../../../../components/StarsBackground';
+import eltcoinLogo from './images/logo.png';
 import idexLogo from './images/idex.png';
 import mercatoxLogo from './images/mercatox.png';
 import decentrexLogo from './images/decentrex.png';
@@ -32,6 +33,7 @@ const EXCHANGES = [
 export default class Exchanges extends Component {
   state = {
     btcPrice: 0,
+    isTextBold: false,
     marketCap: 0,
     percentChange24h: 0,
     rank: 0,
@@ -41,6 +43,7 @@ export default class Exchanges extends Component {
 
   componentDidMount() {
     this.fetchData();
+    this.initializeAnimation();
   }
 
   getPriceChangeClassName = () => {
@@ -51,6 +54,40 @@ export default class Exchanges extends Component {
     return 'has-text-danger';
   };
 
+  initializeAnimation = () => {
+    setInterval(() => {
+      this.setState({
+        btcPrice: this.state.btcPrice - 0.00000001,
+        isTextBold: true,
+        percentChange24h: this.state.percentChange24h - 0.01,
+        usdPrice: this.state.usdPrice - 0.0001,
+      });
+
+      setTimeout(() => {
+        this.setState({
+          isTextBold: false,
+        });
+      }, 2000);
+    }, 10000);
+
+    setTimeout(() => {
+      setInterval(() => {
+        this.setState({
+          btcPrice: this.state.btcPrice + 0.00000001,
+          isTextBold: true,
+          percentChange24h: this.state.percentChange24h + 0.01,
+          usdPrice: this.state.usdPrice + 0.0001,
+        });
+
+        setTimeout(() => {
+          this.setState({
+            isTextBold: false,
+          });
+        }, 2000);
+      }, 10000);
+    }, 5000);
+  };
+
   fetchData = async () => {
     const eltcoinData = await fetch(
       'https://api.coinmarketcap.com/v1/ticker/eltcoin/?ref=widget&convert=USD',
@@ -59,11 +96,11 @@ export default class Exchanges extends Component {
       .then(data => data[0]);
 
     this.setState({
-      btcPrice: eltcoinData.price_btc,
+      btcPrice: +eltcoinData.price_btc,
       marketCap: eltcoinData.market_cap_usd,
-      percentChange24h: eltcoinData.percent_change_24h,
+      percentChange24h: +eltcoinData.percent_change_24h,
       rank: eltcoinData.rank,
-      usdPrice: eltcoinData.price_usd,
+      usdPrice: +eltcoinData.price_usd,
       volumeUsd24h: eltcoinData['24h_volume_usd'],
     });
   };
@@ -78,10 +115,11 @@ export default class Exchanges extends Component {
           padding: '1.5rem',
         }}
       >
+        <StarsBackground />
         <p className="title is-size-1" style={{ color: '#fff' }}>
           Exchanges
         </p>
-        <div className="columns">
+        <div className="columns" style={{ position: 'relative', zIndex: 2 }}>
           {EXCHANGES.map(exchange => (
             <div className="column" key={exchange.link}>
               <a href={exchange.link} target="_blank" rel="noopener noreferrer">
@@ -95,10 +133,17 @@ export default class Exchanges extends Component {
             </div>
           ))}
         </div>
-        <table className="table is-bordered" style={{ margin: 'auto' }}>
+        <table
+          className="table is-bordered"
+          style={{ margin: 'auto', position: 'relative', zIndex: 2 }}
+        >
           <tbody>
             <tr>
-              <td colSpan={3} className="has-text-centered">
+              <td
+                colSpan={3}
+                className="has-text-centered"
+                style={{ zIndex: 1 }}
+              >
                 <a
                   href="https://coinmarketcap.com/currencies/eltcoin/"
                   target="_blank"
@@ -110,13 +155,19 @@ export default class Exchanges extends Component {
             </tr>
             <tr>
               <td colSpan={3} className="has-text-centered">
-                {this.state.usdPrice} USD{' '}
+                <span
+                  className={
+                    this.state.isTextBold ? 'has-text-weight-bold' : ''
+                  }
+                >
+                  {this.state.usdPrice} USD
+                </span>{' '}
                 <span className={this.getPriceChangeClassName()}>
                   ({this.state.percentChange24h}%)
                 </span>
                 <br />
                 <span className="has-text-grey-light">
-                  {this.state.btcPrice} BTC
+                  {this.state.btcPrice.toFixed(8)} BTC
                 </span>
               </td>
             </tr>

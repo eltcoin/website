@@ -96,11 +96,11 @@ export default class Exchanges extends Component {
       .then(data => data[0]);
 
     this.setState({
-      btcPrice: +eltcoinData.price_btc,
+      btcPrice: parseFloat(eltcoinData.price_btc),
       marketCap: eltcoinData.market_cap_usd,
-      percentChange24h: +eltcoinData.percent_change_24h,
+      percentChange24h: parseFloat(eltcoinData.percent_change_24h),
       rank: eltcoinData.rank,
-      usdPrice: +eltcoinData.price_usd,
+      usdPrice: parseFloat(eltcoinData.price_usd),
       volumeUsd24h: eltcoinData['24h_volume_usd'],
     });
   };
@@ -160,10 +160,10 @@ export default class Exchanges extends Component {
                     this.state.isTextBold ? 'has-text-weight-bold' : ''
                   }
                 >
-                  {this.state.usdPrice} USD
+                  {this.state.usdPrice.toFixed(6)} USD
                 </span>{' '}
                 <span className={this.getPriceChangeClassName()}>
-                  ({this.state.percentChange24h}%)
+                  ({this.state.percentChange24h.toFixed(2)}%)
                 </span>
                 <br />
                 <span className="has-text-grey-light">

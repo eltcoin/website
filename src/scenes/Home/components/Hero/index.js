@@ -77,16 +77,14 @@ export default class Hero extends Component {
                       muted
                       playsInline
                       preload="auto"
-                      onLoad={() => {
-                        console.log('here');
-                      }}
                       style={{
                         left: '0',
                         margin: 'auto',
                         position: 'absolute',
                         right: '0',
                         top: '93px',
-                        width: '280px',
+                        maxWidth: '280px',
+                        width: '80%',
                         zIndex: -1,
                       }}
                     >

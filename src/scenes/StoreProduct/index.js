@@ -20,17 +20,18 @@ const SIZES_ORDER = {
 
 class StoreProduct extends Component {
   static propTypes = {
-    cartItems: PropTypes.arrayOf({
-      productVariant: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
+    cartItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        productVariant: PropTypes.shape({
+          id: PropTypes.string.isRequired,
+        }).isRequired,
+      }),
+    ).isRequired,
     data: PropTypes.shape({
       error: PropTypes.object,
       loading: PropTypes.bool.isRequired,
       Product: PropTypes.object,
     }).isRequired,
-    error: PropTypes.string.isRequired,
     onAdd: PropTypes.func.isRequired,
   };
 
@@ -240,7 +241,7 @@ class StoreProduct extends Component {
       return <Spinner />;
     }
 
-    if (this.props.error || !this.props.data.Product) {
+    if (!this.props.data.Product) {
       return (
         <section
           className="container has-text-centered"

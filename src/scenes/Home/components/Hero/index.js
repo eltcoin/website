@@ -1,9 +1,9 @@
 import React from 'react';
-import './index.css';
 import logo from './images/logo.png';
 import iphoneMockup from './images/iphone.png';
 import appStoreLogo from './images/app-store.svg';
 import googlePlayLogo from './images/google-play.png';
+import './index.css';
 
 export default () => (
   <section className="hero">

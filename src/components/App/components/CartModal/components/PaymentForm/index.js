@@ -20,12 +20,14 @@ const CURRENCIES = [
 
 class PaymentForm extends Component {
   static propTypes = {
-    cartItems: PropTypes.arrayOf({
-      amount: PropTypes.number.isRequired,
-      productVariant: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
+    cartItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        amount: PropTypes.number.isRequired,
+        productVariant: PropTypes.shape({
+          id: PropTypes.string.isRequired,
+        }).isRequired,
+      }),
+    ).isRequired,
     createTransaction: PropTypes.func.isRequired,
     emptyCart: PropTypes.func.isRequired,
     loadPreviousPage: PropTypes.func.isRequired,
@@ -37,7 +39,7 @@ class PaymentForm extends Component {
       email: PropTypes.string.isRequired,
       fullName: PropTypes.string.isRequired,
       postalCode: PropTypes.string.isRequired,
-      state: PropTypes.string.isRequired,
+      state: PropTypes.string,
     }).isRequired,
   };
 
@@ -93,7 +95,8 @@ class PaymentForm extends Component {
           statusUrl: res.data.createTransaction.statusUrl,
         });
       })
-      .catch(() => {
+      .catch(error => {
+        window.Raven.captureException(error);
         this.setState({
           isErrorState: true,
         });
@@ -104,12 +107,15 @@ class PaymentForm extends Component {
     <form onSubmit={this.handleSubmit}>
       <div className="field is-horizontal">
         <div className="field-label is-normal">
-          <label className="label">Currency</label>
+          <label className="label" htmlFor="currency">
+            Currency
+          </label>
         </div>
         <div className="field-body">
           <div className="field">
             <div className="control">
               <Select
+                name="currency"
                 searchable={false}
                 clearable={false}
                 value={this.state.selectedCurrency}

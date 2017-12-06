@@ -29,7 +29,7 @@ const Store = props => {
     return <Spinner />;
   }
 
-  if (props.error) {
+  if (!props.data.allProducts) {
     return (
       <section
         className="container has-text-centered"
@@ -55,11 +55,9 @@ const Store = props => {
 
 Store.propTypes = {
   data: PropTypes.shape({
-    error: PropTypes.object,
     loading: PropTypes.bool.isRequired,
-    allProducts: PropTypes.object,
+    allProducts: PropTypes.array,
   }).isRequired,
-  error: PropTypes.string.isRequired,
 };
 
 const PRODUCTS_QUERY = gql`

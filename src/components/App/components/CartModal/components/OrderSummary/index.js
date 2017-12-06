@@ -5,11 +5,13 @@ import CartItem from './components/CartItem';
 
 class OrderSummary extends Component {
   static propTypes = {
-    cartItems: PropTypes.arrayOf({
-      productVariant: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
+    cartItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        productVariant: PropTypes.shape({
+          id: PropTypes.string.isRequired,
+        }).isRequired,
+      }),
+    ).isRequired,
     loadNextPage: PropTypes.func.isRequired,
   };
 

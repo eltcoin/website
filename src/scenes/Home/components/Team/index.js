@@ -87,7 +87,11 @@ export default () => (
           <img src={Nathan} alt="" width={100} />
           <p className="title is-4">You</p>
           <p className="subtitle is-6">
-            We ❤️<br />Community
+            We{' '}
+            <span role="img" aria-label="love">
+              ❤️
+            </span>
+            <br />Community
           </p>
         </a>
       </div>

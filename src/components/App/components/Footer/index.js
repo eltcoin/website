@@ -12,7 +12,7 @@ const SOCIAL_ICONS = [
     className: 'fa-github',
   },
   {
-    link: 'https://www.facebook.com/eltcoin.community',
+    link: 'https://www.facebook.com/officialELTCOIN',
     className: 'fa-facebook',
   },
   {

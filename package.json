@@ -5,19 +5,19 @@
   "homepage": "https://www.eltcoin.tech",
   "license": "MIT",
   "dependencies": {
-    "apollo-client-preset": "^1.0.4",
+    "apollo-client-preset": "^1.0.5",
     "bulma": "^0.6.1",
     "bulma-steps": "^0.1.2",
     "eslint-config-prettier": "^2.9.0",
     "graphql": "^0.11.7",
-    "graphql-tag": "^2.5.0",
+    "graphql-tag": "^2.6.0",
     "history": "^4.7.2",
     "lodash": "^4.17.4",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-apollo": "^2.0.1",
+    "react-apollo": "^2.0.4",
     "react-collapse": "^4.0.3",
     "react-dom": "^16.2.0",
     "react-motion": "^0.5.2",
@@ -30,31 +30,33 @@
     "scroll-to-element": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^4.12.1",
+    "eslint": "^4.13.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.5.1",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
-    "prettier": "^1.8.2",
+    "prettier": "^1.9.2",
     "source-map-explorer": "^1.5.0"
   },
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",
-    "build-css":
-      "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
+    "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "build": "npm run build-css && react-scripts build",
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "precommit": "lint-staged",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "watch-css":
-      "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive"
   },
   "eslintConfig": {
-    "extends": ["airbnb", "prettier", "prettier/react"],
+    "extends": [
+      "airbnb",
+      "prettier",
+      "prettier/react"
+    ],
     "env": {
       "browser": true
     },
@@ -64,14 +66,26 @@
       "jsx-a11y/anchor-is-valid": [
         "error",
         {
-          "components": ["Link"],
-          "specialLink": ["to", "hrefLeft", "hrefRight"],
-          "aspects": ["noHref", "invalidHref", "preferButton"]
+          "components": [
+            "Link"
+          ],
+          "specialLink": [
+            "to",
+            "hrefLeft",
+            "hrefRight"
+          ],
+          "aspects": [
+            "noHref",
+            "invalidHref",
+            "preferButton"
+          ]
         }
       ]
     }
   },
-  "eslintIgnore": ["src/config/registerServiceWorker.js"],
+  "eslintIgnore": [
+    "src/config/registerServiceWorker.js"
+  ],
   "lint-staged": {
     "src/**/*.{js,jsx,json,scss}": [
       "prettier --single-quote --trailing-comma all --write",

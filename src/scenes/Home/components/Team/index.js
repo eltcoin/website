@@ -74,8 +74,8 @@ export default () => (
       {TEAM_MEMBERS.map(member => (
         <div className="column" key={member.name}>
           <img src={member.image} alt="" width={100} />
-          <p className="title is-4">{member.name}</p>
-          <p className="subtitle is-6" dangerouslySetInnerHTML={member.title} />
+          <p className="title is-6">{member.name}</p>
+          <p className="subtitle is-7" dangerouslySetInnerHTML={member.title} />
         </div>
       ))}
       <div className="column">
@@ -85,8 +85,8 @@ export default () => (
           rel="noopener noreferrer"
         >
           <img src={Nathan} alt="" width={100} />
-          <p className="title is-4">You</p>
-          <p className="subtitle is-6">
+          <p className="title is-6">You</p>
+          <p className="subtitle is-7">
             We{' '}
             <span role="img" aria-label="love">
               ❤️

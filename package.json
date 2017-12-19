@@ -9,7 +9,7 @@
     "bulma": "^0.6.1",
     "bulma-steps": "^0.1.2",
     "eslint-config-prettier": "^2.9.0",
-    "graphql": "^0.11.7",
+    "graphql": "^0.12.3",
     "graphql-tag": "^2.6.0",
     "history": "^4.7.2",
     "lodash": "^4.17.4",

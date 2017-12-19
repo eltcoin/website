@@ -43,6 +43,10 @@ body {
   }
 }
 
+.column:focus {
+  outline: 0 !important;
+}
+
 .Select {
   max-width: 12rem;
 

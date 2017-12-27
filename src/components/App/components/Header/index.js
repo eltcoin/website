@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 import blackLogo from './images/black_logo.png';
-import whitePaper from './whitepaper.pdf';
 
 class Header extends Component {
   static propTypes = {
@@ -72,7 +71,7 @@ class Header extends Component {
               </Link>
               <a
                 className="navbar-item"
-                href={whitePaper}
+                href={`${process.env.PUBLIC_URL}/whitepaper.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={this.closeMenu}

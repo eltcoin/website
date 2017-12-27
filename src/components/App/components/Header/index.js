@@ -71,7 +71,7 @@ class Header extends Component {
               </Link>
               <a
                 className="navbar-item"
-                href={`${process.env.PUBLIC_URL}/whitepaper.pdf`}
+                href={`${process.env.PUBLIC_URL}/whitepaper`}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={this.closeMenu}

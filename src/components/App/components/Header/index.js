@@ -71,7 +71,7 @@ class Header extends Component {
               </Link>
               <a
                 className="navbar-item"
-                href={`${process.env.PUBLIC_URL}/whitepaper`}
+                href="https://s3-eu-west-1.amazonaws.com/eltcoin-assets/whitepaper.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={this.closeMenu}

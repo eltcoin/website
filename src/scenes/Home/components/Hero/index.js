@@ -126,16 +126,22 @@ export default class Hero extends Component {
                   style={{ marginRight: '0.5em' }}
                 />
               </a>
-              <img
-                src={googlePlayLogo}
-                alt=""
-                style={{
-                  marginLeft: '0.5em',
-                  height: 40,
-                  width: 'auto',
-                  opacity: '0.5',
-                }}
-              />
+              <a
+                href="https://play.google.com/store/apps/details?id=tech.eltcoin.eltwallet"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: 'flex' }}
+              >
+                <img
+                  src={googlePlayLogo}
+                  alt=""
+                  style={{
+                    marginLeft: '0.5em',
+                    height: 40,
+                    width: 'auto',
+                  }}
+                />
+              </a>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ const TEAM_MEMBERS = [
     image: Oliver,
     name: 'Oli H.',
     title: {
-      __html: 'Founder &<br/>Developer',
+      __html: 'Co-founder &<br/>Developer',
     },
     linkedinLink: 'https://uk.linkedin.com/in/oliver-hirst-2075a3a0',
     twitterLink: 'https://twitter.com/Steake',
@@ -21,7 +21,7 @@ const TEAM_MEMBERS = [
     image: Victor,
     name: 'Victor F.',
     title: {
-      __html: 'Head of<br/>Engineering',
+      __html: 'Co-founder &<br/>Head of<br/>Engineering',
     },
     linkedinLink: 'https://www.linkedin.com/in/victorfaramond',
     twitterLink: 'https://twitter.com/vfaramond',
@@ -30,7 +30,7 @@ const TEAM_MEMBERS = [
     image: Ivan,
     name: 'Ivan S.W.',
     title: {
-      __html: 'Head of<br/>Strategy',
+      __html: 'Co-founder &<br/>Head of<br/>Strategy',
     },
     linkedinLink: 'https://www.linkedin.com/in/isotowright',
     twitterLink: 'https://twitter.com/isotowright',
@@ -39,7 +39,7 @@ const TEAM_MEMBERS = [
     image: Dan,
     name: 'Dan T.',
     title: {
-      __html: 'Head of<br/>Design',
+      __html: 'Co-founder &<br/>Head of<br/>Design',
     },
     linkedinLink: 'https://www.linkedin.com/in/daniel-tracey-a1022989',
     twitterLink: '',

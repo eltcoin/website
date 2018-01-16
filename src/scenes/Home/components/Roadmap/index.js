@@ -52,7 +52,7 @@ class Roadmap extends Component {
             fontFamily: "'Pacifico', cursive",
           }}
         >
-          The hodler's guide to the universe
+          The hodler&apos;s guide to the universe
         </p>
         <div
           className="columns is-mobile"

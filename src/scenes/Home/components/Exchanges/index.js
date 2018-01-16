@@ -3,7 +3,6 @@ import StarsBackground from '../../../../components/StarsBackground';
 import eltcoinLogo from './images/logo.png';
 import idexLogo from './images/idex.png';
 import mercatoxLogo from './images/mercatox.png';
-import decentrexLogo from './images/decentrex.png';
 import etherdeltaLogo from './images/etherdelta.png';
 import coinexchangeLogo from './images/coinexchange.png';
 
@@ -15,10 +14,6 @@ const EXCHANGES = [
   {
     link: 'https://mercatox.com/exchange/ELTCOIN/ETH',
     logo: mercatoxLogo,
-  },
-  {
-    link: 'https://decentrex.com/#ELTCOIN-ETH',
-    logo: decentrexLogo,
   },
   {
     link: 'https://etherdelta.com/#ELTCOIN-ETH',

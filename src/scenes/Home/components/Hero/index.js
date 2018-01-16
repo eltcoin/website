@@ -92,7 +92,7 @@ export default class Hero extends Component {
                         margin: 'auto',
                         position: 'absolute',
                         right: '0',
-                        top: '93px',
+                        top: '150px',
                         maxWidth: '280px',
                         width: '80%',
                         zIndex: -1,

@@ -9,17 +9,17 @@ const SWAG_ITEMS = [
   {
     image: image0,
     name: 'The fighter',
-    price: 'ELT 2999',
+    price: 'ELT 299',
   },
   {
     image: image1,
     name: 'The original',
-    price: 'ELT 3999',
+    price: 'ELT 399',
   },
   {
     image: image2,
     name: 'The hodler',
-    price: 'ELT 2999',
+    price: 'ELT 299',
   },
 ];
 

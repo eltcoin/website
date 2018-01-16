@@ -1,11 +1,11 @@
 import React from 'react';
-import Adrian from './../../images/planet1.png';
-import Oli from './../../images/planet2.png';
-import Ivan from './../../images/planet3.png';
-import Oliver from './../../images/planet4.png';
-import Dan from './../../images/planet5.png';
-import Victor from './../../images/planet6.png';
-import Nathan from './../../images/planet7.png';
+import Adrian from './images/Adrian.png';
+import Oli from './images/Oli.png';
+import Ivan from './images/Ivan.png';
+import Oliver from './images/Oliver.png';
+import Dan from './images/Dan.png';
+import Victor from './images/Victor.png';
+import Community from './images/Bot.png';
 
 const TEAM_MEMBERS = [
   {
@@ -84,7 +84,7 @@ export default () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={Nathan} alt="" width={100} />
+          <img src={Community} alt="" width={100} />
           <p className="title is-6">You</p>
           <p className="subtitle is-7">
             We{' '}

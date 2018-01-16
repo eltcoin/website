@@ -186,7 +186,7 @@ export default class Exchanges extends Component {
                 <p>
                   <b>Market cap.</b>
                 </p>
-                <p>{Math.round(this.state.marketCap / 1000, 2)}K USD</p>
+                <p>{(this.state.marketCap / 1000000).toFixed(2)}M USD</p>
               </td>
               <td className="has-text-centered">
                 <p>

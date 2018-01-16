@@ -14,6 +14,8 @@ const TEAM_MEMBERS = [
     title: {
       __html: 'Founder &<br/>Developer',
     },
+    linkedinLink: 'https://uk.linkedin.com/in/oliver-hirst-2075a3a0',
+    twitterLink: 'https://twitter.com/Steake',
   },
   {
     image: Victor,
@@ -21,6 +23,8 @@ const TEAM_MEMBERS = [
     title: {
       __html: 'Head of<br/>Engineering',
     },
+    linkedinLink: 'https://www.linkedin.com/in/victorfaramond',
+    twitterLink: 'https://twitter.com/vfaramond',
   },
   {
     image: Ivan,
@@ -28,6 +32,8 @@ const TEAM_MEMBERS = [
     title: {
       __html: 'Head of<br/>Strategy',
     },
+    linkedinLink: 'https://www.linkedin.com/in/isotowright',
+    twitterLink: 'https://twitter.com/isotowright',
   },
   {
     image: Dan,
@@ -35,6 +41,8 @@ const TEAM_MEMBERS = [
     title: {
       __html: 'Head of<br/>Design',
     },
+    linkedinLink: 'https://www.linkedin.com/in/daniel-tracey-a1022989',
+    twitterLink: '',
   },
   {
     image: Oli,
@@ -42,6 +50,8 @@ const TEAM_MEMBERS = [
     title: {
       __html: 'Head of<br/>Mobile',
     },
+    linkedinLink: 'https://www.linkedin.com/in/oliver-mahoney-713a4027',
+    twitterLink: 'https://twitter.com/olivermahoney',
   },
   {
     image: Adrian,
@@ -49,6 +59,8 @@ const TEAM_MEMBERS = [
     title: {
       __html: 'Head of<br/>Staff',
     },
+    linkedinLink: 'https://www.linkedin.com/in/adriankpang/',
+    twitterLink: 'https://twitter.com/adriankpang',
   },
 ];
 
@@ -75,7 +87,39 @@ export default () => (
         <div className="column" key={member.name}>
           <img src={member.image} alt="" width={100} />
           <p className="title is-6">{member.name}</p>
-          <p className="subtitle is-7" dangerouslySetInnerHTML={member.title} />
+          <p
+            className="subtitle is-7"
+            dangerouslySetInnerHTML={member.title}
+            style={{
+              marginBottom: '0.1rem',
+            }}
+          />
+          <div>
+            {member.twitterLink && (
+              <a
+                className="is-medium"
+                href={member.twitterLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  marginRight: '0.2rem',
+                }}
+              >
+                <i className="fa fa-twitter" />
+              </a>
+            )}
+            <a
+              className="is-medium"
+              href={member.linkedinLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                marginLeft: member.twitterLink ? '0.2rem' : 0,
+              }}
+            >
+              <i className="fa fa-linkedin" />
+            </a>
+          </div>
         </div>
       ))}
       <div className="column">

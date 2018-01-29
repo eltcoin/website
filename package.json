@@ -7,7 +7,7 @@
   "dependencies": {
     "apollo-client-preset": "^1.0.6",
     "bulma": "^0.6.2",
-    "bulma-steps": "^0.1.9",
+    "bulma-steps": "^0.2.0",
     "eslint-config-prettier": "^2.9.0",
     "graphql": "^0.12.3",
     "graphql-tag": "^2.6.1",

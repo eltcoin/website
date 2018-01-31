@@ -30,26 +30,26 @@
 </div>
 
 ## Features
-* 🔩 <strong>Simple: </strong>Bootstrapped with [create-react-app](https://github.com/facebookincubator/create-react-app)
 
-* 💪 <strong>Powerful: </strong> Runs a [Service Worker](https://github.com/w3c/ServiceWorker) script to increase online performance and function without a network connection
+* 🔩 <strong>Simple: </strong>Bootstrapped with
+  [Gatsby](https://www.gatsbyjs.org/)
 
-* 📱 <strong>Responsive: </strong> Made mobile responsive with [Bulma](http://bulma.io) and [SASS](http://sass-lang.com/)
+* 📱 <strong>Responsive: </strong> Made mobile responsive with
+  [Tachyons](http://tachyons.io) and
+  [styled-components](https://www.styled-components.com)
 
-* 🎉 <strong>Live: </strong> Deployed and secured with [Netlify](https://www.eltcoin.tech/)
+* 🎉 <strong>Live: </strong> Deployed and secured with
+  [Netlify](https://www.netlify.com)
 
 ## Local development
-``` bash
+
+```bash
 # Install dependencies
 $ npm install
 
-# Serve with hot reload at localhost:3000
-$ npm start
+# Serve with hot reload at localhost:8000
+$ npm run develop
 
 # Build for production with minification
 $ npm run build
 ```
-
-<p>
-  Head over to <a href="https://github.com/facebookincubator/create-react-app">create-react-app</a> to see a list of things you can do.
-</p>

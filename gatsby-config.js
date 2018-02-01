@@ -5,7 +5,12 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-remove-serviceworker`,
+      options: {
+        filename: 'service-worker.js',
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {

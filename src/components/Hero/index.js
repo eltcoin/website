@@ -58,7 +58,7 @@ export default () => (
 
     <div className="pt3">
       <a
-        href="https://itunes.apple.com/us/app/eltwallet/id1302147242"
+        href="https://eltwallet.eltcoin.tech"
         target="_blank"
         rel="noopener noreferrer"
         className="dim"

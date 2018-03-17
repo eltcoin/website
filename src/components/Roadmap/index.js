@@ -45,6 +45,7 @@ const roadmapBlocks = [
       '$ELT lists on Apollo (private beta)',
       'Website rebranding',
     ],
+    passed: true,
   },
   {
     title: 'Evolution (2)',

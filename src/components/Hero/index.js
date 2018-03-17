@@ -13,12 +13,12 @@ export default () => (
     <div>
       <a
         className="dib link dim white ba b--light-silver border-box pa2 br2 mv2"
-        href="https://medium.com/officialeltcoin/eltcoin-lunar-news-31-1-18-2515c5c37b38"
+        href="https://medium.com/officialeltcoin/eltcoin-lunar-news-27-3-18-b6af7c4974ef"
         target="_blank"
         rel="noopener noreferrer"
       >
         <span className="b br b--light-silver mr2 pv2 pr2">NEW</span>
-        ELTCOIN Lunar News: 31.1.18 🌕
+        ELTCOIN Lunar News: 17.3.18 🌕
       </a>
     </div>
     <div

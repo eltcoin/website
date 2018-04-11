@@ -8,7 +8,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "gatsby": "1.9.247",
+    "gatsby": "1.9.248",
     "gatsby-plugin-favicon": "2.1.1",
     "gatsby-plugin-google-analytics": "1.0.28",
     "gatsby-plugin-netlify": "1.0.19",

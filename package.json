@@ -9,15 +9,15 @@
   },
   "dependencies": {
     "gatsby": "1.9.251",
-    "gatsby-plugin-favicon": "2.1.1",
     "gatsby-plugin-google-analytics": "1.0.30",
-    "gatsby-plugin-netlify": "1.0.19",
+    "gatsby-plugin-manifest": "1.0.19",
+    "gatsby-plugin-offline": "1.0.15",
     "gatsby-plugin-react-helmet": "2.0.10",
     "gatsby-plugin-remove-serviceworker": "1.0.0",
     "react": "16.3.2",
+    "react-dom": "16.3.2",
     "react-helmet": "5.2.0",
     "smooth-scroll": "12.1.5",
-    "styled-components": "3.2.5",
     "tachyons": "4.9.1"
   },
   "devDependencies": {

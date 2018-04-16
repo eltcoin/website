@@ -35,10 +35,9 @@
   [Gatsby](https://www.gatsbyjs.org/)
 
 * 📱 <strong>Responsive: </strong> Made mobile responsive with
-  [Tachyons](http://tachyons.io) and
-  [styled-components](https://www.styled-components.com)
+  [Tachyons](http://tachyons.io)
 
-* 🎉 <strong>Live: </strong> Deployed and secured with
+- 🎉 <strong>Live: </strong> Deployed and secured with
   [Netlify](https://www.netlify.com)
 
 ## Local development

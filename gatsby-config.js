@@ -4,7 +4,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-plugin-remove-serviceworker`,
       options: {
@@ -18,22 +17,17 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-favicon`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        logo: './src/favicon.png',
-        injectHTML: true,
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          twitter: false,
-          yandex: false,
-          windows: false,
-        },
+        background_color: 'white',
+        display: 'minimal-ui',
+        icon: 'src/favicon.png',
+        name: 'ELTCOIN',
+        short_name: 'ELTCOIN',
+        start_url: '/',
+        theme_color: '#4d00ff',
       },
     },
+    'gatsby-plugin-offline',
   ],
 };

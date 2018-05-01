@@ -8,7 +8,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "gatsby": "1.9.255",
+    "gatsby": "1.9.256",
     "gatsby-plugin-google-analytics": "1.0.31",
     "gatsby-plugin-manifest": "1.0.21",
     "gatsby-plugin-offline": "1.0.15",

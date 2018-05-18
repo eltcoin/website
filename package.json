@@ -17,7 +17,7 @@
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "react-helmet": "5.2.0",
-    "smooth-scroll": "12.1.5",
+    "smooth-scroll": "14.0.0",
     "tachyons": "4.9.1"
   },
   "devDependencies": {

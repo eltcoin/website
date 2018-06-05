@@ -18,7 +18,7 @@
     "react-dom": "16.4.0",
     "react-helmet": "5.2.0",
     "smooth-scroll": "14.2.0",
-    "tachyons": "4.9.1"
+    "tachyons": "4.10.0"
   },
   "devDependencies": {
     "babel-eslint": "8.2.3",

@@ -8,9 +8,9 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "gatsby": "1.9.270",
+    "gatsby": "1.9.272",
     "gatsby-plugin-google-analytics": "1.0.31",
-    "gatsby-plugin-manifest": "1.0.25",
+    "gatsby-plugin-manifest": "1.0.27",
     "gatsby-plugin-offline": "1.0.18",
     "gatsby-plugin-react-helmet": "2.0.11",
     "gatsby-plugin-remove-serviceworker": "1.0.0",

@@ -13,28 +13,21 @@ export default () => (
     <div>
       <a
         className="dib link dim white ba b--light-silver border-box pa2 br2 mv2"
-        href="https://medium.com/officialeltcoin/eltcoin-lunar-news-27-3-18-b6af7c4974ef"
+        href="https://medium.com/officialeltcoin/eltcoin-lunar-news-16-4-18-265a052b7732"
         target="_blank"
         rel="noopener noreferrer"
       >
         <span className="b br b--light-silver mr2 pv2 pr2">NEW</span>
-        ELTCOIN Lunar News: 17.3.18 🌕
+        ELTCOIN Lunar News: 16.4.18 🌕
       </a>
     </div>
     <div
-      className="w5 center pt1"
+      className="w5 center pt1 z-3"
       style={{
         position: 'relative',
       }}
     >
-      <img
-        alt="iPhone"
-        className="w5"
-        src={iphone}
-        style={{
-          zIndex: 1,
-        }}
-      />
+      <img alt="iPhone" className="w5 z-1" src={iphone} />
       <video
         autoPlay
         loop
@@ -46,9 +39,9 @@ export default () => (
           margin: 'auto',
           position: 'absolute',
           right: '0',
-          bottom: '81px',
-          zIndex: 0,
+          bottom: '33px',
           width: '202px',
+          zIndex: -1,
         }}
       >
         <source src={eltwalletVideo} type="video/mp4" />
@@ -58,7 +51,7 @@ export default () => (
 
     <div className="pt3">
       <a
-        href="https://eltwallet.eltcoin.tech"
+        href="https://itunes.apple.com/us/app/eltwallet/id1302147242"
         target="_blank"
         rel="noopener noreferrer"
         className="dim"

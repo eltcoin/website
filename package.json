@@ -21,7 +21,7 @@
     "tachyons": "4.10.0"
   },
   "devDependencies": {
-    "babel-eslint": "8.2.4",
+    "babel-eslint": "8.2.5",
     "eslint": "5.0.1",
     "eslint-config-airbnb": "16.1.0",
     "eslint-config-prettier": "2.9.0",

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import apolloLogo from './images/apollo.png';
 import coinexchangeLogo from './images/coinexchange.png';
-import etherdeltaLogo from './images/etherdelta.png';
+import forkDeltaLogo from './images/forkdelta.png';
 import idexLogo from './images/idex.png';
 import mercatoxLogo from './images/mercatox.png';
+import simpleswapLogo from './images/simpleswap.png';
 
 function nFormatter(num, digits) {
   const si = [
@@ -34,12 +35,12 @@ const exchanges = [
   {
     link: 'https://www.coinexchange.io/market/ELT/ETH',
     logo: coinexchangeLogo,
-    name: 'Coinexchange',
+    name: 'CoinExchange',
   },
   {
-    link: 'https://etherdelta.com/#ELTCOIN-ETH',
-    logo: etherdeltaLogo,
-    name: 'Etherdelta',
+    link: 'https://forkdelta.github.io/#!/trade/ELTCOIN-ETH',
+    logo: forkDeltaLogo,
+    name: 'ForkDelta',
   },
   {
     link: 'https://idex.market/eth/eltcoin',
@@ -50,6 +51,11 @@ const exchanges = [
     link: 'https://mercatox.com/exchange/ELTCOIN/ETH',
     logo: mercatoxLogo,
     name: 'Mercatox',
+  },
+  {
+    link: 'https://www.simpleswap.io/',
+    logo: simpleswapLogo,
+    name: 'SimpleSwap',
   },
 ];
 
@@ -77,15 +83,15 @@ export default class Exchanges extends Component {
   };
 
   render() {
+    const { marketCap, rank, volume } = this.state;
+
     return (
       <section className="cf tc mw9 center pt5">
         <h2 className="f2 normal tracked-mega">EXCHANGES</h2>
         <div className="cf ph3 center">
           {exchanges.map((exchange, index) => (
             <div
-              className={`cf fl ${index < 4 ? 'w-50' : 'w-100'} ${
-                index < 3 ? 'w-third-m' : 'w-50-m'
-              } w-20-ns ph2`}
+              className="cf fl w-50 w-third-ns ph2"
               // eslint-disable-next-line react/no-array-index-key
               key={index}
             >
@@ -100,20 +106,16 @@ export default class Exchanges extends Component {
             </div>
           ))}
         </div>
-        {this.state.marketCap && (
+        {marketCap && (
           <a
             href="https://coinmarketcap.com/currencies/eltcoin"
             target="_blank"
             rel="noopener noreferrer"
             className="db center white link dim"
           >
-            <p className="tracked-mega">RANK = {this.state.rank}</p>
-            <p className="tracked-mega">
-              MARKET CAP = ${this.state.marketCap} USD
-            </p>
-            <p className="tracked-mega">
-              USD VOLUME (24H) = ${this.state.volume} USD
-            </p>
+            <p className="tracked-mega">RANK = {rank}</p>
+            <p className="tracked-mega">MARKET CAP = ${marketCap} USD</p>
+            <p className="tracked-mega">USD VOLUME (24H) = ${volume} USD</p>
           </a>
         )}
       </section>

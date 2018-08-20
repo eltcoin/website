@@ -8,29 +8,29 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "gatsby": "1.9.273",
+    "gatsby": "1.9.277",
     "gatsby-plugin-google-analytics": "1.0.31",
     "gatsby-plugin-manifest": "1.0.27",
     "gatsby-plugin-offline": "1.0.18",
     "gatsby-plugin-react-helmet": "2.0.11",
     "gatsby-plugin-remove-serviceworker": "1.0.0",
-    "react": "16.4.1",
-    "react-dom": "16.4.1",
+    "react": "16.4.2",
+    "react-dom": "16.4.2",
     "react-helmet": "5.2.0",
-    "smooth-scroll": "14.2.0",
-    "tachyons": "4.10.0"
+    "smooth-scroll": "14.2.1",
+    "tachyons": "4.11.1"
   },
   "devDependencies": {
-    "babel-eslint": "8.2.5",
-    "eslint": "4.19.1",
-    "eslint-config-airbnb": "17.0.0",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-import": "2.13.0",
-    "eslint-plugin-jsx-a11y": "6.0.3",
-    "eslint-plugin-react": "7.10.0",
+    "babel-eslint": "8.2.6",
+    "eslint": "5.4.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "3.0.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.1",
     "husky": "0.14.3",
-    "lint-staged": "7.2.0",
-    "prettier": "1.13.7"
+    "lint-staged": "7.2.2",
+    "prettier": "1.14.2"
   },
   "eslintConfig": {
     "extends": [

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import apolloLogo from './images/apollo.png';
 import coinexchangeLogo from './images/coinexchange.png';
-import forkDeltaLogo from './images/forkdelta.png';
 import idexLogo from './images/idex.png';
 import mercatoxLogo from './images/mercatox.png';
 import simpleswapLogo from './images/simpleswap.png';
@@ -28,19 +26,9 @@ function nFormatter(num, digits) {
 
 const exchanges = [
   {
-    link: 'https://www.apollomission.io',
-    logo: apolloLogo,
-    name: 'Apollo',
-  },
-  {
     link: 'https://www.coinexchange.io/market/ELT/ETH',
     logo: coinexchangeLogo,
     name: 'CoinExchange',
-  },
-  {
-    link: 'https://forkdelta.github.io/#!/trade/ELTCOIN-ETH',
-    logo: forkDeltaLogo,
-    name: 'ForkDelta',
   },
   {
     link: 'https://idex.market/eth/eltcoin',
@@ -86,12 +74,12 @@ export default class Exchanges extends Component {
     const { marketCap, rank, volume } = this.state;
 
     return (
-      <section className="cf tc mw9 center pt5">
+      <section className="cf tc mw9 center mb5" id="exchanges">
         <h2 className="f2 normal tracked-mega">EXCHANGES</h2>
         <div className="cf ph3 center">
           {exchanges.map((exchange, index) => (
             <div
-              className="cf fl w-50 w-third-ns ph2"
+              className="cf fl-ns w-full w-50-ns ph2"
               // eslint-disable-next-line react/no-array-index-key
               key={index}
             >
@@ -101,7 +89,11 @@ export default class Exchanges extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img className="w5" src={exchange.logo} alt={exchange.name} />
+                <img
+                  className="w6 tc"
+                  src={exchange.logo}
+                  alt={exchange.name}
+                />
               </a>
             </div>
           ))}

@@ -18,7 +18,8 @@
     "react-dom": "16.4.2",
     "react-helmet": "5.2.0",
     "smooth-scroll": "14.2.1",
-    "tachyons": "4.11.1"
+    "tachyons": "4.11.1",
+    "typeface-varela-round": "0.0.54"
   },
   "devDependencies": {
     "babel-eslint": "8.2.6",

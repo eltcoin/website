@@ -1,14 +1,5 @@
 import React from 'react';
-import {
-  Eltcard,
-  Exchanges,
-  Footer,
-  Header,
-  Hero,
-  Meta,
-  Roadmap,
-  Team,
-} from '../components';
+import { Exchanges, Footer, Header, Hero, Meta, Projects } from '../components';
 import './styles/index.css';
 
 if (typeof window !== 'undefined') {
@@ -16,16 +7,16 @@ if (typeof window !== 'undefined') {
   require('smooth-scroll')('a[href*="#"]');
 }
 
+require('typeface-varela-round');
+
 export default () => (
   <div>
     <Meta />
     <Header />
     <div className="app-container cf">
       <Hero />
+      <Projects />
       <Exchanges />
-      <Roadmap />
-      <Eltcard />
-      <Team />
     </div>
     <Footer />
   </div>

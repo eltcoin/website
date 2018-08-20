@@ -8,24 +8,16 @@ export default () => (
     </a>
     <div className="dtc v-mid w-85 tr">
       <a
-        className="link dim white f7 f5-ns mr3 mr4-ns tracked tracked-mega-ns pointer"
-        href="https://s3.eu-west-1.amazonaws.com/eltcoin/ELTCOIN%20WHITEPAPER.pdf"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        WHITE PAPER
-      </a>
-      <a
         className="link dim white f7 f5-ns mr3 mr4-ns tracked tracked-mega-ns"
-        href="#roadmap"
+        href="#projects"
       >
-        ROADMAP
+        PROJECTS
       </a>
       <a
         className="link dim white f7 f5-ns tracked tracked-mega-ns"
-        href="#team"
+        href="#exchanges"
       >
-        TEAM
+        EXCHANGES
       </a>
     </div>
   </nav>

@@ -38,7 +38,7 @@ const exchanges = [
     name: 'CoinExchange',
   },
   {
-    link: 'https://forkdelta.github.io/#!/trade/ELTCOIN-ETH',
+    link: 'https://forkdelta.app/#!/trade/ELTCOIN-ETH',
     logo: forkDeltaLogo,
     name: 'ForkDelta',
   },
@@ -86,7 +86,7 @@ export default class Exchanges extends Component {
     const { marketCap, rank, volume } = this.state;
 
     return (
-      <section className="cf tc mw9 center pt5">
+      <section className="cf tc mw9 center mb5" id="exchanges">
         <h2 className="f2 normal tracked-mega">EXCHANGES</h2>
         <div className="cf ph3 center">
           {exchanges.map((exchange, index) => (

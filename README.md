@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-  <img src="public/favicon.png" width="250" />
+  <img src="src/favicon.png" width="250" />
   </p>
 
   <p>

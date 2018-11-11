@@ -17,7 +17,7 @@
     "react": "16.4.2",
     "react-dom": "16.4.2",
     "react-helmet": "5.2.0",
-    "smooth-scroll": "14.2.1",
+    "smooth-scroll": "15.0.0",
     "tachyons": "4.11.1",
     "typeface-varela-round": "0.0.54"
   },
